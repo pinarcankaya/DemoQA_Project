@@ -7,17 +7,17 @@ import java.util.Properties;
 public class ConfigurationReader {
 
 
-    public static Properties properties;  ///properties nesnemizi olusturduk cingig.properties deki bilgiler var artik
+    public static Properties properties;
 
-    static {//java ilk once static methodlari b=ve static bloklari okur
+    static {
 
-        String path = "configuration.properties";//dosyayi bulur
+        String path = "configuration.properties";
 
         FileInputStream file = null;
         try {
-            file = new FileInputStream(path); ///FileInputStream yardimi ile acar ve okur
-            properties = new Properties();   //properties nesnesi olusturulur
-            properties.load(file);//okudugu dosyayi properties icine yukler
+            file = new FileInputStream(path);
+            properties = new Properties();
+            properties.load(file);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -26,9 +26,8 @@ public class ConfigurationReader {
 
     }
 
-    public static String getProperty(String key) {  ///buradaki ismi biz verdik
-        return properties.getProperty(key);  //buradaki isim properties classindan gelen method ismi
-        //yani sadce isim benziyor yoksa ustteki frakli bir isim de olabilir
-        //cevap olarak propertideki bilgi return edilir
+    public static String getProperty(String key) {
+        return properties.getProperty(key);
+
     }
 }

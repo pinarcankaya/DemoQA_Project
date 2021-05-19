@@ -1,7 +1,7 @@
 package com.demoqa.utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;///yol--browseri bulur
-import org.openqa.selenium.WebDriver;//araba  --test islemi yapar
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -16,7 +16,7 @@ public class Driver {
     public static WebDriver getDriver(){
 
         if(driver == null){
-            switch (ConfigurationReader.getProperty("browser")){ // chrome // firefox
+            switch (ConfigurationReader.getProperty("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
