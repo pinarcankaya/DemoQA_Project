@@ -5,7 +5,6 @@ import com.demoqa.pages.US01_TextBox_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
