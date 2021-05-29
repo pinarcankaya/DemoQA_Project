@@ -1,6 +1,6 @@
 package com.demoqa.tests;
 
-import com.demoqa.pages.US04_WebTable_Page;
+import git com.demoqa.pages.US04_WebTable_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
