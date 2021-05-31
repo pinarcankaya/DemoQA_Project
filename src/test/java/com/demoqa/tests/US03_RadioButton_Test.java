@@ -99,5 +99,7 @@ public class US03_RadioButton_Test {
             Assert.assertTrue(w.isDisplayed());
             System.out.println("Secilen radio button :" + us03_radioButton_page.buttonSuccesText.getText());
         }
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
+
 }
