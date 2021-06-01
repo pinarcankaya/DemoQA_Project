@@ -4,11 +4,10 @@ import com.demoqa.pages.US03_RadioButton_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ public class US03_RadioButton_Test {
     US03_RadioButton_Page us03_radioButton_page = new US03_RadioButton_Page();
     Actions actions = new Actions(Driver.getDriver());
 
-    @BeforeTest
+    @BeforeMethod
     public void setup() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
