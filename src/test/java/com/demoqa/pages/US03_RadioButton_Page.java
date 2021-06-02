@@ -11,11 +11,8 @@ public class US03_RadioButton_Page {
 
 
     public US03_RadioButton_Page() {
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
-
-    @FindBy(xpath = "//div[@class='card-up']")
-    public WebElement elementsCard;
 
     @FindBy(xpath = "//span[.='Radio Button']")
     public WebElement radioButtonMenu;

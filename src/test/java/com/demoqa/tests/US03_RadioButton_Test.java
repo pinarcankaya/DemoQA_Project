@@ -1,9 +1,9 @@
 package com.demoqa.tests;
 
+import com.demoqa.pages.US01_TextBox_Page;
 import com.demoqa.pages.US03_RadioButton_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
-import com.demoqa.utilities.ReusableMethods;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 public class US03_RadioButton_Test {
 
+    US01_TextBox_Page us01TextBoxPage = new US01_TextBox_Page();
     US03_RadioButton_Page us03_radioButton_page = new US03_RadioButton_Page();
     Actions actions = new Actions(Driver.getDriver());
 
@@ -25,9 +26,8 @@ public class US03_RadioButton_Test {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        us03_radioButton_page.elementsCard.click();
+        us01TextBoxPage.elementsCard.click();
     }
-
 
     @Test
     public void TC0301() {
@@ -37,9 +37,7 @@ public class US03_RadioButton_Test {
             elements.add(us03_radioButton_page.elementsMenuList.get(i).getText());
         }
         Assert.assertTrue(elements.contains("Radio Button"));
-
     }
-
 
     @Test
     public void TC0302() {
@@ -47,7 +45,6 @@ public class US03_RadioButton_Test {
         Assert.assertTrue(us03_radioButton_page.radioButtonMenu.isDisplayed());
 
     }
-
 
     @Test
     public void TC0303() {
@@ -58,17 +55,15 @@ public class US03_RadioButton_Test {
 
     }
 
-
     @Test
     public void TC0304() {
         us03_radioButton_page.radioButtonMenu.click();
-        String [] radioArr = {"Yes","Impressive","No"};///expected
+        String[] radioArr = {"Yes", "Impressive", "No"};///expected
 
-        for (int i = 0; i <us03_radioButton_page.allRadioButtonsText.size() ; i++) {
+        for (int i = 0; i < us03_radioButton_page.allRadioButtonsText.size(); i++) {
 
-            Assert.assertEquals(us03_radioButton_page.allRadioButtonsText.get(i).getText(),radioArr[i]);
+            Assert.assertEquals(us03_radioButton_page.allRadioButtonsText.get(i).getText(), radioArr[i]);
         }
-
 
         //2.yol****Siralama dikkate alinmadan
 
@@ -84,7 +79,6 @@ public class US03_RadioButton_Test {
 
     }
 
-
     @Test
     public void TC0405() {
         us03_radioButton_page.radioButtonMenu.click();
@@ -97,7 +91,7 @@ public class US03_RadioButton_Test {
     }
 
     @AfterClass
-    public void close(){
+    public void close() {
         Driver.closeDriver();
     }
 
