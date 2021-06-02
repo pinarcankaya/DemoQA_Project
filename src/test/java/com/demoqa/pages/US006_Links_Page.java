@@ -10,11 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 public class US006_Links_Page {
 
     public US006_Links_Page(){PageFactory.initElements(Driver.getDriver(),this);}
+
     @FindBy(xpath = "//div[@class='card-up']") //*/h5[contains(text(), 'Elements')]
     public WebElement elementsCard;
 
-    @FindBy(xpath = "//span[.='Links'] ") //   //span[.='Links']    //*[@class='btn btn-light active']
-    public WebElement Links;
+    @FindBy(xpath = "//span[.='Links'] ") //      //*[@class='btn btn-light active']
+    public WebElement links;
 
 
     @FindBy(xpath = "//*[@class='main-header']")

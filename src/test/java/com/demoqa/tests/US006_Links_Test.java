@@ -30,12 +30,16 @@ public class US006_Links_Test {
             Driver.getDriver().manage().window().maximize();
             Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             linksPage.elementsCard.click();
-            ReusableMethods.waitFor(3);
+            //ReusableMethods.waitFor(3);
+
             actions.sendKeys(Keys.ARROW_DOWN).perform();
             actions.sendKeys(Keys.ARROW_DOWN).perform();
+            //Soru: 2 tane koymak yerine sayi verilebilir mi?
 
             ReusableMethods.waitFor(3);
-            linksPage.Links.click();
+            //ReusableMethods.waitForVisibility(linksPage.links, 10);
+            //Soru: ElementClickInterceptedException: element click intercepted: Element <span class="text">...</span> is not clickable
+            linksPage.links.click();
 
     }
     //1-Go to main-header "Links"
@@ -53,7 +57,7 @@ public class US006_Links_Test {
     }
 
 //    1- Click Home
-//    2- Check if there a new page opened
+//    2- Check if there opened a new page
 //    3- Check if its url is "https://demoqa.com/"
     @Test
     public void home(){
@@ -90,6 +94,11 @@ public class US006_Links_Test {
     public void moved(){
         ReusableMethods.waitFor(3);
         linksPage.moved.click();
+        ReusableMethods.waitFor(3);
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+        ReusableMethods.waitFor(3);
         Assert.assertTrue(linksPage.status.isDisplayed());
     }
 

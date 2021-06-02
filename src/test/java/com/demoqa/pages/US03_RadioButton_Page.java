@@ -20,7 +20,6 @@ public class US03_RadioButton_Page {
     @FindBy(xpath = "//span[.='Radio Button']")
     public WebElement radioButtonMenu;
 
-
     @FindBy(xpath = "//li[contains(@id,'item')]")
     public List<WebElement> elementsMenuList;
 
