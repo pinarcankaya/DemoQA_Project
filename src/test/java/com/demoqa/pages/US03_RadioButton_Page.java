@@ -17,22 +17,20 @@ public class US03_RadioButton_Page {
     @FindBy(xpath = "//div[@class='card-up']")
     public WebElement elementsCard;
 
-
-
     @FindBy(xpath = "//span[.='Radio Button']")
     public WebElement radioButtonMenu;
-
 
     @FindBy(xpath = "//li[contains(@id,'item')]")
     public List<WebElement> elementsMenuList;
 
-
-    @FindBy(xpath = "//div[contains(@class,'custom-control')]")//input[@type='radio']
+    @FindBy(xpath = "//input[@type='radio']")
     public List<WebElement> allRadioButton;
 
+    @FindBy(xpath = "//div[contains(@class,'custom-control')]")
+    public List<WebElement> allRadioButtonsText;
 
     @FindBy(xpath = "//div[@class='custom-control custom-radio custom-control-inline']")
-    public List<WebElement> yesImpressButtons;
+    public List<WebElement> yesImpressiveButtons;
 
     @FindBy(xpath = "//span[@class='text-success']")
     public WebElement buttonSuccesText;
