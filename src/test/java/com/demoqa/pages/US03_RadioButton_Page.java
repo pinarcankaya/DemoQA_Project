@@ -17,6 +17,8 @@ public class US03_RadioButton_Page {
     @FindBy(xpath = "//div[@class='card-up']")
     public WebElement elementsCard;
 
+
+
     @FindBy(xpath = "//span[.='Radio Button']")
     public WebElement radioButtonMenu;
 
