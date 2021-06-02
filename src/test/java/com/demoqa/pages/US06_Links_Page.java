@@ -15,4 +15,16 @@ public class US06_Links_Page {
     public WebElement elementsCard;
 
 
+    @FindBy(xpath = "//span[.='Links']")
+    public WebElement linksMenuLink;
+
+
+    @FindBy(xpath = "//div[@class='main-header']")
+    public WebElement linkHeader;
+
+
+    @FindBy(xpath = "//a[@id='simpleLink']")
+    public WebElement homeLink;
+
+
 }
