@@ -101,6 +101,10 @@ public class US006_Links_Test {
         ReusableMethods.waitFor(3);
         Assert.assertTrue(linksPage.status.isDisplayed());
     }
+    @Test
+    public void www(){
+
+    }
 
     @AfterMethod
     public void tearDownMethod() {
