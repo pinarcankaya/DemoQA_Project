@@ -1,6 +1,6 @@
 package com.demoqa.tests;
 
-import git com.demoqa.pages.US04_WebTable_Page;
+import com.demoqa.pages.US04_WebTable_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
@@ -37,7 +37,7 @@ public class US04_WebTable_Test {
 
     }
 
-    @Test
+    @Test(priority = 1)
     public void TC01() {
         //Elements accordion menusu altinda bulunan Web Tables linkine tiklandiginda Add butonu goruntulenebilir olmalidir.
 
@@ -45,7 +45,7 @@ public class US04_WebTable_Test {
 
     }
 
-    @Test
+    @Test(priority = 2)
     public void TC02() {
         // Add butonuna tiklandiginda Registration Form yazisi firstname, lastname,email, age, salary ve department
         // textboxlari goruntulenebilir olmalidir.
@@ -60,7 +60,7 @@ public class US04_WebTable_Test {
 
     }
 
-    @Test
+    @Test(priority = 3)
     public void TC03() {
         // Registration formu gecerli verilerle eksiksiz doldurulup Submit butonuna tiklandiginda
         // web tablede bir kayit olusturulabilmelidir.
@@ -81,7 +81,7 @@ public class US04_WebTable_Test {
 
     }
 
-    @Test
+    @Test(priority = 4)
     public void TC04() {
 
 
@@ -106,7 +106,7 @@ public class US04_WebTable_Test {
     }
 
 
-    @Test
+    @Test(priority = 5)
     public void TC05() throws InterruptedException {
       //  Web table action bolumunde bulunan Edit ve Delete fonksiyonlari dogru calismalidir.
 
