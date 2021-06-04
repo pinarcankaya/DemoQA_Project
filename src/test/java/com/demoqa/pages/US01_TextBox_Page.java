@@ -5,41 +5,34 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
+
 public class US01_TextBox_Page {
 
-    public US01_TextBox_Page () {PageFactory.initElements(Driver.getDriver(), this);}
+    public US01_TextBox_Page() {
+        PageFactory.initElements(Driver.getDriver(),this);
+    }
 
     @FindBy(xpath = "//div[@class='card-up']")
     public WebElement elementsCard;
 
-    @FindBy (xpath = "//li[@id='item-0'][1]")
-    public WebElement textBoxButton;
+
+    @FindBy(xpath = "//div[@class='header-text'][1]")
+    public WebElement elementsMenu;  //gerekli degil acik geliyor
+
+    @FindBy(xpath = "(//ul[@class='menu-list'])[1]/li")
+    public List<WebElement> menuList;
 
     @FindBy(xpath = "//div[@class='main-header']")
-    public  WebElement textBoxHeader;
+    public WebElement textBoxHeader;
 
-    @FindBy(id = "userName")
-    public WebElement fullName;
+    @FindBy(xpath = "//span[.='Text Box']")
+    public WebElement textBoxMenuLink;
 
-    @FindBy (id="userEmail")
-    public WebElement email;
 
-    @FindBy (id="currentAddress")
-    public WebElement currentAddress;
+    @FindBy(xpath = "//form[@id='userForm']/div")
+    public List<WebElement> formList;
 
-    @FindBy (id="permanentAddress")
-    public WebElement permanentAddress;
-
-    @FindBy (id="submit")
-    public WebElement submit;
-
-    @FindBy (id ="output")
-    public WebElement output;
-
-    @FindBy(id="userForm")
-    public WebElement userForm;
-
-    @FindBy(xpath = "//div[@class='border col-md-12 col-sm-12']")
-    public WebElement submitOutput;
 
 }

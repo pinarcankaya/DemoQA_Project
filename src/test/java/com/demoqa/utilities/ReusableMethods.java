@@ -40,7 +40,13 @@ public class ReusableMethods {
         }
         Driver.getDriver().switchTo().window(origin);
     }
-
+    public static void clickWithJS(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
+    }
+    public static void scrollTo(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
     //========Hover Over=====//
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
