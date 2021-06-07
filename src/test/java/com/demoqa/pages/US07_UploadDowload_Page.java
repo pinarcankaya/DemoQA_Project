@@ -10,6 +10,9 @@ import javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder;
 public class US07_UploadDowload_Page {
     public US07_UploadDowload_Page() { PageFactory.initElements(Driver.getDriver(),this); }
 
+    @FindBy(xpath = "(//div[@class='header-wrapper'])[1]")
+    public WebElement elementsButton;
+
     @FindBy(xpath = "//span[.='Upload and Download']")
     public WebElement upDownloadMenu;
 
@@ -24,6 +27,8 @@ public class US07_UploadDowload_Page {
 
     @FindBy(xpath = "//a[.='Download']")
     public WebElement downloadButton;
+
+
 
 
 
