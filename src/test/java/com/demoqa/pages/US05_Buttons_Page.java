@@ -31,4 +31,5 @@ public class US05_Buttons_Page {
     public WebElement clickMeText;
     @FindBy(className = "btn btn-primary")
     public List<WebElement> clickButtons;
+
 }
