@@ -27,13 +27,14 @@ public class US11_Alert_Test {
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         us01TextBoxPage.elementsCard.click();
         ReusableMethods.scrollTo(alertPage.alertFrameWindowsMenu);
+        alertPage.alertFrameWindowsMenu.click();
+        ReusableMethods.waitFor(1);
 
     }
 
     //Alerts, Frame & Windows menusune tiklandiginda Alerts menu linki goruntulendigini dogrulayiniz
     @Test
     public void TC49() {
-        alertPage.alertFrameWindowsMenu.click();
         Assert.assertTrue(alertPage.alertMenuLink.isDisplayed());
 
     }
@@ -41,7 +42,6 @@ public class US11_Alert_Test {
     //Alerts menu linkine tiklandiginda 4 tane Click me butonu oldugunu dogrulayiniz
     @Test
     public void TC50() {
-        alertPage.alertFrameWindowsMenu.click();
         alertPage.alertMenuLink.click();
         Assert.assertEquals(alertPage.allClickMeButtonList.size(), 4);
     }
@@ -49,7 +49,6 @@ public class US11_Alert_Test {
     //Birinci Click me butonuna tiklandiginda cikan alertte "You clicked a button" texti oldugunu verify ediniz
     @Test
     public void TC51() {
-        alertPage.alertFrameWindowsMenu.click();
         alertPage.alertMenuLink.click();
         ReusableMethods.waitForVisibility( alertPage.allClickMeButtonList.get(0),2);
         alertPage.allClickMeButtonList.get(0).click();
@@ -61,7 +60,6 @@ public class US11_Alert_Test {
     //Ikinci Click me butonuna tiklandiginda 5 saniye icinde cikan alertte OK butonuna tiklanabildigini dogrulayiniz
     @Test
     public void TC52() {
-        alertPage.alertFrameWindowsMenu.click();
         alertPage.alertMenuLink.click();
         alertPage.allClickMeButtonList.get(1).click();
 
@@ -85,7 +83,6 @@ public class US11_Alert_Test {
     //Ucuncu Click me butonuna tiklandiginda cikan alertte Cancel'e tiklandiktan sonra "You selected Cancel" texti goruntulendigini verify ediniz
     @Test
     public void TC53() {
-        alertPage.alertFrameWindowsMenu.click();
         alertPage.alertMenuLink.click();
         alertPage.allClickMeButtonList.get(2).click();
         Driver.getDriver().switchTo().alert().dismiss();
@@ -98,7 +95,6 @@ public class US11_Alert_Test {
     // texti altinda goruntulendigini dogrulayiniz
     @Test
     public void TC54() {
-        alertPage.alertFrameWindowsMenu.click();
         alertPage.alertMenuLink.click();
         alertPage.allClickMeButtonList.get(3).click();
         Alert alert = Driver.getDriver().switchTo().alert();
@@ -111,7 +107,7 @@ public class US11_Alert_Test {
     }
     @AfterClass
     public void close() {
-        Driver.getDriver().navigate().refresh();
+       // Driver.getDriver().navigate().refresh();
         //Driver.closeDriver();
     }
 
