@@ -20,8 +20,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class US05_Buttons_Test {
+
     US05_Buttons_Page obj = new US05_Buttons_Page();
     Actions actions = new Actions(Driver.getDriver());
+
     @BeforeClass
     public void background(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
