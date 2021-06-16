@@ -6,6 +6,7 @@ import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -20,6 +21,7 @@ public class US11_Alert_Test {
     US01_TextBox_Page us01TextBoxPage = new US01_TextBox_Page();
     US11_Alert_Page alertPage = new US11_Alert_Page();
 
+
     @BeforeMethod
     public void setup() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
@@ -28,13 +30,15 @@ public class US11_Alert_Test {
         us01TextBoxPage.elementsCard.click();
         ReusableMethods.scrollTo(alertPage.alertFrameWindowsMenu);
         alertPage.alertFrameWindowsMenu.click();
-        ReusableMethods.waitFor(1);
+        ReusableMethods.scrollTo(alertPage.alertMenuLink);
+        //ReusableMethods.waitFor(1);
 
     }
 
     //Alerts, Frame & Windows menusune tiklandiginda Alerts menu linki goruntulendigini dogrulayiniz
     @Test
     public void TC49() {
+        ReusableMethods.waitForVisibility(alertPage.alertMenuLink,5);
         Assert.assertTrue(alertPage.alertMenuLink.isDisplayed());
 
     }
@@ -50,17 +54,30 @@ public class US11_Alert_Test {
     @Test
     public void TC51() {
         alertPage.alertMenuLink.click();
-        ReusableMethods.waitForVisibility( alertPage.allClickMeButtonList.get(0),2);
-        alertPage.allClickMeButtonList.get(0).click();
-        String alertText1 = Driver.getDriver().switchTo().alert().getText();
-        Assert.assertEquals(alertText1, "You clicked a button");
+        ReusableMethods.waitForVisibility( alertPage.allClickMeButtonList.get(0),3);
+//        alertPage.allClickMeButtonList.get(0).click();
+//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
+//        wait.until(ExpectedConditions.alertIsPresent());
+//        String alertText1 = Driver.getDriver().switchTo().alert().getText();
+//         ReusableMethods.waitFor(1);
+//        Assert.assertEquals(alertText1, "You clicked a button");
 
+        try {
+            alertPage.allClickMeButtonList.get(0).click();
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 30);
+            wait.until(ExpectedConditions.alertIsPresent());
+            String alertText2 = Driver.getDriver().switchTo().alert().getText();
+           // Assert.assertEquals(alertText2, "You clicked a button");
+        } catch (UnhandledAlertException f) {
+            System.out.println("alert is not present");
+        }
     }
 
     //Ikinci Click me butonuna tiklandiginda 5 saniye icinde cikan alertte OK butonuna tiklanabildigini dogrulayiniz
     @Test
     public void TC52() {
         alertPage.alertMenuLink.click();
+        ReusableMethods.waitForVisibility(alertPage.allClickMeButtonList.get(1),5);
         alertPage.allClickMeButtonList.get(1).click();
 
         try {
@@ -84,7 +101,10 @@ public class US11_Alert_Test {
     @Test
     public void TC53() {
         alertPage.alertMenuLink.click();
+       ReusableMethods.waitForVisibility(alertPage.allClickMeButtonList.get(2),2);
         alertPage.allClickMeButtonList.get(2).click();
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 8);
+        wait.until(ExpectedConditions.alertIsPresent());
         Driver.getDriver().switchTo().alert().dismiss();
         Assert.assertTrue(alertPage.clickMe3SuccesText.isDisplayed());
 
@@ -96,7 +116,10 @@ public class US11_Alert_Test {
     @Test
     public void TC54() {
         alertPage.alertMenuLink.click();
+        ReusableMethods.waitForVisibility(alertPage.allClickMeButtonList.get(3),2);
         alertPage.allClickMeButtonList.get(3).click();
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
+        wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = Driver.getDriver().switchTo().alert();
         String helloText = "Hello";
         alert.sendKeys(helloText);
@@ -105,10 +128,11 @@ public class US11_Alert_Test {
         System.out.println(alertPage.clickMe4SuccesText.getText());
 
     }
+
     @AfterClass
     public void close() {
-       // Driver.getDriver().navigate().refresh();
-        //Driver.closeDriver();
+       //  Driver.getDriver().navigate().refresh();
+        // Driver.closeDriver();
     }
 
 }

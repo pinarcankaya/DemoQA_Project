@@ -19,7 +19,7 @@ public class US11_Alert_Page {
     @FindBy(xpath = "(//li[@id='item-1'])[2]")
     public WebElement alertMenuLink;
 
-    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    @FindBy(xpath = "//button[contains(@id,'Button')]")
     public List<WebElement> allClickMeButtonList;
 
     @FindBy(xpath = "//span[@id='confirmResult']")
