@@ -4,12 +4,19 @@ import com.demoqa.pages.US05_Buttons_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
+
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class US05_Buttons_Test {
@@ -21,10 +28,10 @@ public class US05_Buttons_Test {
     public void background(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+     //   Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         obj.elementCard.click();
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", obj.buttonsSegment);
-        obj.buttonsSegment.click();
+//        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", obj.buttonsSegment);
+//        obj.buttonsSegment.click();
     }
     @Test
     public void  buttonsTC01(){
@@ -56,7 +63,5 @@ public class US05_Buttons_Test {
         actions.click(obj.clickMeButton).perform();
         ReusableMethods.waitForVisibility(obj.clickMeText,10);
         assertTrue(obj.clickMeText.isDisplayed());
-
     }
-
 }
