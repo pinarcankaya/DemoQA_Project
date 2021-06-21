@@ -8,6 +8,8 @@ import com.demoqa.utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -21,6 +23,9 @@ public class US006_Links_Test {
 
     US006_Links_Page linksPage = new US006_Links_Page();
     Actions actions = new Actions(Driver.getDriver());
+    WebDriverWait visibleWait = new WebDriverWait(Driver.getDriver(), 10);
+    WebDriverWait clickWait = new WebDriverWait(Driver.getDriver(), 10);
+
 
     @BeforeMethod
     public void setup() {
@@ -28,7 +33,7 @@ public class US006_Links_Test {
             Driver.getDriver().manage().window().maximize();
             Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             linksPage.elementsCard.click();
-            //ReusableMethods.waitFor(3);
+
 
            actions.sendKeys(Keys.ARROW_DOWN).perform(); //
   //         ReusableMethods.clickWithJS e bak
@@ -36,18 +41,21 @@ public class US006_Links_Test {
             actions.sendKeys(Keys.ARROW_DOWN).perform();
 
 
-  //          ReusableMethods.waitFor(3);
-            ReusableMethods.waitForClickablility(linksPage.links, 10);
+
+  //       ReusableMethods.waitForClickablility(linksPage.links, 10);
             //Soru: ElementClickInterceptedException: element click intercepted: Element <span class="text">...</span> is not clickable
-            linksPage.links.click();
+
+        clickWait.until(ExpectedConditions.elementToBeClickable(linksPage.links));
+        linksPage.links.click();
 
     }
     //1-Go to main-header "Links"
     //2- Check if its collor is #AAA
     @Test
     public void linkColor() {
-//        ReusableMethods.waitFor(5);
-        ReusableMethods.waitForVisibility(linksPage.headerLinks, 10);
+
+//        ReusableMethods.waitForVisibility(linksPage.headerLinks, 10);
+        visibleWait.until(ExpectedConditions.visibilityOf(linksPage.headerLinks));
         String headerColor = linksPage.headerLinks.getCssValue("color");
         System.out.println(headerColor);
         String convertToHex  = Color.fromString(headerColor).asHex();

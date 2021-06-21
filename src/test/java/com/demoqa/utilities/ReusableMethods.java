@@ -69,6 +69,15 @@ public class ReusableMethods {
         }
         return elemTexts;
     }
+//======== Returns false if an element is not visible =====
+    public static boolean isElementVisible(WebElement el){
+        try {
+            el.isDisplayed();
+            return true;
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
+    }
 
     //===============Explicit Wait==============//
     public static void waitFor(int sec) {
