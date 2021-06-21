@@ -6,10 +6,8 @@ import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -17,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class US01_TextBox_Test {
     public US01_TextBox_Page us01TextBoxPage;
 
-    @BeforeMethod
+    @BeforeClass
     public void setup(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
@@ -27,14 +25,14 @@ public class US01_TextBox_Test {
 
 
     @Test
-    public void TC01() {
+    public void TC0101() {
         String textBoxText = us01TextBoxPage.textBoxButton.getText();
         Assert.assertEquals(textBoxText, "Text Box");
 
     }
 
     @Test
-    public void TC02() {
+    public void TC0102() {
 
         us01TextBoxPage.textBoxButton.click();
         String textBoxHeader = us01TextBoxPage.textBoxHeader.getText();
@@ -44,7 +42,7 @@ public class US01_TextBox_Test {
     }
 
     @Test
-    public void TC03Part1() {
+    public void TC0103Part1() {
 
         Assert.assertTrue(us01TextBoxPage.textBoxButton.isEnabled());
         us01TextBoxPage.textBoxButton.click();
@@ -68,7 +66,7 @@ public class US01_TextBox_Test {
 
     }
     @Test
-    public void TC03Part2Positive() {
+    public void TC0103Part2Positive() {
 
         us01TextBoxPage.textBoxButton.click();
         us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("valid_email"));
@@ -80,23 +78,21 @@ public class US01_TextBox_Test {
 
     }
     @Test
-    public void TC03Part2Negative(){
+    public void TC0103Part2Negative(){
         us01TextBoxPage.textBoxButton.click();
 
         for (int i = 1 ; i <9 ; i++) {
             us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("invalid_email_" + i));
-
             us01TextBoxPage.submit.click();
             ReusableMethods.waitFor(1);
             String invalidEmailAttribute=us01TextBoxPage.email.getAttribute("class");
             Assert.assertTrue(invalidEmailAttribute.contains("error"));
             Driver.getDriver().navigate().refresh();
-
         }
     }
 
     @Test
-    public void TC04(){
+    public void TC0104(){
         us01TextBoxPage.textBoxButton.click();
         String expectedFullName=ConfigurationReader.getProperty("textBox_fullName");
         String expectedEmail=ConfigurationReader.getProperty("valid_email");
@@ -120,16 +116,12 @@ public class US01_TextBox_Test {
 
         for (String b: expectedOutput) {
             Assert.assertTrue(submitOutputText.contains(b));
-            // System.out.println("b = " + b);
+
         }
-//        System.out.println("************************************");
-//        System.out.println("expectedOutput = " + expectedOutput);
-//        System.out.println("*********************************");
-//        System.out.println(submitResultText);
 
     }
 
-    @AfterMethod
+    @AfterClass
     public void tearDownMethod(){
         Driver.closeDriver();
     }
