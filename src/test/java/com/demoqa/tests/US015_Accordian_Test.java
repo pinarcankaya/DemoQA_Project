@@ -33,7 +33,7 @@ public class    US015_Accordian_Test {
        action.sendKeys(Keys.PAGE_DOWN).perform();
        ReusableMethods.clickWithJS(accordianPage.accordianButton);
 
-       ReusableMethods.waitFor(5);
+       //ReusableMethods.waitFor(5);
 
 
     }
@@ -62,8 +62,9 @@ public class    US015_Accordian_Test {
             w.click();
             System.out.println(w.getText());
 
-            Assert.assertEquals(accordianPage.cardList.size(),3);
-            Assert.assertEquals(accordianPage.cardList.get(1).getText(),"Where does it come from?");
+            softAssert.assertEquals(accordianPage.cardList.size(),3);
+            softAssert.assertEquals(accordianPage.cardList.get(1).getText(),"Where does it come from?");
+            softAssert.assertAll();
         }
     }
 
@@ -78,8 +79,16 @@ public class    US015_Accordian_Test {
     @Test  //ikinci accordion menu linkine tiklanabildigini ve  tiklandiginda birinci acordion menu linkinin kapandigini
     // ve ikinci acordion menu linkinin basliginin "Where does it come from?" oldugunu verify ediniz
     public void TC072() {
-        accordianPage.cardList.get(0).click();
+
+        String linkacik=accordianPage.collapse1.getAttribute("class");
+        action.sendKeys(Keys.PAGE_DOWN).perform();
         accordianPage.cardList.get(1).click();
+
+        ReusableMethods.waitFor(2);
+        String linkKapali=accordianPage.collapse1.getAttribute("class");
+
+        System.out.println("Link Acik : "+linkacik+"\n"+"Link Kapali : "+linkKapali);
+        softAssert.assertNotEquals(linkacik,linkKapali);
 
         softAssert.assertEquals(accordianPage.cardList.get(1).getText(),"Where does it come from?");
         softAssert.assertAll();
@@ -92,20 +101,22 @@ public class    US015_Accordian_Test {
         accordianPage.cardList.get(1).click();
 
         ReusableMethods.waitFor(2);
-        String linkacik=accordianPage.collapse.getAttribute("class");
+        String linkacik=accordianPage.collapse2.getAttribute("class");
 
         action.sendKeys(Keys.PAGE_DOWN).perform();
         accordianPage.cardList.get(2).click();
         ReusableMethods.waitFor(2);
-        String linkKapali=accordianPage.collapse.getAttribute("class");
+        String linkKapali=accordianPage.collapse2.getAttribute("class");
 
         System.out.println("Link Acik : "+linkacik+"\n"+"Link Kapali : "+linkKapali);
         softAssert.assertNotEquals(linkacik,linkKapali);
+        softAssert.assertAll();
 
         // ve ucuncu acordion menu linkindeki Text'in font-weight' inin 400 oldugunu verify ediniz
         String text=accordianPage.paragraf.get(3).getCssValue("font-weight");
         System.out.println(text);
-        Assert.assertEquals(text,"400");
+        softAssert.assertEquals(text,"400");
+        softAssert.assertAll();
     }
 
 //        @AfterClass

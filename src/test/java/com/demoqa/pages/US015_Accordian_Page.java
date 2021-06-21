@@ -27,10 +27,13 @@ public class US015_Accordian_Page {
         @FindBy(xpath = "//p")
         public List<WebElement> paragraf;
 
+        @FindBy(xpath = "//*[@id=\"accordianContainer\"]/div/div[1]/div[2]")
+         public WebElement collapse1;
+
         @FindBy(xpath = "//*[@id=\"accordianContainer\"]/div/div[2]/div[2]")
-        public WebElement collapse;
+        public WebElement collapse2;
 
 
-
+//*[@id="accordianContainer"]/div/div[1]/div[2]
 
     }
