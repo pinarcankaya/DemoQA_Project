@@ -17,7 +17,6 @@ public class US006_Links_Page {
     @FindBy(xpath = "//span[.='Links']") //      //*[@class='btn btn-light active']
     public WebElement links;
 
-
     @FindBy(xpath = "//*[@class='main-header']")
     public WebElement headerLinks;
 

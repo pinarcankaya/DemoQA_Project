@@ -100,14 +100,14 @@ public class US014_ModalDialogs_Test {
         System.out.println(modalDialogsPage.closeSmall.size());
 
 //        2.yol: butonu false / true yaparak assert yap
-//        modalDialogsPage.smallButton.click();
-//        Thread.sleep(3000);
-//        modalDialogsPage.smallClose.click();
-//        Thread.sleep(3000);
-//
-//        boolean button = ReusableMethods.isElementVisible(modalDialogsPage.smallClose);
-//        Assert.assertFalse(button);
-//        System.out.println("result = " + button);
+        modalDialogsPage.smallButton.click();
+        Thread.sleep(3000);
+        modalDialogsPage.smallClose.click();
+        Thread.sleep(3000);
+
+        boolean button = ReusableMethods.isElementVisible(modalDialogsPage.smallClose);
+        Assert.assertFalse(button);
+        System.out.println("result = " + button);
     }
 
     //TC066
