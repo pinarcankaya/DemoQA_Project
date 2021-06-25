@@ -45,15 +45,7 @@ public class US10_BrowserWindows_Text {
     @Test
     public void TC_44() {
         browserWindowsPage.browserWindowsMenuLink.click();
-
-        List<String> elements = new ArrayList<>();
-
-
-        for (WebElement w : browserWindowsPage.allMenuList) {
-            System.out.println((w.getText()));
-            elements.add(w.getText());
-        }
-        Assert.assertEquals(elements.get(0), "Browser Windows");
+        Assert.assertEquals(browserWindowsPage.allMenuList.get(0).getText(), "Browser Windows");
 
 
     }
