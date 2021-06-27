@@ -135,22 +135,22 @@ public class ReusableMethods {
     }
 
     //======== Slider Ayarlama =========//
-    public static void setSliderBall(WebElement element, int sliderStartPoint, int target) {
-        Actions actions = new Actions(Driver.getDriver());
-        String value = "";
-        actions.clickAndHold(element).perform();
-        for (int i = 0; i < sliderStartPoint; i++) {
-            if (sliderStartPoint > 0) {
-                actions.sendKeys(Keys.ARROW_LEFT).perform();
-            }
-            value = element.getAttribute("value");
-            if (value.equals("0")) {
-                for (int j = 0; j < target; j++) {
-                    actions.sendKeys(Keys.ARROW_RIGHT).perform();
-                }
-            }
-        }
-    }
+//    public static void setSliderBall(WebElement element, int sliderStartPoint, int target) {
+//        Actions actions = new Actions(Driver.getDriver());
+//        String value = "";
+//        actions.clickAndHold(element).perform();
+//        for (int i = 0; i < sliderStartPoint; i++) {
+//            if (sliderStartPoint > 0) {
+//                actions.sendKeys(Keys.ARROW_LEFT).perform();
+//            }
+//            value = element.getAttribute("value");
+//            if (value.equals("0")) {
+//                for (int j = 0; j < target; j++) {
+//                    actions.sendKeys(Keys.ARROW_RIGHT).perform();
+//                }
+//            }
+//        }
+//    }
 
     // ======= RGB to HEX ==== //
 
@@ -174,6 +174,24 @@ public class ReusableMethods {
         return hex;
     }
 
+    //JS slider
+    public static void setSlider(WebElement slider, WebElement output, int target) {
+        Actions actions = new Actions(Driver.getDriver());
+        ReusableMethods.waitFor(1);
+
+        actions.clickAndHold(slider).perform();
+        while (true) {
+            int value = Integer.parseInt(output.getAttribute("value"));
+            if (value == target) break;
+            if (value > target) {
+                actions.sendKeys(Keys.ARROW_LEFT).perform();
+               // System.out.println("value_left = " + value);
+            } else {
+                actions.sendKeys(Keys.ARROW_RIGHT).perform();
+               // System.out.println("value_right = " + value);
+            }
+        }
 
 
+    }
 }
