@@ -104,6 +104,7 @@ public class    US015_Accordian_Test {
         String linkacik=accordianPage.collapse2.getAttribute("class");
 
         action.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(2);
         accordianPage.cardList.get(2).click();
         ReusableMethods.waitFor(2);
         String linkKapali=accordianPage.collapse2.getAttribute("class");
