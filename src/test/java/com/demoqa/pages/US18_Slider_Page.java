@@ -23,15 +23,12 @@ public class US18_Slider_Page {
     public WebElement sliderButton;
 
 
-    @FindBy(xpath = "//input[@value='100']]")
-    public WebElement sliderMax;
-
-    @FindBy(xpath = "//input[@value='0']]")
-    public WebElement sliderMin;
-
 
     @FindBy(xpath = "//input[@id='sliderValue']")
     public WebElement sliderValue;
 
+
+    @FindBy(xpath = "//div[@class='range-slider__tooltip range-slider__tooltip--auto range-slider__tooltip--bottom']")
+    public WebElement  sliderNokta;
 
 }

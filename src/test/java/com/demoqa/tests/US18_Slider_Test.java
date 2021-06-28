@@ -38,55 +38,40 @@ public class US18_Slider_Test {
     public void TC91() {
         ReusableMethods.scrollTo(sliderPage.sliderButton);
         ReusableMethods.waitFor(2);
-         int sliderBeforeValue = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
-//        System.out.println("sliderBefore :" + sliderBefore);
-//        ReusableMethods.setSlider(sliderPage.sliderButton, sliderPage.sliderValue, 10);
-//        int sliderAfter = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
-//        System.out.println("sliderAfter :" + sliderAfter);
-//        Assert.assertTrue(sliderBefore > sliderAfter);
 
-        // JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        // js.executeScript("arguments[0].setAttribute('value', '80')",sliderPage.sliderButton);
+        //1.Yol //CUSTOM METHOD ILE
 
+       int sliderBeforeValue=Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //25
+        System.out.println(sliderBeforeValue);
 
-        /////////////***********
-        Dimension sliderSize = sliderPage.sliderButton.getSize();
-        int width = sliderPage.sliderButton.getSize().getWidth();  //466
-        System.out.println(width);
-        int hight=sliderPage.sliderButton.getSize().getHeight();  //38
-        System.out.println(hight);
-//        System.out.println(x);
-//
-//        float min=0;
-//        float max=100;
-//        float offsetX=x/(max-min)*sliderBeforeValue;
-//        System.out.println(offsetX);
+        ReusableMethods.setSlider(sliderPage.sliderButton,sliderPage.sliderValue,10);
 
-        //action.clickAndHold(sliderPage.sliderButton).moveByOffset((x-466),0).release().build().perform();
-
-        //1/4 oranida eksiltir
-          action.dragAndDropBy(sliderPage.sliderButton, (width-hight*25)/100, 0).build().perform();
-        //dragAndDropBy(sliderPage.sliderButton, 80, 0).perform();
+        int sliderAfterValue=Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //10
+        System.out.println(sliderAfterValue);
 
 
-        ///2.yol
+        Assert.assertTrue(sliderBeforeValue>sliderAfterValue);
+
+
+        //2.yol
+     //   int sliderValue=Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //ilk value 25 geliyor
 //        action.click(sliderPage.sliderButton).build().perform();
-//        ReusableMethods.waitFor(2);
-//
-//        for (int i = 0; i <sliderBeforeValue+10; i++) {
+//        for (int i = 0; i <sliderValue-10 ; i++) {  //25-10=15  ///baslangic noktasini 50  aliyor
 //            action.sendKeys(Keys.ARROW_LEFT).build().perform();
-//            ReusableMethods.waitFor(1);
-             //action.sendKeys(Keys.ARROW_RIGHT).build().perform();
-//
 //        }
 
+        //2.yol
+//        JavascriptExecutor js= (JavascriptExecutor) Driver.getDriver();
+//        js.executeScript("arguments[0].setAttribute('style','--value:20;')",sliderPage.sliderButton);
 
-        // action.dragAndDropBy(sliderPage.sliderButton,x-466,0).build().perform();
-
-//
-//        ((JavascriptExecutor) Driver.getDriver()).executeScript("$(arguments[0]).val(" + 80 + ").change()", sliderPage.sliderButton);
-//        Point aa = sliderPage.sliderButton.getLocation();
-//        System.out.println(aa);
+        //3.yol
+//        Dimension sliderSize=sliderPage.sliderButton.getSize();
+//        System.out.println(sliderSize);
+//        int width = sliderPage.sliderNokta.getSize().getWidth();//466   //x koordinat
+//        System.out.println(width);
+//        int height = sliderPage.sliderNokta.getSize().getHeight();  ///y koordinat
+//        System.out.println(height);
+//        action.clickAndHold(sliderPage.sliderNokta).moveByOffset(width, height).release().build().perform();
 
 
     }
@@ -97,28 +82,31 @@ public class US18_Slider_Test {
     public void TC92() {
         ReusableMethods.scrollTo(sliderPage.sliderButton);
         ReusableMethods.waitFor(2);
-        int sliderBefore = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
+        int sliderBefore = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //25
         System.out.println("sliderBefore :" + sliderBefore);
         ReusableMethods.setSlider(sliderPage.sliderButton, sliderPage.sliderValue, 80);
-        int sliderAfter = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
+        int sliderAfter = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //80
         System.out.println("sliderAfter :" + sliderAfter);
         Assert.assertTrue(sliderBefore < sliderAfter);
     }
 
-    //slide.ın en sola kaydırılabildiğini assert edin
+    //slide.ın en sola kaydırılabildiğini assert edin  //0
     @Test
     public void TC93() {
         ReusableMethods.scrollTo(sliderPage.sliderButton);
         ReusableMethods.waitFor(2);
+
         int sliderBefore = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
         System.out.println("sliderBefore :" + sliderBefore);
+
         ReusableMethods.setSlider(sliderPage.sliderButton, sliderPage.sliderValue, 0);
+
         int sliderAfter = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
         System.out.println("sliderAfter :" + sliderAfter);
         Assert.assertEquals(sliderAfter, 0);
     }
 
-    //slide.ın en sağa kaydırılabildiğini assert edin
+    //slide.ın en sağa kaydırılabildiğini assert edin  //100
     @Test
     public void TC94() {
         ReusableMethods.scrollTo(sliderPage.sliderButton);
@@ -136,15 +124,20 @@ public class US18_Slider_Test {
     public void TC95() {
         ReusableMethods.scrollTo(sliderPage.sliderButton);
         ReusableMethods.waitFor(2);
+
         ReusableMethods.setSlider(sliderPage.sliderButton, sliderPage.sliderValue, 20);
         int sliderBefore = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
-        Assert.assertTrue(sliderBefore < 25);
         System.out.println("sliderBefore :" + sliderBefore);
+
+        Assert.assertTrue(sliderBefore < 50);
+
         ReusableMethods.setSlider(sliderPage.sliderButton, sliderPage.sliderValue, 60);
+        ReusableMethods.waitFor(1);
         int sliderAfter = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
         System.out.println("sliderAfter :" + sliderAfter);
 
-        Assert.assertTrue(sliderBefore > 25);
+        ReusableMethods.waitFor(1);
+        Assert.assertTrue(sliderAfter > 50);
     }
 
     //slide.ı önce sağ sonra solakaydırılabildiğini assert edina

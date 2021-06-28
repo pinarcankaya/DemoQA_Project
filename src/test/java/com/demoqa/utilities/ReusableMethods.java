@@ -40,13 +40,16 @@ public class ReusableMethods {
         }
         Driver.getDriver().switchTo().window(origin);
     }
+
     public static void clickWithJS(WebElement element) {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
     }
+
     public static void scrollTo(WebElement element) {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
     //========Hover Over=====//
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
@@ -180,15 +183,18 @@ public class ReusableMethods {
         ReusableMethods.waitFor(1);
 
         actions.clickAndHold(slider).perform();
+
         while (true) {
-            int value = Integer.parseInt(output.getAttribute("value"));
+            int value = Integer.parseInt(output.getAttribute("value"));  //25
+
             if (value == target) break;
+
             if (value > target) {
                 actions.sendKeys(Keys.ARROW_LEFT).perform();
-               // System.out.println("value_left = " + value);
+                //System.out.println("value_left = " + value);
             } else {
                 actions.sendKeys(Keys.ARROW_RIGHT).perform();
-               // System.out.println("value_right = " + value);
+                // System.out.println("value_right = " + value);
             }
         }
 
