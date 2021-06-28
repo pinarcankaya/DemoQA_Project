@@ -10,12 +10,7 @@ import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +18,6 @@ public class US22_Menu_Test {
 
     US22_Menu_Page menuPage=new US22_Menu_Page();
     Actions action=new Actions(Driver.getDriver());
-    SoftAssert softAssert=new SoftAssert();
     String url="https://demoqa.com/widgets";
 
     @BeforeMethod
@@ -59,22 +53,16 @@ public class US22_Menu_Test {
     @Test  //Text boxların başlıklarinin "Main Item 1" , "Main Item 2" , "Main Item 3"
     // oldugunu assert edin.
     public void TC121() {
-        String mainArr[]={"Main Item 1","Main Item 2","Main Item 3"};
-
-        for (int i = 0; i <menuPage.items.size(); i++) {
-            ReusableMethods.waitFor(2);
-            Assert.assertEquals(menuPage.items.get(i).getText(), mainArr[i]);
-            System.out.println(menuPage.items.get(i).getText());
-
-//        for (WebElement w:menuPage.items) {
-//            ReusableMethods.waitFor(2);
-//            System.out.println(w.getText());
-//            List<String>list=new ArrayList<>();
-//            list.add(w.getText());
-//            System.out.println(list);
-//            Assert.assertTrue(list.contains("Main Item 1,Main Item 2,Main Item 3"));
+        String[] expectedMain ={"Main Item 1","Main Item 2","Main Item 3"};
+        List<String>actualMain=new ArrayList<>();
+        for (WebElement w:menuPage.items) {
+            actualMain.add(w.getText());
         }
+            for (String e : expectedMain) {
+                Assert.assertTrue(actualMain.contains(e)); }
+        System.out.println(actualMain);
     }
+
     @Test  //Üst Text box hover yapilinca box ici koyu yesil renk(#003f20) oldugunu verify edin.
     public void TC122() {
         action.moveToElement(menuPage.items.get(0)).perform();
