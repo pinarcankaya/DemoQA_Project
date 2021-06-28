@@ -14,9 +14,8 @@ public class US006_Links_Page {
     @FindBy(xpath = "//div[@class='card-up']") //*/h5[contains(text(), 'Elements')]
     public WebElement elementsCard;
 
-    @FindBy(xpath = "//span[.='Links'] ") //      //*[@class='btn btn-light active']
+    @FindBy(xpath = "//span[.='Links']") //      //*[@class='btn btn-light active']
     public WebElement links;
-
 
     @FindBy(xpath = "//*[@class='main-header']")
     public WebElement headerLinks;
