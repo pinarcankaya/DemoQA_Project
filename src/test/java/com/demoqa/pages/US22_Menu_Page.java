@@ -13,10 +13,8 @@ public class US22_Menu_Page {
     @FindBy(xpath = "//span[.='Menu']")
     public WebElement menuButton;
 
-    @FindBy(xpath = "//div[@class='pattern-backgound playgound-header']")
+    @FindBy(xpath = "//div[@class='pattern-backgound playgound-header']") ////div[.='Menu'])[2]
     public WebElement header;
-    //div[.='Menu'])[2]
-
 
     @FindBy(xpath = "//*[@id='nav']/li")
     public List<WebElement> items;  //a[contains(text(),'Main Item')] ==>background-color vermiyor
