@@ -24,8 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4c32fd1b-b9b8-4d4f-be60-26d0e2998824" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US22_Menu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US22_Menu_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US22_Menu_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US22_Menu_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US22_Menu_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US22_Menu_Page.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +54,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.textmate.bundles" />
   </component>
-  <component name="RunManager" selected="TestNG.US22_Menu_Test">
-    <configuration name="US22_Menu_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.US27_Droppable_Test">
+    <configuration name="US27_Droppable_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -65,7 +66,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US22_Menu_Test" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -73,7 +74,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US22_Menu_Test.TC121" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US27_Droppable_Test.TC154" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -82,8 +83,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US22_Menu_Test" />
-      <option name="METHOD_NAME" value="TC121" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
+      <option name="METHOD_NAME" value="TC154" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -91,7 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US22_Menu_Test.TC124" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US27_Droppable_Test.TC156" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -100,8 +101,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US22_Menu_Test" />
-      <option name="METHOD_NAME" value="TC124" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
+      <option name="METHOD_NAME" value="TC156" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -109,7 +110,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US22_Menu_Test.TC126" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US27_Droppable_Test.TC158" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +119,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US22_Menu_Test" />
-      <option name="METHOD_NAME" value="TC126" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
+      <option name="METHOD_NAME" value="TC158" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -127,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US22_Menu_Test.TC127" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US27_Droppable_Test.TC159" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -136,8 +137,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US22_Menu_Test" />
-      <option name="METHOD_NAME" value="TC127" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
+      <option name="METHOD_NAME" value="TC159" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -147,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.US22_Menu_Test" />
-        <item itemvalue="TestNG.US22_Menu_Test.TC121" />
-        <item itemvalue="TestNG.US22_Menu_Test.TC124" />
-        <item itemvalue="TestNG.US22_Menu_Test.TC127" />
-        <item itemvalue="TestNG.US22_Menu_Test.TC126" />
+        <item itemvalue="TestNG.US27_Droppable_Test" />
+        <item itemvalue="TestNG.US27_Droppable_Test.TC159" />
+        <item itemvalue="TestNG.US27_Droppable_Test.TC158" />
+        <item itemvalue="TestNG.US27_Droppable_Test.TC154" />
+        <item itemvalue="TestNG.US27_Droppable_Test.TC156" />
       </list>
     </recent_temporary>
   </component>
@@ -191,5 +192,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

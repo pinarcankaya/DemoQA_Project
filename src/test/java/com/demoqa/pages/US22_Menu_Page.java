@@ -18,13 +18,13 @@ public class US22_Menu_Page {
     //div[.='Menu'])[2]
 
 
-    @FindBy(xpath = "//*[@id=\"nav\"]/li")
+    @FindBy(xpath = "//*[@id='nav']/li")
     public List<WebElement> items;  //a[contains(text(),'Main Item')] ==>background-color vermiyor
 
     @FindBy(xpath = "//ul[@id='nav']/li[2]/ul/li")
     public List<WebElement> sub;
 
-    @FindBy(xpath = "//*[@id=\"nav\"]/li[2]/ul/li[3]/ul/li")
+    @FindBy(xpath = "//*[@id='nav']/li[2]/ul/li[3]/ul/li")
     public List<WebElement> subSub;            //a[contains(text(),'Sub Sub Item')]==>background-color vermiyor
 
 
