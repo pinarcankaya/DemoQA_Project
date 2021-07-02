@@ -30,6 +30,8 @@ public class US21_ToolTips_Page {
     @FindBy(xpath = "//input[@id='toolTipTextField']")
     public WebElement bosTextBox;
 
+    @FindBy(xpath = "(//div[.='You hovered over the text field'])[2]")
+    public WebElement textBoxHoverText;
 
     @FindBy(xpath = "//div[@id='texToolTopContainer']")
     public WebElement container;

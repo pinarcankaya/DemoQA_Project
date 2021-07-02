@@ -59,6 +59,8 @@ public class US21_ToolTips_Test {
         System.out.println(placeHolder);
 
         Assert.assertEquals(placeHolder,"Hover me to see");
+
+
     }
 
     //Mouse Text box basligi üzerine geldiginde "You hovered over the Button" yazisi siyah renk dolgulu
