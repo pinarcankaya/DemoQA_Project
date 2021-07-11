@@ -25,19 +25,16 @@ public class US21_ToolTips_Page {
     @FindBy(xpath = "//button[@id='toolTipButton']")
     public WebElement greenButton;
 
-    @FindBy(xpath = "//div[@id='texFieldToolTopContainer']")
+    @FindBy(xpath = "//input[@id='toolTipTextField']")
     public WebElement emptyBox;
+
+    @FindBy(xpath = "//input[@placeholder='Hover me to see']")  //input[@id='toolTipTextField']
+    public WebElement boxHeader;
 
     @FindBy(xpath = "//div[@id='texToolTopContainer']")
     public WebElement container;
 
-    @FindBy(linkText = "Contrary") //a[contains(@href,'javascript:void')][1]
-    public  WebElement contrary;
-
-    @FindBy(xpath = "//a[contains(@href,'javascript:void')][2]")
-    private WebElement number;
-
-
-
+    @FindBy (xpath = "(//div[.='You hovered over the text field'])[2]")
+    public WebElement hoverOverText;
 
 }
