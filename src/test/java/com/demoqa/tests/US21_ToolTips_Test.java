@@ -114,7 +114,7 @@ public class US21_ToolTips_Test {
     @Test
     public void emptyBox() throws InterruptedException {
         Assert.assertEquals(toolTipsPage.boxHeader.getText(), ""); // kutucugun bos oldugunu
-        Assert.assertTrue(toolTipsPage.emptyBox.isEnabled()); // kutunun actıf oldugunu anlıyoruz
+        Assert.assertTrue(toolTipsPage.emptyBox.isEnabled()); // kutunun actif oldugunu anlıyoruz
 
         int locationBox = toolTipsPage.emptyBox.getLocation().getY();
         int locationText = toolTipsPage.container.getLocation().getY();
