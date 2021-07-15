@@ -4,60 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="547aed1e-0f31-4962-9ff4-bf327cb41a69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/DemoQA_Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US26_Resizable_Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US26_Resizable_Test.java" afterDir="false" />
+    <list default="true" id="57a1fffd-e0e1-49af-aa00-69c664b09858" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/us27_offline_droppable_page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/us27_offline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11-Jul-21_11_29_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11-Jul-21_11_29_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11-Jul-21_11_53_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11-Jul-21_11_53_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12-Jul-21_12_04_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12-Jul-21_12_04_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14-Jul-21_10_58_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14-Jul-21_10_58_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US18_Slider_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US18_Slider_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US006_Links_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US06_Links_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US012_Frame_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US12_Frame_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US014_ModalDialogs_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US14_ModalDialogs_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US015_Accordian_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US15_Accordian_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US023_SelectMenu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US23_SelectMenu_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US030_BookStoreMenu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US30_BookStoreMenu_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US18_Slider_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US18_Slider_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US006_Links_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US006_Links_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US012_Frame_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US012_Frame_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US014_ModalDialogs_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US014_ModalDialogs_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US015_Accordian_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US015_Accordian_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US01_TextBox_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US01_TextBox_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US03_RadioButton_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US03_RadioButton_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US04_WebTable_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US04_WebTable_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US05_Buttons_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US05_Buttons_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US07_UploadDowload_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US07_UploadDowload_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US09_PracticeForm_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US09_PracticeForm_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US11_Alert_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US11_Alert_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US13_NestedFrame_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US13_NestedFrame_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US18_Slider_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US18_Slider_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US20_Tabs_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US20_Tabs_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US21_ToolTips_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US21_ToolTips_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US22_Menu_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US22_Menu_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US27_Droppable_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US27_Droppable_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US01_TextBox_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US01_TextBox_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US03_RadioButton_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US03_RadioButton_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US04_WebTable_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US04_WebTable_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US05_Buttons_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US05_Buttons_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US07_UploadDowload_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US07_UploadDowload_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US11_Alert_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US11_Alert_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US13_NestedFrame_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US13_NestedFrame_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US18_Slider_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US18_Slider_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US20_Tabs_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US20_Tabs_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US21_ToolTips_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US21_ToolTips_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US27_Droppable_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US27_Droppable_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,12 +22,25 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="pinar" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1vMfXf3zYUsCUwYiIHnCAtia17K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG.US26_Resizable_Test">
-    <configuration name="US18_Slider_Test.TC94" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.us27_offline.TC160">
+    <configuration name="us27_offline.TC156" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -85,8 +49,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US18_Slider_Test" />
-      <option name="METHOD_NAME" value="TC94" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.us27_offline" />
+      <option name="METHOD_NAME" value="TC156" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -94,7 +58,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US18_Slider_Test.TC95" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="us27_offline.TC157" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +67,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US18_Slider_Test" />
-      <option name="METHOD_NAME" value="TC95" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.us27_offline" />
+      <option name="METHOD_NAME" value="TC157" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -112,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US18_Slider_Test.TC96" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="us27_offline.TC158" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +85,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US18_Slider_Test" />
-      <option name="METHOD_NAME" value="TC96" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.us27_offline" />
+      <option name="METHOD_NAME" value="TC158" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -130,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US26_Resizable_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="us27_offline.TC159" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -139,15 +103,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US26_Resizable_Test" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.us27_offline" />
+      <option name="METHOD_NAME" value="TC159" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US26_Resizable_Test.TC147" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="us27_offline.TC160" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -156,8 +121,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US26_Resizable_Test" />
-      <option name="METHOD_NAME" value="TC147" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.us27_offline" />
+      <option name="METHOD_NAME" value="TC160" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -167,15 +132,23 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.US26_Resizable_Test" />
-        <item itemvalue="TestNG.US26_Resizable_Test.TC147" />
-        <item itemvalue="TestNG.US18_Slider_Test.TC96" />
-        <item itemvalue="TestNG.US18_Slider_Test.TC95" />
-        <item itemvalue="TestNG.US18_Slider_Test.TC94" />
+        <item itemvalue="TestNG.us27_offline.TC160" />
+        <item itemvalue="TestNG.us27_offline.TC159" />
+        <item itemvalue="TestNG.us27_offline.TC158" />
+        <item itemvalue="TestNG.us27_offline.TC157" />
+        <item itemvalue="TestNG.us27_offline.TC156" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57a1fffd-e0e1-49af-aa00-69c664b09858" name="Default Changelist" comment="" />
+      <created>1626377111088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626377111088</updated>
+    </task>
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
