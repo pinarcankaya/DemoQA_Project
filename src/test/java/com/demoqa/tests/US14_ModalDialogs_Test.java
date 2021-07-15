@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class US014_ModalDialogs_Test {
+public class US14_ModalDialogs_Test {
 
     US014_ModalDialogs_Page modalDialogsPage = new US014_ModalDialogs_Page();
     Actions actions = new Actions(Driver.getDriver());

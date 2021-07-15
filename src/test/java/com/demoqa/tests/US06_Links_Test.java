@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class US006_Links_Test {
+public class US06_Links_Test {
 
     US006_Links_Page linksPage = new US006_Links_Page();
     Actions actions = new Actions(Driver.getDriver());

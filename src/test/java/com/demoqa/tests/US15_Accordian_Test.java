@@ -15,7 +15,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.concurrent.TimeUnit;
 
-public class    US015_Accordian_Test {
+public class US15_Accordian_Test {
 
 
    US015_Accordian_Page accordianPage=new US015_Accordian_Page();
