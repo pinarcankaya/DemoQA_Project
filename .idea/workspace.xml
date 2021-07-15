@@ -4,25 +4,28 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c32fd1b-b9b8-4d4f-be60-26d0e2998824" name="Default Changelist" comment="" />
+    <list default="true" id="25c81045-ead4-4c8d-9175-7194f77779ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoQA_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DemoQA_Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US006_Links_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US006_Links_Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US17_Date_Picker_Page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US006_Links_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US006_Links_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US03_RadioButton_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US03_RadioButton_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US05_Buttons_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US05_Buttons_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US11_Alert_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US11_Alert_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US17_Date_Picker_Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US27_Droppable_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US27_Droppable_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +44,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
         <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -57,9 +61,47 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.textmate.bundles" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="TestNG.US27_Droppable_Test">
+  <component name="RunManager" selected="TestNG.US014_ModalDialogs_Test">
+    <configuration name="US014_ModalDialogs_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoqa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US014_ModalDialogs_Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US014_ModalDialogs_Test.modalDiaButtons" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoqa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US014_ModalDialogs_Test" />
+      <option name="METHOD_NAME" value="modalDiaButtons" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="US27_Droppable_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
@@ -71,42 +113,6 @@
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
       <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US27_Droppable_Test.TC154" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
-      <option name="METHOD_NAME" value="TC154" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US27_Droppable_Test.TC156" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
-      <option name="METHOD_NAME" value="TC156" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -149,13 +155,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+<<<<<<< HEAD
+      <item itemvalue="TestNG.US014_ModalDialogs_Test" />
+      <item itemvalue="TestNG.US014_ModalDialogs_Test.modalDiaButtons" />
+=======
+      <item itemvalue="TestNG.US27_Droppable_Test.TC154" />
+      <item itemvalue="TestNG.US27_Droppable_Test.TC156" />
+>>>>>>> master
+      <item itemvalue="TestNG.US27_Droppable_Test" />
+      <item itemvalue="TestNG.US27_Droppable_Test.TC158" />
+      <item itemvalue="TestNG.US27_Droppable_Test.TC159" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.US014_ModalDialogs_Test" />
+        <item itemvalue="TestNG.US014_ModalDialogs_Test.modalDiaButtons" />
         <item itemvalue="TestNG.US27_Droppable_Test" />
         <item itemvalue="TestNG.US27_Droppable_Test.TC159" />
         <item itemvalue="TestNG.US27_Droppable_Test.TC158" />
-        <item itemvalue="TestNG.US27_Droppable_Test.TC154" />
-        <item itemvalue="TestNG.US27_Droppable_Test.TC156" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +202,43 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1620" y="353" key="FileChooserDialogImpl" timestamp="1626298902189">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1620" y="353" key="FileChooserDialogImpl/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626298902189" />
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1626305203356">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626305203356" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1626305203355">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626305203355" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1626305203355">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626305203355" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1626305203356">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626305203356" />
+    <state x="-1920" y="173" key="SettingsEditor" timestamp="1626299107824">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1920" y="173" key="SettingsEditor/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626299107824" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/demoqa/tests/US014_ModalDialogs_Test.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
