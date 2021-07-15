@@ -36,7 +36,6 @@ public class US014_ModalDialogs_Test {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         wait.until(ExpectedConditions.visibilityOf(modalDialogsPage.modalDialogs));
         modalDialogsPage.modalDialogs.click();
-
     }
     //TC063
     //1- Click "Small Modal" button
