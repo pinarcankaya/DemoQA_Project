@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class US030_BookStoreMenu_Test {
+public class US30_BookStoreMenu_Test {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         Actions action=new Actions(Driver.getDriver());
     US030_BookStoreMenu_Page us030BookStoreMenuPage=new US030_BookStoreMenu_Page();

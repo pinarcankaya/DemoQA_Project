@@ -1,32 +1,20 @@
 package com.demoqa.tests;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> Exercices
 import com.demoqa.pages.US18_Slider_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
-<<<<<<< HEAD
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-=======
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
->>>>>>> Exercices
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 public class US18_Slider_Test {
-<<<<<<< HEAD
 
-
-=======
->>>>>>> Exercices
     US18_Slider_Page sliderPage = new US18_Slider_Page();
     Actions action = new Actions(Driver.getDriver());
 
@@ -49,7 +37,7 @@ public class US18_Slider_Test {
     public void TC91() {
         ReusableMethods.scrollTo(sliderPage.sliderButton);
         ReusableMethods.waitFor(2);
-<<<<<<< HEAD
+
 
         //1.Yol //CUSTOM METHOD ILE
 
@@ -165,7 +153,6 @@ public class US18_Slider_Test {
         int sliderAfter = Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));
         System.out.println("sliderAfter :" + sliderAfter);
         Assert.assertTrue(sliderAfter < 25);
-=======
->>>>>>> Exercices
+
     }
 }

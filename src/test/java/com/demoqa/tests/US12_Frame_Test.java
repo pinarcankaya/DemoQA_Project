@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class US012_Frame_Test {
+public class US12_Frame_Test {
 
      US012_Frame_Page framePage = new US012_Frame_Page();
 

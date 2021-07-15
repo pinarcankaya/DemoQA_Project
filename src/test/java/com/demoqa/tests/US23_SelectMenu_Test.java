@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class US023_SelectMenu_Test {
+public class US23_SelectMenu_Test {
     public US023_SelectMenu_Page us023SelectMenuPage;
     Actions action=new Actions(Driver.getDriver());
     WebDriverWait wait=new WebDriverWait(Driver.getDriver(),15);
