@@ -156,8 +156,13 @@
       </method>
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="TestNG.US014_ModalDialogs_Test" />
       <item itemvalue="TestNG.US014_ModalDialogs_Test.modalDiaButtons" />
+=======
+      <item itemvalue="TestNG.US27_Droppable_Test.TC154" />
+      <item itemvalue="TestNG.US27_Droppable_Test.TC156" />
+>>>>>>> master
       <item itemvalue="TestNG.US27_Droppable_Test" />
       <item itemvalue="TestNG.US27_Droppable_Test.TC158" />
       <item itemvalue="TestNG.US27_Droppable_Test.TC159" />
