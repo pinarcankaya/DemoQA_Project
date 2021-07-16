@@ -17,13 +17,13 @@ public class US29_BookStoreApp_Test {
    // US13_NestedFrame_Page nestedFrameObj = new US13_NestedFrame_Page();
     US29_BookStoreApp_Page bookStoreCard = new US29_BookStoreApp_Page();
 
-    @BeforeClass
-    public void background(){
+    @Test(priority = 1)
+    public void goTo(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", bookStoreCard.bookStoreApp);
-        bookStoreCard.bookStoreApp.click();
+//        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", bookStoreCard.bookStoreApp);
+//        bookStoreCard.bookStoreApp.click();
 
     }
 
