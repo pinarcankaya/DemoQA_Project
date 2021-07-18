@@ -52,13 +52,14 @@ public class US20_Tabs_Test {
 //            }
 //
 //        }
-                String[] arr={"What", "Origin", "Use", "More"};
-        for (int i = 0; i <obj.tabs.size() ; i++) {
-            Assert.assertEquals(obj.tabs.get(i).getText(),arr[i]);
-            System.out.println(obj.tabs.get(i).getLocation().getX());
-        }
+//                String[] arr={"What", "Origin", "Use", "More"};
+//        for (int i = 0; i <obj.tabs.size() ; i++) {
+//            Assert.assertEquals(obj.tabs.get(i).getText(),arr[i]);
+//            System.out.println(obj.tabs.get(i).getLocation().getX());
+//        }
 
         int whatX = obj.tabs.get(0).getLocation().getX();
+        System.out.println(whatX);
         int originX =obj.tabs.get(1).getLocation().getX();
         int useX = obj.tabs.get(2).getLocation().getX();
         int moreX = obj.tabs.get(3).getLocation().getX();
