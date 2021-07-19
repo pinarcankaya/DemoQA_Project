@@ -41,13 +41,22 @@ public class US29_BookStoreApp_Test {
 //        Assert.assertEquals(bookStoreApp.headerBookStore.getText(), "Book Store Application");
 
         // Ve Sirasiyle "Login, Bookstore,Profile ve Book Store API" linkleri  alt alta olmali ve seklinde yazilmis olmali bu durumlari test ediniz
-
-//       String [] arr ={"Login", "Bookstore", "Profile", "Book Store API"};
-//        for (int i = 0; i <bookStoreApp.)
         ReusableMethods.isElementVisible(bookStoreApp.login.get(0));
        // ReusableMethods.waitFor(3000);
         int loginY = bookStoreApp.login.get(0).getLocation().getY();
         System.out.println(loginY);
+        int bookStoreY = bookStoreApp.bookStore.get(0).getLocation().getY();
+        System.out.println(bookStoreY);
+        int profileY = bookStoreApp.profile.get(0).getLocation().getY();
+        System.out.println(profileY);
+        int bookStoreAPIY = bookStoreApp.bookStoreAPI.get(0).getLocation().getY();
+        System.out.println(bookStoreAPIY);
+
+        boolean inOrder = false;
+        if (loginY<bookStoreY && bookStoreY<profileY && profileY<bookStoreAPIY){
+            System.out.println("Order : True");
+            inOrder = true;
+        }
 
     }
 

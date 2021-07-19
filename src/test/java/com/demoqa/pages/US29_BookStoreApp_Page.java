@@ -24,13 +24,13 @@ public class US29_BookStoreApp_Page {
     public List<WebElement> login;
 
     @FindBy(xpath = "//span[contains(text(), 'Book Store')]")
-    public WebElement bookStore;
+    public List<WebElement> bookStore;
 
     @FindBy(xpath = "//span[contains(text(), 'Profile')]")
-    public WebElement profile;
+    public List<WebElement> profile;
 
     @FindBy(xpath = "//span[contains(text(), 'Book Store API')]")
-    public WebElement bookStoreAPI;
+    public List<WebElement> bookStoreAPI;
 
 //div[.='Book Store Application']
 
