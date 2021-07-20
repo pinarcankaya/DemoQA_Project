@@ -23,6 +23,9 @@ public class US29_BookStoreApp_Page {
     @FindBy(xpath = "//span[contains(text(), 'Login')]")
     public List<WebElement> login;
 
+    @FindBy(xpath = "//span[contains(text(), 'Login')]")
+    public WebElement logIn;
+
     @FindBy(xpath = "//span[contains(text(), 'Book Store')]")
     public List<WebElement> bookStore;
 
@@ -32,6 +35,23 @@ public class US29_BookStoreApp_Page {
     @FindBy(xpath = "//span[contains(text(), 'Book Store API')]")
     public List<WebElement> bookStoreAPI;
 
-//div[.='Book Store Application']
+    @FindBy(xpath = "//div[@style='margin-bottom: 50px;']")
+    public WebElement headerWelcome;
+
+    @FindBy(id = "newUser")
+    public WebElement newUserButton;
+
+    @FindBy(xpath = "(//input[@class='mr-sm-2 form-control'])")
+    public List<WebElement> registerButtons;
+
+    @FindBy(xpath = "//button[@id='register']")
+    public WebElement register;
+
+    @FindBy(xpath = "//button[@id='gotologin']")
+    public WebElement backToLogin;
+
+
+
+
 
 }

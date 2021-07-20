@@ -6,12 +6,13 @@ import com.demoqa.pages.US29_BookStoreApp_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
-import org.openqa.selenium.Dimension;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.util.concurrent.TimeUnit;
 
@@ -34,15 +35,15 @@ public class US29_BookStoreApp_Test {
     public void  bookStore(){
 
         //"Book Store Application" linkinin gorunurlugunu ve  islevsel olup olmadigini  test ediniz.
-//        ReusableMethods.clickWithJS(bookStoreApp.bookStoreApplication);
-//        Assert.assertTrue(bookStoreApp.bookStoreApplication.isEnabled());
-//
-//        bookStoreApp.headerBookStore.click();
-//        Assert.assertEquals(bookStoreApp.headerBookStore.getText(), "Book Store Application");
+        ReusableMethods.clickWithJS(bookStoreApp.bookStoreApplication);
+        Assert.assertTrue(bookStoreApp.bookStoreApplication.isEnabled());
+        System.out.println(bookStoreApp.bookStoreApplication.getText()); //gorunumu
+
+     //  new SoftAssert().assertEquals(bookStoreApp.headerBookStore.getText(), "Book Store Application");
+       Assert.assertEquals(bookStoreApp.headerBookStore.getText(), "Book Store Application"); // islevsel olmasi
+
 
         // Ve Sirasiyle "Login, Bookstore,Profile ve Book Store API" linkleri  alt alta olmali ve seklinde yazilmis olmali bu durumlari test ediniz
-        ReusableMethods.isElementVisible(bookStoreApp.login.get(0));
-       // ReusableMethods.waitFor(3000);
         int loginY = bookStoreApp.login.get(0).getLocation().getY();
         System.out.println(loginY);
         int bookStoreY = bookStoreApp.bookStore.get(0).getLocation().getY();
@@ -57,13 +58,29 @@ public class US29_BookStoreApp_Test {
             System.out.println("Order : True");
             inOrder = true;
         }
-
+        Assert.assertTrue(inOrder);
     }
 
+    //TC 170
+    //Welcome,Login in Book Store" yazisinin  baslik seklinde  oldugunu assert ediniz.
     @Test (priority = 3, dependsOnMethods = "openBookStoreApp")
     public void LogIn(){
+        ReusableMethods.clickWithJS(bookStoreApp.logIn);
+        bookStoreApp.logIn.click();
 
+        Assert.assertEquals(bookStoreApp.headerWelcome.getText(), "Welcome,\n" + "Login in Book Store");
+        System.out.println(bookStoreApp.headerWelcome.getText());
     }
 
+    //TC 171
+    //First Name :First Name
+    //Last Name :Last Name
+    //UserName :UserNamePassword :Password"  dogru kullanici adi ve password  ile  kayit yapilabilirlig test ediniz
+    // ve  kayit olursa sayfaya geri donuz Back to login butonu ile.
+    @Test (priority = 4, dependsOnMethods = "openBookStoreApp")
+    public void Registration(){
+
+
+    }
 
     }
