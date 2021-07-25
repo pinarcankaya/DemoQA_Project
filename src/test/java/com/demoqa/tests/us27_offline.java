@@ -64,6 +64,7 @@ public class us27_offline {
         actions.dragAndDrop(droppable_page.dragMeBox,droppable_page.simpleDragHearBox).build().perform();
         String droppedText=droppable_page.droppedText.getText();
         System.out.println(droppedText);
+        //Assert.assertTrue();
     }
 
     //Accept Tab'inin altinda "Acceptable" kutusu suruklendiginde "Drop here" kutusunun yesil renk aldigini dogrulayiniz
