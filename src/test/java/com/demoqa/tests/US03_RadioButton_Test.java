@@ -4,6 +4,8 @@ import com.demoqa.pages.US01_TextBox_Page;
 import com.demoqa.pages.US03_RadioButton_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
+import com.demoqa.utilities.ReusableMethods;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -26,7 +28,12 @@ public class US03_RadioButton_Test {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ReusableMethods.scrollTo(us01TextBoxPage.elementsCard);
         us01TextBoxPage.elementsCard.click();
+
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+       // ReusableMethods.waitFor(1);
+
     }
 
     @Test
@@ -89,10 +96,10 @@ public class US03_RadioButton_Test {
         }
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
-
-    @AfterClass
-    public void close() {
-        Driver.closeDriver();
-    }
+//
+//    @AfterClass
+//    public void close() {
+//        Driver.closeDriver();
+//    }
 
 }

@@ -8,10 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 public class US18_Slider_Page {
 
 
-    public US18_Slider_Page() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
-
+    public US18_Slider_Page(){
+        PageFactory.initElements(Driver.getDriver(),this);}
 
 
     @FindBy(xpath = "(//div[@class='card-up'])[4]")

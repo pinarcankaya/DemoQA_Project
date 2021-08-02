@@ -1,16 +1,15 @@
 package com.demoqa.tests;
 
-
 import com.demoqa.pages.US18_Slider_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
-import org.openqa.selenium.*;
+
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.openqa.selenium.Keys;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
 
 public class US18_Slider_Test {

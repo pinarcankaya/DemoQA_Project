@@ -5,6 +5,8 @@ import com.demoqa.pages.US01_TextBox_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -13,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 
 
 public class US01_TextBox_Test {
+
+    Actions actions = new Actions(Driver.getDriver());
     public US01_TextBox_Page us01TextBoxPage;
 
     @BeforeClass
@@ -21,7 +25,10 @@ public class US01_TextBox_Test {
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         us01TextBoxPage = new US01_TextBox_Page();
-        us01TextBoxPage.elementsCard.click();}
+        ReusableMethods.scrollTo(us01TextBoxPage.elementsCard);
+        us01TextBoxPage.elementsCard.click();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+    }
 
 
     @Test
@@ -70,6 +77,9 @@ public class US01_TextBox_Test {
 
         us01TextBoxPage.textBoxButton.click();
         us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("valid_email"));
+        ReusableMethods.waitFor(1);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
         us01TextBoxPage.submit.click();
         ReusableMethods.waitFor(1);
         String emailAttribute = us01TextBoxPage.email.getAttribute("class");
@@ -79,15 +89,18 @@ public class US01_TextBox_Test {
     }
     @Test
     public void TC0103Part2Negative(){
+        ReusableMethods.waitFor(1);
         us01TextBoxPage.textBoxButton.click();
 
         for (int i = 1 ; i <9 ; i++) {
             us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("invalid_email_" + i));
-            us01TextBoxPage.submit.click();
+            actions.sendKeys(Keys.PAGE_DOWN).perform();
             ReusableMethods.waitFor(1);
+            us01TextBoxPage.submit.click();
             String invalidEmailAttribute=us01TextBoxPage.email.getAttribute("class");
             Assert.assertTrue(invalidEmailAttribute.contains("error"));
             Driver.getDriver().navigate().refresh();
+            ReusableMethods.waitFor(1);
         }
     }
 
@@ -105,6 +118,8 @@ public class US01_TextBox_Test {
         us01TextBoxPage.currentAddress.sendKeys(expectedCurrentAddress);
         us01TextBoxPage.permanentAddress.sendKeys(expectedPermanentAddress);
 
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
         us01TextBoxPage.submit.click();
         String submitOutputText=us01TextBoxPage.submitOutput.getText();
 
