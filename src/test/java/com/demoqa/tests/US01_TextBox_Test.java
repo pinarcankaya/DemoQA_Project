@@ -69,7 +69,7 @@ public class US01_TextBox_Test {
         ReusableMethods.waitFor(1/2);
 
         us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("valid_email"));
-        ReusableMethods.waitFor(1/2);
+        ReusableMethods.waitFor(1);
         action.sendKeys(Keys.PAGE_DOWN).perform();
 
 
