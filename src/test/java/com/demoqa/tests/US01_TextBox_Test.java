@@ -5,6 +5,8 @@ import com.demoqa.pages.US01_TextBox_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -22,6 +24,7 @@ public class US01_TextBox_Test {
         Driver.getDriver().manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         us01TextBoxPage = new US01_TextBox_Page();
         us01TextBoxPage.elementsCard.click();}
+    Actions action=new Actions(Driver.getDriver());
 
 
     @Test
@@ -36,13 +39,13 @@ public class US01_TextBox_Test {
 
         us01TextBoxPage.textBoxButton.click();
         String textBoxHeader = us01TextBoxPage.textBoxHeader.getText();
-        //System.out.println("textBoxHeader = " + textBoxHeader);
+
         String expectedTextBoxHeader = "Text Box";
         Assert.assertEquals(textBoxHeader, expectedTextBoxHeader);
     }
 
     @Test
-    public void TC0103Part1() {
+    public void TC0103() {
 
         Assert.assertTrue(us01TextBoxPage.textBoxButton.isEnabled());
         us01TextBoxPage.textBoxButton.click();
@@ -50,11 +53,10 @@ public class US01_TextBox_Test {
         String actualUserForm = us01TextBoxPage.userForm.getText();
         String[] expectedUserForm = {"Full Name", "Email", "Current Address", "Permanent Address", "Submit"};
 
-        //System.out.println("***************************************************");
+
 
         for (String a : expectedUserForm) {
             Assert.assertTrue(actualUserForm.contains(a));
-
 
         }
 
@@ -64,32 +66,40 @@ public class US01_TextBox_Test {
         Assert.assertTrue(us01TextBoxPage.permanentAddress.isDisplayed()&&us01TextBoxPage.permanentAddress.isEnabled());
         Assert.assertTrue(us01TextBoxPage.submit.isDisplayed()&&us01TextBoxPage.submit.isEnabled());
 
-    }
-    @Test
-    public void TC0103Part2Positive() {
+        ReusableMethods.waitFor(1/2);
 
-        us01TextBoxPage.textBoxButton.click();
         us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("valid_email"));
+        ReusableMethods.waitFor(1/2);
+        action.sendKeys(Keys.PAGE_DOWN).perform();
+
+
         us01TextBoxPage.submit.click();
         ReusableMethods.waitFor(1);
         String emailAttribute = us01TextBoxPage.email.getAttribute("class");
         String validEmailAttribute = "mr-sm-2 form-control";
         Assert.assertEquals(validEmailAttribute, emailAttribute);
+        ReusableMethods.waitFor(1/2);
 
-    }
-    @Test
-    public void TC0103Part2Negative(){
-        us01TextBoxPage.textBoxButton.click();
+        Driver.getDriver().navigate().refresh();
+
 
         for (int i = 1 ; i <9 ; i++) {
             us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("invalid_email_" + i));
-            us01TextBoxPage.submit.click();
+            ReusableMethods.waitFor(1/2);
+            action.sendKeys(Keys.PAGE_DOWN).perform();
             ReusableMethods.waitFor(1);
+            us01TextBoxPage.submit.click();
+            //ReusableMethods.waitFor(1);
             String invalidEmailAttribute=us01TextBoxPage.email.getAttribute("class");
             Assert.assertTrue(invalidEmailAttribute.contains("error"));
+            ReusableMethods.waitFor(1/2);
             Driver.getDriver().navigate().refresh();
+            ReusableMethods.waitFor(1/2);
         }
+        Driver.getDriver().navigate().refresh();
+        ReusableMethods.waitFor(1);
     }
+
 
     @Test
     public void TC0104(){
@@ -99,11 +109,15 @@ public class US01_TextBox_Test {
         String expectedCurrentAddress=ConfigurationReader.getProperty("textBox_currentAddress");
         String expectedPermanentAddress=ConfigurationReader.getProperty("textBox_permanentAddress");
 
-
+        Driver.getDriver().navigate().refresh();
         us01TextBoxPage.fullName.sendKeys(expectedFullName);
         us01TextBoxPage.email.sendKeys(expectedEmail);
         us01TextBoxPage.currentAddress.sendKeys(expectedCurrentAddress);
         us01TextBoxPage.permanentAddress.sendKeys(expectedPermanentAddress);
+
+        ReusableMethods.waitFor(1);
+        action.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
 
         us01TextBoxPage.submit.click();
         String submitOutputText=us01TextBoxPage.submitOutput.getText();
