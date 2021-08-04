@@ -8,7 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class US22_Menu_Page {
-    public US22_Menu_Page() {PageFactory.initElements(Driver.getDriver(),this); }
+    public US22_Menu_Page() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(xpath = "//span[.='Menu']")
     public WebElement menuButton;
@@ -23,13 +25,9 @@ public class US22_Menu_Page {
     public List<WebElement> sub;
 
     @FindBy(xpath = "//*[@id='nav']/li[2]/ul/li[3]/ul/li")
+
     public List<WebElement> subSub;            //a[contains(text(),'Sub Sub Item')]==>background-color vermiyor
 
 
-
-
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
+
