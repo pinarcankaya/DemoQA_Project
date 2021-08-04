@@ -19,6 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
   </component>
   <component name="ProjectId" id="1vdZoRAP10OxfO0bfty7ClmznnO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -31,16 +32,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.demoqa.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.B">
+  <component name="RunManager" selected="TestNG.US33_Broken_Links.TC199">
     <configuration name="B" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
@@ -52,24 +53,6 @@
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
       <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.B" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US18_Slider_Test.TC96" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US18_Slider_Test" />
-      <option name="METHOD_NAME" value="TC96" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -93,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US26_Resizable_Test.TC147" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US33_Broken_Links" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -102,8 +85,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US26_Resizable_Test" />
-      <option name="METHOD_NAME" value="TC147" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US33_Broken_Links" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US33_Broken_Links.TC199" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoqa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US33_Broken_Links" />
+      <option name="METHOD_NAME" value="TC199" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -123,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.US33_Broken_Links.TC199" />
+        <item itemvalue="TestNG.US33_Broken_Links" />
         <item itemvalue="TestNG.B" />
         <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.US26_Resizable_Test" />
-        <item itemvalue="TestNG.US26_Resizable_Test.TC147" />
-        <item itemvalue="TestNG.US18_Slider_Test.TC96" />
       </list>
     </recent_temporary>
   </component>

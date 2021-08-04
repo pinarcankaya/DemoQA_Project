@@ -208,5 +208,15 @@ public class ReusableMethods {
         }
 
 
+
+    }
+    public static WebElement isClickable(WebElement webElement, int timeout) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
+        return wait.until(ExpectedConditions.elementToBeClickable(webElement));
+    }
+    public static boolean isClickable(WebElement webElement) {
+        JavascriptExecutor ex = (JavascriptExecutor) Driver.getDriver();
+        ex.executeScript("arguments[0].click()", webElement);
+        return true;
     }
 }
