@@ -29,67 +29,68 @@ public class US33_Broken_Links {
         ReusableMethods.waitFor(2);
     }
 
-    @Test
+    @Test(priority = 1)
     /*Broken Links - Images linkine tıklanmalıdır*/
     public void TC195() {
         Assert.assertTrue(Omer.isClickable(us33_broken_image.BrokenLinksImage));
+        ReusableMethods.waitFor(2);
 
     }
 
-    @Test
+    @Test(priority = 2)
     /*Sayfada sırasıyla Valid image, Broken image, Valid link ve Broken link elemanları olamalıdır*/
     public void TC196() {
 
         us33_broken_image.BrokenLinksImage.click();
-
+ReusableMethods.waitFor(2);
         String[] expectedDate = {"Valid image", "Broken image", "Valid Link", "Broken Link"};
         for (int i = 0; i < 4; i++) {
-           // System.out.println(us33_broken_image.fourObjects.get(i).getText());
             Assert.assertEquals(us33_broken_image.fourObjects.get(i).getText(), expectedDate[i]);
+            ReusableMethods.waitFor(2);
         }
 //test case de l kucuk verilmisti bu tam olarak olmasa da kucuk bir bug olabilir
     }
 
-    @Test
+    @Test(priority = 3)
     /*Valid image görünür olmalı*/
     public void TC197() {
         ReusableMethods.scrollTo(us33_broken_image.BrokenLinksImage);
         us33_broken_image.BrokenLinksImage.click();
-
+        ReusableMethods.waitFor(2);
         Assert.assertTrue(us33_broken_image.pictures.get(0).isDisplayed());
     }
 
-    @Test
+    @Test(priority = 4)
     /*Broken image görünür olmamali*/
     public void TC198() {
         ReusableMethods.scrollTo(us33_broken_image.BrokenLinksImage);
         us33_broken_image.BrokenLinksImage.click();
+        Assert.assertNotEquals(us33_broken_image.pictures.get(1).getAttribute("naturalWidth"), "[0]");
 
-        Assert.assertFalse(us33_broken_image.pictures.get(1).isDisplayed());
     }
 
-    @Test
+    @Test(priority = 5)
     /*Valid linke tıklandiginda demoqa anasayfaya ulasilmalidir*/
     public void TC199() {
         ReusableMethods.scrollTo(us33_broken_image.BrokenLinksImage);
         us33_broken_image.BrokenLinksImage.click();
-us33_broken_image.links.get(0).click();
-        String actualData =(Driver.getDriver().getCurrentUrl());
-        String expectedData= "https://demoqa.com/";
-        Assert.assertEquals(actualData,expectedData);
+        ReusableMethods.waitFor(3);
+        ReusableMethods.scrollTo(us33_broken_image.links.get(0));
+        us33_broken_image.links.get(0).click();
+        ReusableMethods.waitFor(2);
+        String actualData = (Driver.getDriver().getCurrentUrl());
+        String expectedData = "https://demoqa.com/";
+        Assert.assertEquals(actualData, expectedData);
     }
 
-    @Test
+    @Test(priority = 6)
     /*Broken linke tiklandiginda Ip adresi bulnamadı hatasi alinmalidir*/
     public void TC200() {
         ReusableMethods.scrollTo(us33_broken_image.BrokenLinksImage);
         us33_broken_image.BrokenLinksImage.click();
         ReusableMethods.scrollTo(us33_broken_image.links.get(1));
-
         us33_broken_image.links.get(1).click();
-        String actualData = us33_broken_image.statusCode.getText();
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("500"));
-      //  System.out.println(actualData);
     }
 
 

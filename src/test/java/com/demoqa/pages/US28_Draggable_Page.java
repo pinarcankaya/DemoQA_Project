@@ -19,6 +19,8 @@ public class US28_Draggable_Page {
 
     @FindBy(xpath = "(//div//ul[@class='menu-list'])[5]//li")
     public List<WebElement> dragableMenuList;
+    @FindBy(xpath = "//div[@id='draggableExample-tabpane-containerRestriction']/div")
+    public List<WebElement> restcrictedkutulari;
 
     @FindBy(xpath = "(//div//ul[@class='menu-list'])[5]//li")
     public WebElement dragableMenu;
