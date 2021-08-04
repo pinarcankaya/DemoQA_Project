@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.security.cert.X509Certificate;
 import java.util.List;
 
 public class US030_BookStoreMenu_Page {
@@ -36,7 +37,7 @@ public class US030_BookStoreMenu_Page {
     public WebElement PageNumber;
 
     @FindBy (xpath = "//select[@aria-label='rows per page']")
-    public WebElement Rows;
+    public WebElement RowsButton;
 
     @FindBy(xpath = "//div[@class='profile-wrapper']/div")
     public List <WebElement> BookCardList;
@@ -47,7 +48,29 @@ public class US030_BookStoreMenu_Page {
     @FindBy(xpath = "//div[@class= 'main-header']")
     public WebElement LoginMainHeader;
 
+    @FindBy(xpath="//div[@class='rt-tr-group']")
+    public List <WebElement> bookRowGroup;
 
+//    @FindBy(xpath="//div[@class='rt-td']")
+//    public List <WebElement> textofRow;
+
+    @FindBy(xpath="//div[@class='rt-tr-group']/div[not(contains(@class, '-padRow'))]")
+    public List <WebElement> textofRow;
+
+    @FindBy(xpath = "//div[@class='-pagination']")
+    public WebElement previousAndNextBar;
+
+    @FindBy (xpath = "//div[@class='rt-tbody']//a")
+    public List <WebElement> bookListBody;
+
+    @FindBy(xpath = "//button[@id='addNewRecordButton']")
+    public WebElement backToStoreButton;
+
+    @FindBy (xpath = "//a[.='Git Pocket Guide']")
+    public WebElement GitPocketGuideLink;
+
+    @FindBy (xpath = "(//label[@id='userName-value'])[8]")
+    public  WebElement websiteLink;
 
 
 

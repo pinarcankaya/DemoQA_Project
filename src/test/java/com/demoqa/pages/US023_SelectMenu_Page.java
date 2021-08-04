@@ -10,7 +10,7 @@ import java.util.List;
 
 public class US023_SelectMenu_Page {
 
-public US023_SelectMenu_Page(){ PageFactory.initElements(Driver.getDriver(),this); }
+    public US023_SelectMenu_Page(){ PageFactory.initElements(Driver.getDriver(),this); }
 
     @FindBy(xpath = "(//div[@class='card-up'])[4]")
     public WebElement Widgets;
@@ -36,19 +36,19 @@ public US023_SelectMenu_Page(){ PageFactory.initElements(Driver.getDriver(),this
     @FindBy (xpath = "//div[contains(@class,'-placeholder')]")
     public List<WebElement> placeHolder;
 
-   @FindBy(xpath = "(//div[@class=' css-1hwfws3'])[3]")  //   //(//div[@class=' css-2b097c-container'])[3]
+    @FindBy(xpath = "(//div[@class=' css-1hwfws3'])[3]")  //   //(//div[@class=' css-2b097c-container'])[3]
     public WebElement selectOptionBox;
 
-   @FindBy (xpath = "//select[@id='cars']")
+    @FindBy (xpath = "//select[@id='cars']")
     public WebElement cars;
 
-   @FindBy (xpath = "//*[contains(text(),'Multiselect drop down')]")
+    @FindBy (xpath = "//*[contains(text(),'Multiselect drop down')]")
     public WebElement multiSelectDropDown;
 
-   @FindBy(xpath = "//*[text()='Select...']")
-   public WebElement multiSelectDropDownBox;
+    @FindBy(xpath = "//*[text()='Select...']")
+    public WebElement multiSelectDropDownBox;
 
-   @FindBy (xpath = "//*[contains(text(),'Standard multi select')]")
+    @FindBy (xpath = "//*[contains(text(),'Standard multi select')]")
     public WebElement standartMultiSelect;
 
 //    @FindBy(id = "aria-selection-event")  //   //(//div[@class=' css-2b097c-container'])[3]

@@ -29,38 +29,38 @@ public class US023_SelectMenu_Test {
 
     @Test (priority = 1)
     public void setup() throws InterruptedException {
-    Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-    Driver.getDriver().manage().window().maximize();
-    Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    us023SelectMenuPage =new US023_SelectMenu_Page();
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        us023SelectMenuPage =new US023_SelectMenu_Page();
 
 
 
-    us023SelectMenuPage.Widgets.click();
+        us023SelectMenuPage.Widgets.click();
 
-    Thread.sleep(500);
-    //scrolling down
-    jse.executeScript("window.scrollBy(0,300)");
-    wait.until(ExpectedConditions.elementToBeClickable(us023SelectMenuPage.SelectMenu));
-    ReusableMethods.clickWithJS(us023SelectMenuPage.SelectMenu);
-
-
+        Thread.sleep(500);
+        //scrolling down
+        jse.executeScript("window.scrollBy(0,300)");
+        wait.until(ExpectedConditions.elementToBeClickable(us023SelectMenuPage.SelectMenu));
+        ReusableMethods.clickWithJS(us023SelectMenuPage.SelectMenu);
 
 
-}
+
+
+    }
     @Test(priority = 2, dependsOnMethods = "setup")
     //- Sayfanın başlığı "Select Menu" olmalıdir.
 
     public void US023128(){
-    Assert.assertEquals(us023SelectMenuPage.mainheader.getText(),"Select Menu");
-    System.out.println(us023SelectMenuPage.mainheader.getText());
+        Assert.assertEquals(us023SelectMenuPage.mainheader.getText(),"Select Menu");
+        System.out.println(us023SelectMenuPage.mainheader.getText());
 
     }
 
     @Test (priority = 3, dependsOnMethods = "setup")
     //-Sayfada ilk olarak "Select Value" adi altinda "Select Option" adli box icinde Dropdown menu tiklandiginda acilmalidir
     public void US023129(){
-    
+
         Assert.assertEquals(us023SelectMenuPage.SelectDropDownBoxes.get(1).getText(),"Select Value");
         // System.out.println(us023SelectMenuPage.SelectDropDownBoxes.get(1).getText());
         Assert.assertEquals(us023SelectMenuPage.SelectDropDownBoxes.get(2).getText(),"Select Option");
@@ -169,7 +169,7 @@ public class US023_SelectMenu_Test {
     @Test (priority = 7, dependsOnMethods = "setup")
     //-Sayfada son olarak "Standard multi select" adi altinda alt alta "Volvo", "Saab","Opel" ve "Audi" secenekleri bulunmali
     //ve secenekler secilebilmelidir.
-    
+
     public void US023133(){
         WebElement standartMultiSelect=us023SelectMenuPage.SelectDropDownBoxes.get(8);
         Assert.assertTrue(standartMultiSelect.getText().contains("Standard multi select\n"+ "Volvo\n" +"Saab\n" + "Opel\n" +"Audi"));
@@ -188,17 +188,17 @@ public class US023_SelectMenu_Test {
 
     public void US023134 (){
 
-    Assert.assertEquals(us023SelectMenuPage.multiSelectDropDown.getCssValue("font-weight"),"700");
-    Assert.assertEquals(us023SelectMenuPage.standartMultiSelect.getCssValue("font-weight"),"700");
+        Assert.assertEquals(us023SelectMenuPage.multiSelectDropDown.getCssValue("font-weight"),"700");
+        Assert.assertEquals(us023SelectMenuPage.standartMultiSelect.getCssValue("font-weight"),"700");
 
 
-    try {
-        Thread.sleep(5000);
-    } catch (InterruptedException e) {
-        e.printStackTrace();
-    }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Driver.closeDriver();
-}
+    }
 }
 
 

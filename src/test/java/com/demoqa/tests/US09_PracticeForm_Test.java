@@ -22,7 +22,7 @@ public class US09_PracticeForm_Test {
     Actions action = new Actions(Driver.getDriver());
 
 
-    @BeforeClass
+    @Test(priority = 1)
     public void setup() {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
@@ -33,13 +33,13 @@ public class US09_PracticeForm_Test {
 
     }
 
-    @Test
+    @Test(priority = 2, dependsOnMethods = "setup")
     //Forms altindaki Practice Form sayfasina ulasilabilmelidir.
     public void TC0936() {
         Assert.assertTrue(us09PracticeFormPage.practiceFormButton.isEnabled());
     }
 
-    @Test
+    @Test(priority = 3, dependsOnMethods = "setup")
    /* Student Registration Formdaki  Name,  Gender, Date of Birth, Mobile bolumleri bos birakildiginda
     Submit yapilamadigini dogrulayin*/
 
@@ -47,7 +47,8 @@ public class US09_PracticeForm_Test {
         us09PracticeFormPage.practiceFormButton.click();
         ReusableMethods.waitFor(2);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitForClickablility(us09PracticeFormPage.submit, 10);
+        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitForClickablility(us09PracticeFormPage.submit, 10);
         us09PracticeFormPage.submit.click();
         ReusableMethods.waitFor(1);
         String expectedColor = "#dc3545";
@@ -58,7 +59,7 @@ public class US09_PracticeForm_Test {
         String lastNameBorderColor = us09PracticeFormPage.lastName.getCssValue("border-color");
         String lastnameHexColor = Color.fromString(lastNameBorderColor).asHex();
 
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(2);
         String genderBorderColor = us09PracticeFormPage.gender.getCssValue("border-color");
         String genderHexColor = Color.fromString(genderBorderColor).asHex();
         System.out.println("genderHexColor = " + genderHexColor);
@@ -72,11 +73,12 @@ public class US09_PracticeForm_Test {
         String mobileNumberHexColor = Color.fromString(mobileNumberBorderColor).asHex();
 
         Assert.assertEquals(mobileNumberHexColor, expectedColor);
+        Driver.getDriver().navigate().refresh();
 
     }
 
 
-    @Test
+    @Test(priority = 4, dependsOnMethods = "setup")
     //Gecerli bir mail ile submit yapilabilmelidir
     public void US0938(){
         us09PracticeFormPage.practiceFormButton.click();
@@ -96,18 +98,22 @@ public class US09_PracticeForm_Test {
         }
 
         us09PracticeFormPage.userEmail.sendKeys(ConfigurationReader.getProperty("valid_email"));
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(1/2);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,2);
+        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,2);
         us09PracticeFormPage.submit.click();
         ReusableMethods.waitFor(1);
         String userEmailBorderColor = us09PracticeFormPage.userEmail.getCssValue("border-color");
         String userEmailHexColor = Color.fromString(userEmailBorderColor).asHex();
         String expectedColor = "#28a745";
         Assert.assertEquals(userEmailHexColor, expectedColor);
+        ReusableMethods.waitFor(1/2);
+        Driver.getDriver().navigate().refresh();
+        ReusableMethods.waitFor(1/2);
     }
 
-    @Test
+    @Test(priority = 5, dependsOnMethods = "setup")
     //Mobile TextBox kismina gercek bir mobile number ile submit yapilabilmelidir
     public void US0939() {
         us09PracticeFormPage.practiceFormButton.click();
@@ -120,6 +126,7 @@ public class US09_PracticeForm_Test {
         us09PracticeFormPage.mobile.sendKeys("123456789");
         ReusableMethods.waitFor(1);
         action.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
         us09PracticeFormPage.submit.click();
         ReusableMethods.waitFor(1);
         String mobileHexColor = ReusableMethods.getHexColor(us09PracticeFormPage.mobile, "border-color");
@@ -127,9 +134,11 @@ public class US09_PracticeForm_Test {
         String expectedColor = "#dc3545";
         Assert.assertEquals(mobileHexColor, expectedColor);
 
+        Driver.getDriver().navigate().refresh();
+
     }
 
-    @Test
+    @Test(priority = 6, dependsOnMethods = "setup")
     //Hobbies  checkBoxlari secilebilir olmalidir
     public void US0940() {
         us09PracticeFormPage.practiceFormButton.click();
@@ -142,22 +151,27 @@ public class US09_PracticeForm_Test {
 
         action.click(us09PracticeFormPage.hobbySports).perform();
         Assert.assertTrue(us09PracticeFormPage.hobbySports.isSelected());
+        Driver.getDriver().navigate().refresh();
 
     }
 
-    @Test
+
+    @Test(priority = 7, dependsOnMethods = "setup")
     public void US0941() {
         //Gecerli veriler ile submit yapilabilmelidir
 
-
+        ReusableMethods.waitFor(1);
         us09PracticeFormPage.practiceFormButton.click();
         us09PracticeFormPage.firstName.sendKeys("Ahmet");
         us09PracticeFormPage.lastName.sendKeys("Murat");
         us09PracticeFormPage.userEmail.sendKeys("ahmetmurat@gmail.com");
 
         action.click(us09PracticeFormPage.male).perform();
+        ReusableMethods.waitFor(1);
 
         action.sendKeys(us09PracticeFormPage.mobile, "1234567890").perform();
+
+        //ReusableMethods.waitFor(1/2);
 
 
         action.click(us09PracticeFormPage.dateOfBirth).perform();
@@ -174,7 +188,7 @@ public class US09_PracticeForm_Test {
 
         action.sendKeys(us09PracticeFormPage.subjects, "Testing US09").perform();
 
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(1/2);
 
         action.click(us09PracticeFormPage.hobbySports).perform();
 
@@ -188,12 +202,12 @@ public class US09_PracticeForm_Test {
         //ReusableMethods.waitFor(1);
 
         us09PracticeFormPage.currentAddress.sendKeys(ConfigurationReader.getProperty("textBox_currentAddress"));
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(1/2);
 
 
         action.sendKeys(us09PracticeFormPage.selectState, "Haryana" + Keys.ENTER).perform();
 
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(1/2);
         action.sendKeys(us09PracticeFormPage.selectCity, "Karnal" + Keys.ENTER).perform();
 
         us09PracticeFormPage.submit.click();
@@ -208,6 +222,6 @@ public class US09_PracticeForm_Test {
     @AfterClass
     public void tearDown(){
         Driver.closeDriver();
-        }
-
     }
+
+}
