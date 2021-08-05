@@ -37,6 +37,7 @@ public class US01_TextBox_Test {
     @Test
     public void TC0102() {
 
+
         us01TextBoxPage.textBoxButton.click();
         String textBoxHeader = us01TextBoxPage.textBoxHeader.getText();
 
@@ -69,7 +70,7 @@ public class US01_TextBox_Test {
         ReusableMethods.waitFor(1/2);
 
         us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("valid_email"));
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitFor(1/2);
         action.sendKeys(Keys.PAGE_DOWN).perform();
 
 

@@ -1,16 +1,12 @@
 package com.demoqa.tests;
 
-import com.demoqa.pages.US01_TextBox_Page;
 import com.demoqa.pages.US07_UploadDowload_Page;
-import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.nio.file.Files;

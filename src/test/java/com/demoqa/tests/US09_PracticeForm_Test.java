@@ -133,6 +133,7 @@ public class US09_PracticeForm_Test {
         System.out.println("mobileHexColor = " + mobileHexColor);
         String expectedColor = "#dc3545";
         Assert.assertEquals(mobileHexColor, expectedColor);
+
         Driver.getDriver().navigate().refresh();
 
     }
