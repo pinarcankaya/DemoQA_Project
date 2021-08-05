@@ -125,6 +125,7 @@ public class US023_SelectMenu_Test {
         System.out.println(select.getFirstSelectedOption().getText());
 
         for (WebElement selectMenu : select.getOptions()) {
+            ReusableMethods.waitFor(1/2);
             us023SelectMenuPage.oldSelectMenu.click();
             String toBeSelected=selectMenu.getText();
 
@@ -149,7 +150,7 @@ public class US023_SelectMenu_Test {
 
         WebElement selectBox =us023SelectMenuPage.multiSelectDropDownBox;
 
-
+        ReusableMethods.waitFor(1);
         selectBox.click();
 
         List <String> optionsText=new ArrayList<>();
