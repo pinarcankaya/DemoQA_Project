@@ -13,6 +13,8 @@ public class US33_Broken_Image {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
+
     @FindBy(xpath = "(//div[@class='header-wrapper'])[1]")
     public WebElement element;
     @FindBy(xpath = "//div/p")
