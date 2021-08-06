@@ -1,7 +1,6 @@
 package com.demoqa.tests;
 
 import com.demoqa.pages.US006_Links_Page;
-
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
@@ -12,9 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -33,20 +30,10 @@ public class US006_Links_Test {
             Driver.getDriver().manage().window().maximize();
             Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             linksPage.elementsCard.click();
-
-
-           actions.sendKeys(Keys.ARROW_DOWN).perform(); //
-  //         ReusableMethods.clickWithJS e bak
-
             actions.sendKeys(Keys.ARROW_DOWN).perform();
-
-
-
-  //       ReusableMethods.waitForClickablility(linksPage.links, 10);
-            //Soru: ElementClickInterceptedException: element click intercepted: Element <span class="text">...</span> is not clickable
-
-        clickWait.until(ExpectedConditions.elementToBeClickable(linksPage.links));
-        linksPage.links.click();
+            actions.sendKeys(Keys.ARROW_DOWN).perform();
+            clickWait.until(ExpectedConditions.elementToBeClickable(linksPage.links));
+            linksPage.links.click();
 
     }
     //1-Go to main-header "Links"
@@ -108,15 +95,13 @@ public class US006_Links_Test {
         linksPage.moved.click();
         ReusableMethods.waitFor(3);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-//        actions.sendKeys(Keys.ARROW_DOWN).perform();
-//        actions.sendKeys(Keys.ARROW_DOWN).perform();
         ReusableMethods.waitFor(3);
         Assert.assertTrue(linksPage.status.isDisplayed());
     }
 
-//    @AfterClass
-//    public void tearDownMethod() {
-//        Driver.closeDriver();
-//    }
+    @AfterClass
+    public void tearDownMethod() {
+        Driver.closeDriver();
+    }
 
 }

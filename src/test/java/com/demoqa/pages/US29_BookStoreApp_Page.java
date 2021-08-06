@@ -20,20 +20,11 @@ public class US29_BookStoreApp_Page {
     @FindBy(xpath = "//div[@class='main-header']")
     public WebElement headerBookStore;
 
-    @FindBy(xpath = "//span[contains(text(), 'Login')]")
-    public List<WebElement> login;
+    @FindBy(xpath = "(//ul[@class='menu-list'])[6]/li//span")
+    public List<WebElement> menuList;
 
     @FindBy(xpath = "//span[contains(text(), 'Login')]")
     public WebElement logIn;
-
-    @FindBy(xpath = "//span[contains(text(), 'Book Store')]")
-    public List<WebElement> bookStore;
-
-    @FindBy(xpath = "//span[contains(text(), 'Profile')]")
-    public List<WebElement> profile;
-
-    @FindBy(xpath = "//span[contains(text(), 'Book Store API')]")
-    public List<WebElement> bookStoreAPI;
 
     @FindBy(xpath = "//div[@style='margin-bottom: 50px;']")
     public WebElement headerWelcome;
@@ -42,7 +33,7 @@ public class US29_BookStoreApp_Page {
     public WebElement newUserButton;
 
     @FindBy(xpath = "(//input[@class='mr-sm-2 form-control'])")
-    public List<WebElement> registerButtons;
+    public List<WebElement> placeholders;
 
     @FindBy(xpath = "//button[@id='register']")
     public WebElement register;
@@ -50,8 +41,7 @@ public class US29_BookStoreApp_Page {
     @FindBy(xpath = "//button[@id='gotologin']")
     public WebElement backToLogin;
 
-
-
-
+    @FindBy(id = "rc-anchor-container")
+    public WebElement reCaptcha;
 
 }

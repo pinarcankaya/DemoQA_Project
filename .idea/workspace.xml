@@ -9,10 +9,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45f2d93e-111c-435a-b3b2-a1850cc61c88" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14-Jul-21_10_58_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14-Jul-21_10_58_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16-Jul-21_12_42_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16-Jul-21_12_42_AM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17-Jul-21_2_32_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17-Jul-21_2_32_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US006_Links_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US006_Links_Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US29_BookStoreApp_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US29_BookStoreApp_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US006_Links_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US006_Links_Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US29_BookStoreApp_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US29_BookStoreApp_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US20_Tabs_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US20_Tabs_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US29_BookStoreApp_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US29_BookStoreApp_Page.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US29_BookStoreApp_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US29_BookStoreApp_Test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,44 +51,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="TestNG.US29_BookStoreApp_Test.LogIn">
-    <configuration name="US20_Tabs_Test.tabsDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US20_Tabs_Test" />
-      <option name="METHOD_NAME" value="tabsDisplayed" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US27_Droppable_Test.TC153" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US27_Droppable_Test" />
-      <option name="METHOD_NAME" value="TC153" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US29_BookStoreApp_Test.LogIn" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.US29_BookStoreApp_Test.reCaptcha">
+    <configuration name="US29_BookStoreApp_Test.Registration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -89,7 +62,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
       <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US29_BookStoreApp_Test" />
-      <option name="METHOD_NAME" value="LogIn" />
+      <option name="METHOD_NAME" value="Registration" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -115,7 +88,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US29_BookStoreApp_Test.openBookStoreApp" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US29_BookStoreApp_Test.logIn" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -125,7 +98,43 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
       <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US29_BookStoreApp_Test" />
-      <option name="METHOD_NAME" value="openBookStoreApp" />
+      <option name="METHOD_NAME" value="logIn" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US29_BookStoreApp_Test.reCaptcha" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoqa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US29_BookStoreApp_Test" />
+      <option name="METHOD_NAME" value="reCaptcha" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US29_BookStoreApp_Test.registration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoqa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US29_BookStoreApp_Test" />
+      <option name="METHOD_NAME" value="registration" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -135,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.US29_BookStoreApp_Test.LogIn" />
+        <item itemvalue="TestNG.US29_BookStoreApp_Test.reCaptcha" />
+        <item itemvalue="TestNG.US29_BookStoreApp_Test.logIn" />
         <item itemvalue="TestNG.US29_BookStoreApp_Test.bookStore" />
-        <item itemvalue="TestNG.US29_BookStoreApp_Test.openBookStoreApp" />
-        <item itemvalue="TestNG.US20_Tabs_Test.tabsDisplayed" />
-        <item itemvalue="TestNG.US27_Droppable_Test.TC153" />
+        <item itemvalue="TestNG.US29_BookStoreApp_Test.registration" />
+        <item itemvalue="TestNG.US29_BookStoreApp_Test.Registration" />
       </list>
     </recent_temporary>
   </component>
@@ -175,22 +184,26 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1159" y="350" key="FileChooserDialogImpl/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626471433601" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1626809278730">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom" timestamp="1628026965462">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626809278730" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1626809278730">
+    <state width="1877" height="288" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628026965462" />
+    <state width="1493" height="287" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1627921706521" />
+    <state width="1877" height="288" key="GridCell.Tab.0.center" timestamp="1628026965461">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626809278730" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1626809278730">
+    <state width="1877" height="288" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628026965461" />
+    <state width="1493" height="287" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1627921706521" />
+    <state width="1877" height="288" key="GridCell.Tab.0.left" timestamp="1628026965461">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626809278730" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1626809278730">
+    <state width="1877" height="288" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628026965461" />
+    <state width="1493" height="287" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1627921706521" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right" timestamp="1628026965461">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1626809278730" />
+    <state width="1877" height="288" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628026965461" />
+    <state width="1493" height="287" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1627921706521" />
     <state x="-1459" y="170" key="SettingsEditor" timestamp="1626471438533">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
@@ -205,15 +218,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/com/demoqa/tests/US29_BookStoreApp_Test.java</url>
-          <line>34</line>
-          <properties class="com.demoqa.tests.US29_BookStoreApp_Test" method="bookStore">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/com/demoqa/tests/US29_BookStoreApp_Test.java</url>
-          <line>24</line>
+          <line>17</line>
           <properties class="com.demoqa.tests.US29_BookStoreApp_Test" method="openBookStoreApp">
             <option name="EMULATED" value="true" />
           </properties>
@@ -221,11 +226,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/com/demoqa/tests/US29_BookStoreApp_Test.java</url>
-          <line>66</line>
-          <properties class="com.demoqa.tests.US29_BookStoreApp_Test" method="LogIn">
+          <line>63</line>
+          <properties class="com.demoqa.tests.US29_BookStoreApp_Test" method="logIn">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/demoqa/tests/US29_BookStoreApp_Test.java</url>
+          <line>27</line>
+          <properties class="com.demoqa.tests.US29_BookStoreApp_Test" method="bookStore">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
