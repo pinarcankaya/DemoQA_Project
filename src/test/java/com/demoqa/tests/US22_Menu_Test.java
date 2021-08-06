@@ -6,10 +6,18 @@ import com.demoqa.utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import org.openqa.selenium.support.ui.ISelect;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -31,6 +39,7 @@ public class US22_Menu_Test {
         ReusableMethods.clickWithJS(menuPage.menuButton);
 
     }
+
     @Test  //Sayfanın başlığı "Menu" oldugunu verify edin
     public void TC119() {
         Assert.assertEquals(menuPage.header.getText(),"Menu");
@@ -131,6 +140,26 @@ public class US22_Menu_Test {
         System.out.println("hexBackground1 : "+hexBackground1+"\n"+"hexBackground2 : "+hexBackground2);
 
     }
+
+
+
+
+    @Test
+    public void TC_121() {
+        String [] expectedMain= {"Main Item 1", "Main Item 2", "Main Item 3",};
+        List<String> actualMain= new ArrayList<>();
+
+        for (WebElement w:menuPage.items){
+            actualMain.add(w.getText());
+
+        }
+        for (String e: expectedMain) {
+            Assert.assertTrue(actualMain.contains(e));
+            System.out.println(actualMain);
+
+        }
+    }
+
 
 
 }
