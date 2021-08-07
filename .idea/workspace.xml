@@ -25,7 +25,6 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US01_TextBox_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US01_TextBox_Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
