@@ -107,9 +107,9 @@ public class ReusableMethods {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public static WebElement waitForClickablility(WebElement element, int timeout) {
+    public static void waitForClickablility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
-        return wait.until(ExpectedConditions.elementToBeClickable(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public static WebElement waitForClickablility(By locator, int timeout) {
@@ -131,6 +131,7 @@ public class ReusableMethods {
             System.out.println(
                     "Timeout waiting for Page Load Request to complete after " + timeOutInSeconds + " seconds");
         }
+
     }
 
     //======Fluent Wait====//
