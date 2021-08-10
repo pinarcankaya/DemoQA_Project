@@ -1,0 +1,16 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<!--<suite name="All Test Suite1">-->
+<!--    <groups>-->
+<!--        <run>-->
+<!--            <include name="smokeTest"/>-->
+<!--        </run>-->
+<!--    </groups>-->
+<!--    <test verbose="2" preserve-order="true" parallel="classes" thread-count="2"-->
+<!--          name="paralel test">-->
+<!--        <classes>-->
+<!--            <class name="tests.Deneme01"/>-->
+<!--            <class name="tests.Deneme02"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
