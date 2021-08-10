@@ -4,59 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="547aed1e-0f31-4962-9ff4-bf327cb41a69" name="Default Changelist" comment="" />
-
-    <list default="true" id="82b08d83-dd82-4961-a0e5-10f09fb242ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US08_DynamicProperties_Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US16_AutoComplete_page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US19_ProgressBar_Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US24_Sortable_Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US31_Login_Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US08_DynamicProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US16_Widgets_AutoComplete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US19_ProgressBar_Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US24_Sortable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US31_Login_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="547aed1e-0f31-4962-9ff4-bf327cb41a69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/smokeTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US03_RadioButton_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US04_WebTable_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US023_SelectMenu_Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US03_RadioButton_Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US04_WebTable_Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US006_Links_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US006_Links_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US012_Frame_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US012_Frame_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US01_TextBox_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US01_TextBox_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US03_RadioButton_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US04_WebTable_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US05_Buttons_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US05_Buttons_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US023_SelectMenu_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US023_SelectMenu_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US030_BookStoreMenu_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US030_BookStoreMenu_Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US01_TextBox_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US01_TextBox_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US03_RadioButton_Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US04_WebTable_Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US05_Buttons_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US05_Buttons_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US12_Frame_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US12_Frame_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US006_Links_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US012_Frame_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US01_TextBox_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US03_RadioButton_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US04_WebTable_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US05_Buttons_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US11_Alert_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US11_Alert_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US18_Slider_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US21_ToolTips_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US22_Menu_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US006_Links_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US012_Frame_Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US09_PracticeForm_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US09_PracticeForm_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US23_SelectMenu_Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US30_BookStoreMenu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US30_BookStoreMenu_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US01_TextBox_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US01_TextBox_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US03_RadioButton_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US04_WebTable_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US05_Buttons_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US11_Alert_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US11_Alert_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ConfigurationReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/Driver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" afterDir="false" />
     </list>
-
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,10 +41,16 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
   </component>
-
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="11" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1vdZoRAP10OxfO0bfty7ClmznnO" />
-
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -84,25 +60,43 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\abdkz\IdeaProjects\DemoQA_Project" />
+      <recent name="C:\Users\abdkz\IdeaProjects\DemoQA_Project\src\test\java\com\demoqa\tests" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.demoqa.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.B">
-    <configuration name="B" type="TestNG" temporary="true" nameIsGenerated="true">
-
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-  </component>
-  <component name="RunManager" selected="TestNG.US16_Widgets_AutoComplete.TC_75">
-    <configuration name="US08_DynamicProperties" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.US01_TextBox_Test">
+    <configuration name="C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng1.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng1.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US01_TextBox_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.demoqa.tests.*" />
@@ -110,7 +104,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US08_DynamicProperties" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US01_TextBox_Test" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -118,8 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US16_Widgets_AutoComplete.TC_75" type="TestNG" temporary="true" nameIsGenerated="true">
-
+    <configuration name="US023_SelectMenu_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -128,48 +121,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.B" />
-      <option name="TEST_OBJECT" value="CLASS" />
-
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US16_Widgets_AutoComplete" />
-      <option name="METHOD_NAME" value="TC_75" />
-      <option name="TEST_OBJECT" value="METHOD" />
-
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US18_Slider_Test.TC96" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US18_Slider_Test" />
-      <option name="METHOD_NAME" value="TC96" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US26_Resizable_Test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US26_Resizable_Test" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US023_SelectMenu_Test" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -177,7 +129,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US26_Resizable_Test.TC147" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US30_BookStoreMenu_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -186,19 +138,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US26_Resizable_Test" />
-      <option name="METHOD_NAME" value="TC147" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US30_BookStoreMenu_Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -207,22 +148,14 @@
     </configuration>
     <recent_temporary>
       <list>
-
-        <item itemvalue="TestNG.B" />
-        <item itemvalue="TestNG.&lt;default&gt;" />
-
-        <item itemvalue="TestNG.US16_Widgets_AutoComplete.TC_75" />
-        <item itemvalue="TestNG.US08_DynamicProperties" />
-
-        <item itemvalue="TestNG.US26_Resizable_Test" />
-        <item itemvalue="TestNG.US26_Resizable_Test.TC147" />
-        <item itemvalue="TestNG.US18_Slider_Test.TC96" />
+        <item itemvalue="TestNG.US01_TextBox_Test" />
+        <item itemvalue="TestNG.C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng.xml" />
+        <item itemvalue="TestNG.C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng1.xml" />
+        <item itemvalue="TestNG.US30_BookStoreMenu_Test" />
+        <item itemvalue="TestNG.US023_SelectMenu_Test" />
       </list>
     </recent_temporary>
   </component>
-
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -235,10 +168,10 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
-
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="547aed1e-0f31-4962-9ff4-bf327cb41a69" name="Default Changelist" comment="" />
@@ -254,26 +187,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="651" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1628075286255">
-      <screen x="0" y="0" width="1600" height="900" />
-    </state>
-    <state x="651" y="343" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1600.900/1600.-124.1280.1024@0.0.1600.900" timestamp="1628075286255" />
-    <state x="330" y="109" key="Maven.ArtifactSearchDialog" timestamp="1628075659963">
-      <screen x="0" y="0" width="1600" height="900" />
-    </state>
-    <state x="330" y="109" key="Maven.ArtifactSearchDialog/0.0.1600.900/1600.-124.1280.1024@0.0.1600.900" timestamp="1628075659963" />
-    <state x="303" y="96" key="SettingsEditor" timestamp="1628075733961">
-      <screen x="0" y="0" width="1600" height="900" />
-    </state>
-    <state x="303" y="96" key="SettingsEditor/0.0.1600.900/1600.-124.1280.1024@0.0.1600.900" timestamp="1628075733961" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

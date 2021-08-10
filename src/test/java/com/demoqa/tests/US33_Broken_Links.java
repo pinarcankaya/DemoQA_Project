@@ -3,7 +3,6 @@ package com.demoqa.tests;
 import com.demoqa.pages.US33_Broken_Image;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
-import com.demoqa.utilities.Omer;
 import com.demoqa.utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -32,7 +31,7 @@ public class US33_Broken_Links {
     @Test(priority = 1)
     /*Broken Links - Images linkine tıklanmalıdır*/
     public void TC195() {
-        Assert.assertTrue(Omer.isClickable(us33_broken_image.BrokenLinksImage));
+        Assert.assertTrue(ReusableMethods.isClickable(us33_broken_image.BrokenLinksImage));
         ReusableMethods.waitFor(2);
 
     }
