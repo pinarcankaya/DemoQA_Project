@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
+
 
 public class US21_ToolTips_Page {
     public US21_ToolTips_Page(){PageFactory.initElements(Driver.getDriver(),this);}
@@ -28,7 +28,7 @@ public class US21_ToolTips_Page {
     @FindBy(xpath = "//input[@id='toolTipTextField']")
     public WebElement emptyBox;
 
-    @FindBy(xpath = "//input[@placeholder='Hover me to see']")  //input[@id='toolTipTextField']
+    @FindBy(xpath = "//input[@placeholder='Hover me to see']")
     public WebElement boxHeader;
 
     @FindBy(xpath = "//div[@id='texToolTopContainer']")

@@ -4,7 +4,7 @@ import com.demoqa.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class US014_ModalDialogs_Page {
     public WebElement smallButton;
 
 
-    @FindBy(xpath = "//div[@class='modal-body']") //small/Large body ve Pencere        //*[@class='modal-title h4']
+    @FindBy(xpath = "//div[@class='modal-body']")
     public WebElement text;
 
     @FindBy(xpath = "//*[@class='btn btn-primary']")
@@ -39,13 +39,11 @@ public class US014_ModalDialogs_Page {
     @FindBy(xpath = "//button[@id='closeSmallModal']")
     public WebElement smallClose;
 
-    @FindBy(xpath = "//button[@id='closeLargeModal']")  ////button[@id='closeLargeModal']
+    @FindBy(xpath = "//button[@id='closeLargeModal']")
     public WebElement closeLarge;
 
     @FindBy(xpath = "//button[@id='closeLargeModal']")
     public List<WebElement> closeLarge2;
 
-    @FindBy(xpath = "//div[@class='modal-content']")
-    public  WebElement largeDialogBox;
 }
 
