@@ -11,7 +11,7 @@ import java.util.List;
 public class US014_ModalDialogs_Page {
     public US014_ModalDialogs_Page(){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath = "//*/h5[contains(text(), 'Alerts, Frame & Windows')]")
+    @FindBy(xpath = "(//div[@class ='card-body'])[3]")
     public WebElement alertsFrameWindows;
 
     @FindBy(xpath = "//span[.='Modal Dialogs']")
@@ -22,7 +22,6 @@ public class US014_ModalDialogs_Page {
 
     @FindBy(id = "showSmallModal")
     public WebElement smallButton;
-
 
     @FindBy(xpath = "//div[@class='modal-body']")
     public WebElement text;

@@ -4,7 +4,6 @@
     <test verbose="2" preserve-order="true" parallel="classes" thread-count="2"
           name="parallel test">
         <classes>
-
             <class name="com.demoqa.tests.US06_Links_Test"/>
             <class name="com.demoqa.tests.US14_ModalDialogs_Test"/>
             <class name="com.demoqa.tests.US21_ToolTips_Test"/>
