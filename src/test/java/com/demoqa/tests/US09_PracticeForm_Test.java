@@ -5,14 +5,15 @@ import com.demoqa.pages.US09_PracticeForm_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -29,6 +30,8 @@ public class US09_PracticeForm_Test {
         us09PracticeFormPage = new US09_PracticeForm_Page();
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ReusableMethods.waitForClickablility(us09PracticeFormPage.formsButton,10);
+        //ReusableMethods.clickWithJS(us09PracticeFormPage.formsButton);
         us09PracticeFormPage.formsButton.click();
 
     }
@@ -47,9 +50,8 @@ public class US09_PracticeForm_Test {
         us09PracticeFormPage.practiceFormButton.click();
         ReusableMethods.waitFor(2);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitFor(1);
-        //ReusableMethods.waitForClickablility(us09PracticeFormPage.submit, 10);
-        us09PracticeFormPage.submit.click();
+        ReusableMethods.waitForClickablility(us09PracticeFormPage.submit, 10);
+        ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
         ReusableMethods.waitFor(1);
         String expectedColor = "#dc3545";
         String firstNameBorderColor = us09PracticeFormPage.firstName.getCssValue("border-color");
@@ -59,7 +61,7 @@ public class US09_PracticeForm_Test {
         String lastNameBorderColor = us09PracticeFormPage.lastName.getCssValue("border-color");
         String lastnameHexColor = Color.fromString(lastNameBorderColor).asHex();
 
-        ReusableMethods.waitFor(2);
+        ReusableMethods.waitForClickablility(us09PracticeFormPage.gender,10);
         String genderBorderColor = us09PracticeFormPage.gender.getCssValue("border-color");
         String genderHexColor = Color.fromString(genderBorderColor).asHex();
         System.out.println("genderHexColor = " + genderHexColor);
@@ -68,7 +70,7 @@ public class US09_PracticeForm_Test {
         Assert.assertEquals(lastnameHexColor, expectedColor);
         Assert.assertEquals(genderHexColor, expectedColor);
 
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitForVisibility(us09PracticeFormPage.mobile,10);
         String mobileNumberBorderColor = us09PracticeFormPage.mobile.getCssValue("border-color");
         String mobileNumberHexColor = Color.fromString(mobileNumberBorderColor).asHex();
 
@@ -84,11 +86,10 @@ public class US09_PracticeForm_Test {
         us09PracticeFormPage.practiceFormButton.click();
 
         for (int i = 1; i < 9; i++) {
-            ReusableMethods.waitFor(1);
+            ReusableMethods.waitForClickablility(us09PracticeFormPage.userEmail,10);
             us09PracticeFormPage.userEmail.sendKeys(ConfigurationReader.getProperty("invalid_email_" + i));
-            action.sendKeys(Keys.PAGE_DOWN).perform();
-            ReusableMethods.waitFor(1);
-            us09PracticeFormPage.submit.click();
+            ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,10);
+            ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
             ReusableMethods.waitFor(1);
             String userEmailBorderColor = us09PracticeFormPage.userEmail.getCssValue("border-color");
             String userEmailHexColor = Color.fromString(userEmailBorderColor).asHex();
@@ -101,8 +102,7 @@ public class US09_PracticeForm_Test {
         ReusableMethods.waitFor(1/2);
         action.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.waitFor(1);
-        //ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,2);
-        us09PracticeFormPage.submit.click();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
         ReusableMethods.waitFor(1);
         String userEmailBorderColor = us09PracticeFormPage.userEmail.getCssValue("border-color");
         String userEmailHexColor = Color.fromString(userEmailBorderColor).asHex();
@@ -126,8 +126,8 @@ public class US09_PracticeForm_Test {
         us09PracticeFormPage.mobile.sendKeys("123456789");
         ReusableMethods.waitFor(1);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitFor(1);
-        us09PracticeFormPage.submit.click();
+        ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,10);
+        ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
         ReusableMethods.waitFor(1);
         String mobileHexColor = ReusableMethods.getHexColor(us09PracticeFormPage.mobile, "border-color");
         System.out.println("mobileHexColor = " + mobileHexColor);
@@ -141,15 +141,13 @@ public class US09_PracticeForm_Test {
     @Test(priority = 6, dependsOnMethods = "setup")
     //Hobbies  checkBoxlari secilebilir olmalidir
     public void US0940() {
-        us09PracticeFormPage.practiceFormButton.click();
-
-        action.click(us09PracticeFormPage.hobbyMusic).perform();
+        ReusableMethods.clickWithJS( us09PracticeFormPage.practiceFormButton);
+        ReusableMethods.clickWithJS(us09PracticeFormPage.hobbyMusic);
         Assert.assertTrue(us09PracticeFormPage.hobbyMusic.isSelected());
 
-        action.click(us09PracticeFormPage.hobbyReading).perform();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.hobbyReading);
         Assert.assertTrue(us09PracticeFormPage.hobbyReading.isSelected());
-
-        action.click(us09PracticeFormPage.hobbySports).perform();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.hobbySports);
         Assert.assertTrue(us09PracticeFormPage.hobbySports.isSelected());
         Driver.getDriver().navigate().refresh();
 
@@ -160,37 +158,65 @@ public class US09_PracticeForm_Test {
     public void US0941() {
         //Gecerli veriler ile submit yapilabilmelidir
 
-        ReusableMethods.waitFor(1);
-        us09PracticeFormPage.practiceFormButton.click();
+
+
+        Driver.getDriver().navigate().refresh();
+        ReusableMethods.waitForClickablility(us09PracticeFormPage.practiceFormButton,10);
+        ReusableMethods.clickWithJS( us09PracticeFormPage.practiceFormButton);
+
+       // ReusableMethods.clickWithJS(us09PracticeFormPage.selectState);
+        ReusableMethods.clickStaleElement(us09PracticeFormPage.selectState);
+        action.sendKeys(us09PracticeFormPage.selectState,"Haryana"+ Keys.ENTER).build().perform();
+        ReusableMethods.clickStaleElement(us09PracticeFormPage.selectCity);
+        action.sendKeys(us09PracticeFormPage.selectCity, "Karnal" + Keys.ENTER).build().perform();
+
+
+//            boolean result = false;
+//            int attempts = 0;
+//            while(attempts < 500) {
+//                try {
+//                    Driver.getDriver().navigate().refresh();
+//                    ReusableMethods.clickWithJS(us09PracticeFormPage.selectState);
+//                    action.sendKeys(us09PracticeFormPage.selectState,"Haryana"+ Keys.ENTER).build().perform();
+//                    ReusableMethods.clickWithJS(us09PracticeFormPage.selectCity);
+//                    action.sendKeys(us09PracticeFormPage.selectCity, "Karnal" + Keys.ENTER).build().perform();
+//                    result = true;
+//                    break;
+//                } catch(Exception e) {
+//                    System.out.println("StaleElementException");
+//                }
+//                attempts++;
+//            }
+
+
+       // action.sendKeys(us09PracticeFormPage.selectState,"Haryana"+ Keys.ENTER).build().perform();
+//        ReusableMethods.clickWithJS(us09PracticeFormPage.selectCity);
+//        action.sendKeys(us09PracticeFormPage.selectCity, "Karnal" + Keys.ENTER).build().perform();
+
         us09PracticeFormPage.firstName.sendKeys("Ahmet");
         us09PracticeFormPage.lastName.sendKeys("Murat");
         us09PracticeFormPage.userEmail.sendKeys("ahmetmurat@gmail.com");
 
-        action.click(us09PracticeFormPage.male).perform();
-        ReusableMethods.waitFor(1);
-
-        action.sendKeys(us09PracticeFormPage.mobile, "1234567890").perform();
-
-        //ReusableMethods.waitFor(1/2);
+        ReusableMethods.clickWithJS(us09PracticeFormPage.male);
+        ReusableMethods.waitFor(2);
+        us09PracticeFormPage.mobile.sendKeys("1234567890");
 
 
-        action.click(us09PracticeFormPage.dateOfBirth).perform();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.dateOfBirth);
         Select month = new Select(us09PracticeFormPage.monthDropdown);
         month.selectByIndex(4);
         Select year = new Select(us09PracticeFormPage.yearDropdown);
         year.selectByVisibleText("2014");
 
-        action.click(us09PracticeFormPage.day).perform();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.day);
 
         ReusableMethods.waitFor(1);
+        ReusableMethods.clickWithJS(us09PracticeFormPage.subjects);
 
-        us09PracticeFormPage.subjects.click();
-
-        action.sendKeys(us09PracticeFormPage.subjects, "Testing US09").perform();
 
         ReusableMethods.waitFor(1/2);
 
-        action.click(us09PracticeFormPage.hobbySports).perform();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.hobbySports);
 
         ReusableMethods.waitFor(1);
         action.sendKeys(Keys.PAGE_DOWN).perform();
@@ -198,19 +224,12 @@ public class US09_PracticeForm_Test {
         String uploadFile = "C:\\Users\\abdkz\\OneDrive\\Desktop\\images.png";
 
         us09PracticeFormPage.chooseFile.sendKeys(uploadFile);
-        ReusableMethods.waitForClickablility(us09PracticeFormPage.currentAddress,5);
-        //ReusableMethods.waitFor(1);
-
+        //ReusableMethods.waitForClickablility(us09PracticeFormPage.currentAddress,5);
+        ReusableMethods.waitForVisibility(us09PracticeFormPage.currentAddress,10);
         us09PracticeFormPage.currentAddress.sendKeys(ConfigurationReader.getProperty("textBox_currentAddress"));
-        ReusableMethods.waitFor(1/2);
 
 
-        action.sendKeys(us09PracticeFormPage.selectState, "Haryana" + Keys.ENTER).perform();
-
-        ReusableMethods.waitFor(1/2);
-        action.sendKeys(us09PracticeFormPage.selectCity, "Karnal" + Keys.ENTER).perform();
-
-        us09PracticeFormPage.submit.click();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
 
 
         String[] expectedOutput = {"Label Values", "Student Name Ahmet Murat", "Student Email ahmetmurat@gmail.com", "Gender Male", "Mobile 1234567890", "Date of Birth 13 May,2014", "Subjects", "Hobbies Sports", "Picture images.png", "Address asdfg", "State and City Haryana Karnal"};

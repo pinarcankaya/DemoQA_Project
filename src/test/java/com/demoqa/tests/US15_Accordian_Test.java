@@ -26,8 +26,8 @@ public class US15_Accordian_Test {
     @BeforeMethod
     public void setup(){
         Driver.getDriver().get(url);
-        Driver.driver.manage().window().maximize();
-        Driver.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
        action.sendKeys(Keys.PAGE_DOWN).perform();
        action.sendKeys(Keys.PAGE_DOWN).perform();

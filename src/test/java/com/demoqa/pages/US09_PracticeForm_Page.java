@@ -1,15 +1,19 @@
 package com.demoqa.pages;
 
 import com.demoqa.utilities.Driver;
+import org.openqa.selenium.ElementNotSelectableException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class US09_PracticeForm_Page {
 
     public US09_PracticeForm_Page() { PageFactory.initElements(Driver.getDriver(), this); }
+
 
     @FindBy(xpath = "(//div[@class='card-up'])[2]")
     public WebElement formsButton;
@@ -39,7 +43,7 @@ public class US09_PracticeForm_Page {
     @FindBy(id = "dateOfBirthInput")
     public WebElement dateOfBirth;
 
-    @FindBy(id = "userNumber")
+    @FindBy(xpath = "//input[@id='userNumber']")
     public WebElement mobile;
 
     @FindBy(id = "submit")
@@ -69,13 +73,13 @@ public class US09_PracticeForm_Page {
     @FindBy (id ="uploadPicture")
     public WebElement chooseFile;
 
-    @FindBy (id ="currentAddress")
+    @FindBy (xpath = "//textarea[@id='currentAddress']")
     public WebElement currentAddress;
 
-    @FindBy (id ="state")
+    @FindBy (xpath = "(//div[@class=' css-tlfecz-indicatorContainer'])[1]")  ////input[@id='react-select-3-input'] ////(//div[@class=' css-1wa3eu0-placeholder'])[1]
     public WebElement selectState;
 
-    @FindBy (id ="city")
+    @FindBy (xpath ="//input[@id='react-select-4-input']")
     public WebElement selectCity;
 
     @FindBy (xpath = "//tr")
