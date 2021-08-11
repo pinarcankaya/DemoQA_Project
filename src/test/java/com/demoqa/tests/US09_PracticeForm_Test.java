@@ -164,34 +164,12 @@ public class US09_PracticeForm_Test {
         ReusableMethods.waitForClickablility(us09PracticeFormPage.practiceFormButton,10);
         ReusableMethods.clickWithJS( us09PracticeFormPage.practiceFormButton);
 
-       // ReusableMethods.clickWithJS(us09PracticeFormPage.selectState);
-        ReusableMethods.clickStaleElement(us09PracticeFormPage.selectState);
-        action.sendKeys(us09PracticeFormPage.selectState,"Haryana"+ Keys.ENTER).build().perform();
-        ReusableMethods.clickStaleElement(us09PracticeFormPage.selectCity);
-        action.sendKeys(us09PracticeFormPage.selectCity, "Karnal" + Keys.ENTER).build().perform();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.selectState);
 
+        ReusableMethods.SendKeysStaleElement(us09PracticeFormPage.selectState,"Haryana");
 
-//            boolean result = false;
-//            int attempts = 0;
-//            while(attempts < 500) {
-//                try {
-//                    Driver.getDriver().navigate().refresh();
-//                    ReusableMethods.clickWithJS(us09PracticeFormPage.selectState);
-//                    action.sendKeys(us09PracticeFormPage.selectState,"Haryana"+ Keys.ENTER).build().perform();
-//                    ReusableMethods.clickWithJS(us09PracticeFormPage.selectCity);
-//                    action.sendKeys(us09PracticeFormPage.selectCity, "Karnal" + Keys.ENTER).build().perform();
-//                    result = true;
-//                    break;
-//                } catch(Exception e) {
-//                    System.out.println("StaleElementException");
-//                }
-//                attempts++;
-//            }
-
-
-       // action.sendKeys(us09PracticeFormPage.selectState,"Haryana"+ Keys.ENTER).build().perform();
-//        ReusableMethods.clickWithJS(us09PracticeFormPage.selectCity);
-//        action.sendKeys(us09PracticeFormPage.selectCity, "Karnal" + Keys.ENTER).build().perform();
+        ReusableMethods.clickWithJS(us09PracticeFormPage.selectCity);
+        ReusableMethods.SendKeysStaleElement(us09PracticeFormPage.selectCity,"Karnal");
 
         us09PracticeFormPage.firstName.sendKeys("Ahmet");
         us09PracticeFormPage.lastName.sendKeys("Murat");
@@ -224,7 +202,6 @@ public class US09_PracticeForm_Test {
         String uploadFile = "C:\\Users\\abdkz\\OneDrive\\Desktop\\images.png";
 
         us09PracticeFormPage.chooseFile.sendKeys(uploadFile);
-        //ReusableMethods.waitForClickablility(us09PracticeFormPage.currentAddress,5);
         ReusableMethods.waitForVisibility(us09PracticeFormPage.currentAddress,10);
         us09PracticeFormPage.currentAddress.sendKeys(ConfigurationReader.getProperty("textBox_currentAddress"));
 

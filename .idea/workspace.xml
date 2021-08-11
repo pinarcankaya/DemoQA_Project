@@ -6,40 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="547aed1e-0f31-4962-9ff4-bf327cb41a69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smokeTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US023_SelectMenu_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US023_SelectMenu_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US030_BookStoreMenu_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US030_BookStoreMenu_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US09_PracticeForm_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US09_PracticeForm_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US01_TextBox_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US01_TextBox_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US023_SelectMenu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US023_SelectMenu_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US06_Links_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US06_Links_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US07_UploadDowload_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US07_UploadDowload_Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US09_PracticeForm_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US09_PracticeForm_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US15_Accordian_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US15_Accordian_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US22_Menu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US22_Menu_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US27_Droppable_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US27_Droppable_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US28_DragableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US28_DragableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US30_BookStoreMenu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US30_BookStoreMenu_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US33_Broken_Links.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US33_Broken_Links.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/ReusableMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/ReusableMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US023_SelectMenu_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US023_SelectMenu_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US030_BookStoreMenu_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US030_BookStoreMenu_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US09_PracticeForm_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US09_PracticeForm_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US01_TextBox_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US01_TextBox_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US023_SelectMenu_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US023_SelectMenu_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US06_Links_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US06_Links_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US07_UploadDowload_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US07_UploadDowload_Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US15_Accordian_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US15_Accordian_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US27_Droppable_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US27_Droppable_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US28_DragableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US28_DragableTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US30_BookStoreMenu_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US30_BookStoreMenu_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US33_Broken_Links.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US33_Broken_Links.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="abdullah2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
   </component>
