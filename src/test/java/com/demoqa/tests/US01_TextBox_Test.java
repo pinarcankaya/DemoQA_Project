@@ -67,15 +67,17 @@ public class US01_TextBox_Test {
         Assert.assertTrue(us01TextBoxPage.permanentAddress.isDisplayed()&&us01TextBoxPage.permanentAddress.isEnabled());
         Assert.assertTrue(us01TextBoxPage.submit.isDisplayed()&&us01TextBoxPage.submit.isEnabled());
 
-        ReusableMethods.waitFor(1/2);
+        //ReusableMethods.waitFor(1/2);
+        ReusableMethods.waitForClickablility(us01TextBoxPage.email,10);
 
         us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("valid_email"));
         ReusableMethods.waitFor(1/2);
-        action.sendKeys(Keys.PAGE_DOWN).perform();
+       // action.sendKeys(Keys.PAGE_DOWN).perform();
 
-
+        ReusableMethods.clickWithJS(us01TextBoxPage.submit);
         us01TextBoxPage.submit.click();
-        ReusableMethods.waitFor(1);
+        ReusableMethods.waitForClickablility(us01TextBoxPage.email,10);
+        //ReusableMethods.waitFor(1);
         String emailAttribute = us01TextBoxPage.email.getAttribute("class");
         String validEmailAttribute = "mr-sm-2 form-control";
         Assert.assertEquals(validEmailAttribute, emailAttribute);
@@ -85,11 +87,14 @@ public class US01_TextBox_Test {
 
 
         for (int i = 1 ; i <9 ; i++) {
+            ReusableMethods.clickWithJS(us01TextBoxPage.email);
             us01TextBoxPage.email.sendKeys(ConfigurationReader.getProperty("invalid_email_" + i));
             ReusableMethods.waitFor(1/2);
             action.sendKeys(Keys.PAGE_DOWN).perform();
-            ReusableMethods.waitFor(1);
-            us01TextBoxPage.submit.click();
+            ReusableMethods.waitForClickablility(us01TextBoxPage.submit,10);
+            //ReusableMethods.waitFor(1);
+            ReusableMethods.clickWithJS(us01TextBoxPage.submit);
+            //us01TextBoxPage.submit.click();
             //ReusableMethods.waitFor(1);
             String invalidEmailAttribute=us01TextBoxPage.email.getAttribute("class");
             Assert.assertTrue(invalidEmailAttribute.contains("error"));
@@ -118,9 +123,10 @@ public class US01_TextBox_Test {
 
         ReusableMethods.waitFor(1);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitFor(1);
-
-        us01TextBoxPage.submit.click();
+        ReusableMethods.waitForClickablility(us01TextBoxPage.submit,10);
+        //ReusableMethods.waitFor(1);
+        ReusableMethods.clickWithJS(us01TextBoxPage.submit);
+        //us01TextBoxPage.submit.click();
         String submitOutputText=us01TextBoxPage.submitOutput.getText();
 
         ArrayList<String> expectedOutput= new ArrayList<String>();
@@ -141,3 +147,6 @@ public class US01_TextBox_Test {
         Driver.closeDriver();
     }
 }
+
+//<class name="com.demoqa.tests.US023_SelectMenu_Test"/>
+//                    <class name="com.demoqa.tests.US30_BookStoreMenu_Test"/>

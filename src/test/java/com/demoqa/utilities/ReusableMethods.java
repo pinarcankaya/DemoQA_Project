@@ -78,6 +78,21 @@ public class ReusableMethods {
         }
         return elemTexts;
     }
+
+    //=====StaleElementReferenceException=====//
+    public static void clickStaleElement(WebElement element){
+        WebDriverWait wait=new WebDriverWait(Driver.getDriver(),20);
+        boolean cevir = true;
+        while (cevir) {
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                element.click();
+                cevir = false;
+            } catch (StaleElementReferenceException e) {
+                cevir = true;
+            }
+        }
+    }
 //======== Returns false if an element is not visible =====
     public static boolean isElementVisible(WebElement el){
         try {

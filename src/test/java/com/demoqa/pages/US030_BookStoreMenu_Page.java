@@ -12,7 +12,7 @@ public class US030_BookStoreMenu_Page {
 
     public US030_BookStoreMenu_Page (){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy (xpath = "//h5[text()='Book Store Application']")
+    @FindBy (xpath = "(//div[@class='card-up'])[6]") // ////h5[text()='Book Store Application']
     public WebElement BookStoreAppCard;
 
     @FindBy (xpath = "//div[@class='main-header']")

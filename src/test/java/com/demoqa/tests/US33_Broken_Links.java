@@ -20,8 +20,8 @@ public class US33_Broken_Links {
     @BeforeMethod
     public void setup() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        Driver.driver.manage().window().maximize();
-        Driver.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         ReusableMethods.clickWithJS(draggablePage.draggablePage.dragableInteractions);
         us33_broken_image.element.click();
         actions.sendKeys(Keys.PAGE_DOWN);

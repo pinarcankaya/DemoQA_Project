@@ -26,8 +26,8 @@ public class US07_UploadDowload_Test {
     @BeforeMethod
     public void setup(){
         Driver.getDriver().get(url);
-        Driver.driver.manage().window().maximize();
-        Driver.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         uploadDowloadPage.elementsButton.click();
         ReusableMethods.waitFor(5);

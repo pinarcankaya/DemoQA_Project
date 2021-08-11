@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +62,7 @@ public class US023_SelectMenu_Test {
 
     @Test (priority = 3, dependsOnMethods = "setup")
     //-Sayfada ilk olarak "Select Value" adi altinda "Select Option" adli box icinde Dropdown menu tiklandiginda acilmalidir
-    public void US023129(){
+    public void US023129() throws InterruptedException {
 
         Assert.assertEquals(us023SelectMenuPage.SelectDropDownBoxes.get(1).getText(),"Select Value");
 
@@ -77,8 +79,9 @@ public class US023_SelectMenu_Test {
 
             Assert.assertTrue(actualResult.contains(expectedResult));
             us023SelectMenuPage.SelectDropDownBoxes.get(2).click();
-        }
 
+        }
+        Driver.getDriver().navigate().refresh();
 
 
     }
@@ -87,28 +90,39 @@ public class US023_SelectMenu_Test {
     //-Sayfada ikinci olarak "Select One" adi altinda "Select Title" adli box icinde Dropdown menu tiklandiginda acilmalidir
     public void US023130 (){
 
-
+        //ReusableMethods.waitForVisibility(us023SelectMenuPage.SelectDropDownBoxes.get(4),10);
         Assert.assertEquals(us023SelectMenuPage.SelectDropDownBoxes.get(3).getText(),"Select One");
 
 
         Assert.assertEquals(us023SelectMenuPage.SelectDropDownBoxes.get(4).getText(),"Select Title");
+        System.out.println("us023SelectMenuPage.SelectDropDownBoxes.get(4).getText() = " + us023SelectMenuPage.SelectDropDownBoxes.get(4).getText());
 
-
-        wait.until(ExpectedConditions.elementToBeClickable(us023SelectMenuPage.SelectDropDownBoxes.get(4)));
-        action.click(us023SelectMenuPage.SelectDropDownBoxes.get(4)).build().perform();
-        jse.executeScript("window.scrollBy(0,175)");
+        ReusableMethods.waitForClickablility(us023SelectMenuPage.selectTitle,25);
+//        for (int i = 0; i < 15; i++) {
+//            try {
+//                us023SelectMenuPage.selectTitle.click();
+//            }catch(Exception exception){
+//                System.out.println("exception = " + exception);
+//            }
+//        }
+        us023SelectMenuPage.selectTitle.click();
+        //ReusableMethods.waitFor(2);
+        //action.click(us023SelectMenuPage.SelectDropDownBoxes.get(4)).build().perform();
+        Driver.getDriver().navigate().refresh();
 
         for (int i = 0; i < us023SelectMenuPage.SelectOption.size(); i++) {
+            ReusableMethods.waitForVisibility(us023SelectMenuPage.SelectOption.get(i),5);
             String expectedResult=us023SelectMenuPage.SelectOption.get(i).getText();
 
+            ReusableMethods.waitForClickablility(us023SelectMenuPage.SelectOption.get(i),10);
+            //ReusableMethods.scrollTo(us023SelectMenuPage.SelectOption.get(i));
             us023SelectMenuPage.SelectOption.get(i).click();
-
+            ReusableMethods.waitForVisibility(us023SelectMenuPage.SelectDropDownBoxes.get(4),5);
             String actualResult= us023SelectMenuPage.SelectDropDownBoxes.get(4).getText();
-
             Assert.assertTrue(actualResult.contains(expectedResult));
             us023SelectMenuPage.SelectDropDownBoxes.get(4).click();
         }
-
+        us023SelectMenuPage.SelectDropDownBoxes.get(3).click();
 
     }
 
@@ -125,7 +139,7 @@ public class US023_SelectMenu_Test {
         System.out.println(select.getFirstSelectedOption().getText());
 
         for (WebElement selectMenu : select.getOptions()) {
-            ReusableMethods.waitFor(1);
+            ReusableMethods.waitForClickablility(us023SelectMenuPage.oldSelectMenu,10);
             us023SelectMenuPage.oldSelectMenu.click();
             String toBeSelected=selectMenu.getText();
 
@@ -143,13 +157,11 @@ public class US023_SelectMenu_Test {
     // tiklandiginda  acilmalidir ve takibinde menudeki secenekler secilebilmelidir.
 
     public void US023132() {
-
+        Driver.getDriver().navigate().refresh();
         Assert.assertTrue(us023SelectMenuPage.SelectDropDownBoxes.get(7).getText().contains("Multiselect drop down"));
 
-        ReusableMethods.waitFor(1);
-
         WebElement selectBox =us023SelectMenuPage.multiSelectDropDownBox;
-
+        ReusableMethods.waitForClickablility(selectBox,10);
 
         selectBox.click();
 
