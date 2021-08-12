@@ -40,6 +40,7 @@ public class US09_PracticeForm_Test {
     //Forms altindaki Practice Form sayfasina ulasilabilmelidir.
     public void TC0936() {
         Assert.assertTrue(us09PracticeFormPage.practiceFormButton.isEnabled());
+        Driver.getDriver().navigate().refresh();
     }
 
     @Test(priority = 3, dependsOnMethods = "setup")
@@ -47,11 +48,15 @@ public class US09_PracticeForm_Test {
     Submit yapilamadigini dogrulayin*/
 
     public void TC0937() {
-        us09PracticeFormPage.practiceFormButton.click();
-        ReusableMethods.waitFor(2);
+        //ReusableMethods.clickStaleElement(us09PracticeFormPage.practiceFormButton);
+       // ReusableMethods.clickStaleElement(us09PracticeFormPage.practiceFormButton);
+       ReusableMethods.clickWithJS(us09PracticeFormPage.practiceFormButton);
+        //us09PracticeFormPage.practiceFormButton.click();
+       // ReusableMethods.waitFor(2);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitForClickablility(us09PracticeFormPage.submit, 10);
-        ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
+        ReusableMethods.clickStaleElement(us09PracticeFormPage.submit);
+//        ReusableMethods.waitForClickablility(us09PracticeFormPage.submit, 10);
+//        ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
         ReusableMethods.waitFor(1);
         String expectedColor = "#dc3545";
         String firstNameBorderColor = us09PracticeFormPage.firstName.getCssValue("border-color");
@@ -83,13 +88,15 @@ public class US09_PracticeForm_Test {
     @Test(priority = 4, dependsOnMethods = "setup")
     //Gecerli bir mail ile submit yapilabilmelidir
     public void US0938(){
-        us09PracticeFormPage.practiceFormButton.click();
+        ReusableMethods.clickStaleElement(us09PracticeFormPage.practiceFormButton);
+        //us09PracticeFormPage.practiceFormButton.click();
 
         for (int i = 1; i < 9; i++) {
             ReusableMethods.waitForClickablility(us09PracticeFormPage.userEmail,10);
             us09PracticeFormPage.userEmail.sendKeys(ConfigurationReader.getProperty("invalid_email_" + i));
-            ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,10);
-            ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
+            ReusableMethods.clickStaleElement(us09PracticeFormPage.submit);
+//            ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,10);
+//            ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
             ReusableMethods.waitFor(1);
             String userEmailBorderColor = us09PracticeFormPage.userEmail.getCssValue("border-color");
             String userEmailHexColor = Color.fromString(userEmailBorderColor).asHex();
@@ -116,7 +123,8 @@ public class US09_PracticeForm_Test {
     @Test(priority = 5, dependsOnMethods = "setup")
     //Mobile TextBox kismina gercek bir mobile number ile submit yapilabilmelidir
     public void US0939() {
-        us09PracticeFormPage.practiceFormButton.click();
+        ReusableMethods.clickStaleElement(us09PracticeFormPage.practiceFormButton);
+        //us09PracticeFormPage.practiceFormButton.click();
         String minlength = us09PracticeFormPage.mobile.getAttribute("minlength");
         String maxlength = us09PracticeFormPage.mobile.getAttribute("maxlength");
         String expectedlength = "10";
@@ -126,8 +134,9 @@ public class US09_PracticeForm_Test {
         us09PracticeFormPage.mobile.sendKeys("123456789");
         ReusableMethods.waitFor(1);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,10);
-        ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
+        ReusableMethods.clickStaleElement(us09PracticeFormPage.submit);
+//        ReusableMethods.waitForClickablility(us09PracticeFormPage.submit,10);
+//        ReusableMethods.clickWithJS(us09PracticeFormPage.submit);
         ReusableMethods.waitFor(1);
         String mobileHexColor = ReusableMethods.getHexColor(us09PracticeFormPage.mobile, "border-color");
         System.out.println("mobileHexColor = " + mobileHexColor);
@@ -141,7 +150,9 @@ public class US09_PracticeForm_Test {
     @Test(priority = 6, dependsOnMethods = "setup")
     //Hobbies  checkBoxlari secilebilir olmalidir
     public void US0940() {
-        ReusableMethods.clickWithJS( us09PracticeFormPage.practiceFormButton);
+        ReusableMethods.clickStaleElement(us09PracticeFormPage.practiceFormButton);
+        //ReusableMethods.clickWithJS( us09PracticeFormPage.practiceFormButton);
+        //ReusableMethods.clickStaleElement(us09PracticeFormPage.hobbyMusic);
         ReusableMethods.clickWithJS(us09PracticeFormPage.hobbyMusic);
         Assert.assertTrue(us09PracticeFormPage.hobbyMusic.isSelected());
 
@@ -161,8 +172,9 @@ public class US09_PracticeForm_Test {
 
 
         Driver.getDriver().navigate().refresh();
-        ReusableMethods.waitForClickablility(us09PracticeFormPage.practiceFormButton,10);
-        ReusableMethods.clickWithJS( us09PracticeFormPage.practiceFormButton);
+        ReusableMethods.clickStaleElement(us09PracticeFormPage.practiceFormButton);
+//        ReusableMethods.waitForClickablility(us09PracticeFormPage.practiceFormButton,10);
+//        ReusableMethods.clickWithJS( us09PracticeFormPage.practiceFormButton);
 
         ReusableMethods.clickWithJS(us09PracticeFormPage.selectState);
 
@@ -216,7 +228,7 @@ public class US09_PracticeForm_Test {
     }
 
     @AfterClass
-    public void tearDown(){
+    public void tearDown() throws InterruptedException {
         Driver.closeDriver();
     }
 

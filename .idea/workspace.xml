@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="547aed1e-0f31-4962-9ff4-bf327cb41a69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US023_SelectMenu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US023_SelectMenu_Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US09_PracticeForm_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US09_PracticeForm_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US30_BookStoreMenu_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US30_BookStoreMenu_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/ReusableMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/ReusableMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US09_PracticeForm_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +76,46 @@
       <recent name="com.demoqa.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng.xml">
+  <component name="RunManager" selected="TestNG.US30_BookStoreMenu_Test">
     <configuration name="C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US01_TextBox_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoqa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US01_TextBox_Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US023_SelectMenu_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoqa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US023_SelectMenu_Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -95,7 +132,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
       <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US09_PracticeForm_Test" />
-      <option name="METHOD_NAME" value="US0941" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -103,7 +139,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US09_PracticeForm_Test.TC0936" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US30_BookStoreMenu_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -112,45 +148,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US09_PracticeForm_Test" />
-      <option name="METHOD_NAME" value="TC0936" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US09_PracticeForm_Test.TC0937" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US09_PracticeForm_Test" />
-      <option name="METHOD_NAME" value="TC0937" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US09_PracticeForm_Test.US0941" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US09_PracticeForm_Test" />
-      <option name="METHOD_NAME" value="US0941" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US30_BookStoreMenu_Test" />
+      <option name="METHOD_NAME" value="setUp" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -159,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng.xml" />
-        <item itemvalue="TestNG.US09_PracticeForm_Test.US0941" />
+        <item itemvalue="TestNG.US30_BookStoreMenu_Test" />
         <item itemvalue="TestNG.US09_PracticeForm_Test" />
-        <item itemvalue="TestNG.US09_PracticeForm_Test.TC0937" />
-        <item itemvalue="TestNG.US09_PracticeForm_Test.TC0936" />
+        <item itemvalue="TestNG.US01_TextBox_Test" />
+        <item itemvalue="TestNG.C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng.xml" />
+        <item itemvalue="TestNG.US023_SelectMenu_Test" />
       </list>
     </recent_temporary>
   </component>

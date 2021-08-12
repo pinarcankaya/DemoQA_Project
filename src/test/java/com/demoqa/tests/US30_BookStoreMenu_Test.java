@@ -23,15 +23,17 @@ public class US30_BookStoreMenu_Test { JavascriptExecutor jse = (JavascriptExecu
 
     @Test (priority = 1)
     public void setUp() throws InterruptedException {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        Driver.getDriver().get("https://demoqa.com/books");
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //Driver.getDriver().manage().deleteAllCookies();
 
         //Driver.getDriver().navigate().refresh();
         //action.sendKeys(Keys.PAGE_DOWN).perform();
-       // Thread.sleep(2000);
-        //jse.executeScript("window.scrollBy(0,750)");
-        ReusableMethods.clickStaleElement(us030BookStoreMenuPage.BookStoreAppCard);
+//       Thread.sleep(2000);
+//        jse.executeScript("window.scrollBy(0,750)");
+//
+//        ReusableMethods.clickStaleElement(us030BookStoreMenuPage.BookStoreAppCard);
         //ReusableMethods.clickWithJS(us030BookStoreMenuPage.BookStoreAppCard);
         //us030BookStoreMenuPage.BookStoreAppCard.click();
     }
@@ -39,17 +41,18 @@ public class US30_BookStoreMenu_Test { JavascriptExecutor jse = (JavascriptExecu
     //Book Store ifadesi Baslik olarak gorunmeli
     public void US030176(){
         String s="Book Store";
+        ReusableMethods.waitForVisibilityStaleElement(us030BookStoreMenuPage.BookStoreHeader);
         WebElement BookStoreHeader=us030BookStoreMenuPage.BookStoreHeader;
         Assert.assertTrue(BookStoreHeader.isDisplayed()&&BookStoreHeader.getText().contentEquals(s));
         Assert.assertTrue(us030BookStoreMenuPage.SearchBox.isDisplayed()&&us030BookStoreMenuPage.SearchBox.isEnabled());
         Assert.assertTrue(us030BookStoreMenuPage.LoginButton.isDisplayed()&&us030BookStoreMenuPage.LoginButton.isEnabled());
+
 
     }
 
     @Test  (priority = 3, dependsOnMethods = "setUp")
     //Arama alaninin altinda sirasiyla " Image, Title,Author ve Publisher " sekmeleri gorunmeli ve aktif olmali
     public void US030177(){
-        // Point location=us030BookStoreMenuPage.ColumnHeaders.get(1).getLocation();
         List<WebElement> columnHeaders=us030BookStoreMenuPage.ColumnHeaders;
         String []  columnHeadersName=new String[]{"Image","Title","Author","Publisher"};
 
@@ -73,7 +76,6 @@ public class US30_BookStoreMenu_Test { JavascriptExecutor jse = (JavascriptExecu
 
 
             int newSize=us030BookStoreMenuPage.textofRow.size();
-            ReusableMethods.waitFor(1);
 
             for (int i = 0; i < newSize; i++) {
                 Assert.assertTrue(us030BookStoreMenuPage.textofRow.get(i).getText().contains(w));
@@ -118,7 +120,7 @@ public class US30_BookStoreMenu_Test { JavascriptExecutor jse = (JavascriptExecu
 
     }
 
-    @Test  (priority = 6, dependsOnMethods = "setUp")
+    @Test  (priority = 7, dependsOnMethods = "setUp")
     /*
     Kitap table listesinden bir Kitap ismine tiklanip , o kitabla ilgili "ISBN :
 Title :
@@ -148,7 +150,8 @@ ilgili kitabin linkinin calisip calismadigini linki acarak test ediniz
          ReusableMethods.waitForClickablility(us030BookStoreMenuPage.GitPocketGuideLink,10);
 
         //ReusableMethods.waitFor(1);
-        us030BookStoreMenuPage.GitPocketGuideLink.click();
+        ReusableMethods.clickWithJS(us030BookStoreMenuPage.GitPocketGuideLink);
+        //us030BookStoreMenuPage.GitPocketGuideLink.click();
 
         for (int i = 0; i < us030BookStoreMenuPage.BookCardList.size()-1; i++) {
             Assert.assertEquals(us030BookStoreMenuPage.BookCardList.get(i).getText(),bookInfoList.get(i));
@@ -157,9 +160,10 @@ ilgili kitabin linkinin calisip calismadigini linki acarak test ediniz
         }
         String currentWindowHandle=Driver.getDriver().getWindowHandle();
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        //ReusableMethods.waitFor(1);
-        ReusableMethods.waitForClickablility(us030BookStoreMenuPage.websiteLink,10);
-        us030BookStoreMenuPage.websiteLink.click();
+
+        ReusableMethods.clickWithJS(us030BookStoreMenuPage.websiteLink);
+        //ReusableMethods.clickStaleElement(us030BookStoreMenuPage.websiteLink);
+
         Set<String> windowHandles=Driver.getDriver().getWindowHandles();
         for (String handle: windowHandles
         ) {
@@ -171,26 +175,24 @@ ilgili kitabin linkinin calisip calismadigini linki acarak test ediniz
 
         }
         Driver.getDriver().switchTo().window(currentWindowHandle);
+        ReusableMethods.waitFor(1/2);
 
     }
 
-    @Test  (priority = 7, dependsOnMethods = "setUp")
+    @Test  (priority = 6, dependsOnMethods = "setUp")
     /*
     "Back to BookStore  butunun  assert ediniz  tiklanir olup olmadigini ve istenilen yere gelip gelmedigini
      */
     public void TC030181 (){
-        //ReusableMethods.waitFor(2);
-        wait.until(ExpectedConditions.elementToBeClickable(us030BookStoreMenuPage.bookListBody.get(0)));
-        us030BookStoreMenuPage.GitPocketGuideLink.click();
-        //ReusableMethods.waitFor(1);
-        action.sendKeys(Keys.PAGE_DOWN).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(us030BookStoreMenuPage.backToStoreButton));
-        Assert.assertTrue(us030BookStoreMenuPage.backToStoreButton.isEnabled());
-        us030BookStoreMenuPage.backToStoreButton.click();
+        ReusableMethods.clickStaleElement(us030BookStoreMenuPage.GitPocketGuideLink);
+
+        ReusableMethods.clickStaleElement(us030BookStoreMenuPage.backToStoreButton);
+
         Assert.assertTrue(us030BookStoreMenuPage.BookStoreHeader.isDisplayed());
+
     }
 
-    @Test  (priority = 7, dependsOnMethods = "setUp")
+    @Test  (priority = 8, dependsOnMethods = "setUp")
     /*
     Login buttonuda yine gorunur ve aktif olmali ve tiklandiginda  Login alanina gitmeli sayfa .
      */

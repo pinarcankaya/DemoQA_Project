@@ -5,6 +5,7 @@ import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -37,15 +38,15 @@ public class US023_SelectMenu_Test {
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         us023SelectMenuPage =new US023_SelectMenu_Page();
 
+        ReusableMethods.clickStaleElement(us023SelectMenuPage.Widgets);
 
-
-        us023SelectMenuPage.Widgets.click();
-
-        Thread.sleep(500);
-        //scrolling down
-        jse.executeScript("window.scrollBy(0,300)");
-        wait.until(ExpectedConditions.elementToBeClickable(us023SelectMenuPage.SelectMenu));
-        ReusableMethods.clickWithJS(us023SelectMenuPage.SelectMenu);
+       // us023SelectMenuPage.Widgets.click();
+        ReusableMethods.clickStaleElement(us023SelectMenuPage.SelectMenu);
+//        Thread.sleep(500);
+//        //scrolling down
+//        jse.executeScript("window.scrollBy(0,300)");
+//        wait.until(ExpectedConditions.elementToBeClickable(us023SelectMenuPage.SelectMenu));
+//        ReusableMethods.clickWithJS(us023SelectMenuPage.SelectMenu);
 
 
 
@@ -55,6 +56,7 @@ public class US023_SelectMenu_Test {
     //- Sayfanın başlığı "Select Menu" olmalıdir.
 
     public void US023128(){
+        ReusableMethods.waitFor(1);
         Assert.assertEquals(us023SelectMenuPage.mainheader.getText(),"Select Menu");
 
 
@@ -69,12 +71,12 @@ public class US023_SelectMenu_Test {
         Assert.assertEquals(us023SelectMenuPage.SelectDropDownBoxes.get(2).getText(),"Select Option");
 
 
-
-        us023SelectMenuPage.SelectDropDownBoxes.get(2).click();
+        ReusableMethods.clickStaleElement(us023SelectMenuPage.SelectDropDownBoxes.get(2));
+        //us023SelectMenuPage.SelectDropDownBoxes.get(2).click();
         for (int i = 0; i < us023SelectMenuPage.SelectOption.size(); i++) {
             String expectedResult=us023SelectMenuPage.SelectOption.get(i).getText();
-
-            us023SelectMenuPage.SelectOption.get(i).click();
+            ReusableMethods.clickStaleElement(us023SelectMenuPage.SelectOption.get(i));
+            //us023SelectMenuPage.SelectOption.get(i).click();
             String actualResult= us023SelectMenuPage.SelectDropDownBoxes.get(2).getText();
 
             Assert.assertTrue(actualResult.contains(expectedResult));
@@ -96,33 +98,37 @@ public class US023_SelectMenu_Test {
 
         Assert.assertEquals(us023SelectMenuPage.SelectDropDownBoxes.get(4).getText(),"Select Title");
         System.out.println("us023SelectMenuPage.SelectDropDownBoxes.get(4).getText() = " + us023SelectMenuPage.SelectDropDownBoxes.get(4).getText());
-
-        ReusableMethods.waitForClickablility(us023SelectMenuPage.selectTitle,25);
-//        for (int i = 0; i < 15; i++) {
-//            try {
-//                us023SelectMenuPage.selectTitle.click();
-//            }catch(Exception exception){
-//                System.out.println("exception = " + exception);
-//            }
-//        }
-        us023SelectMenuPage.selectTitle.click();
+        ReusableMethods.clickStaleElement(us023SelectMenuPage.selectTitle);
+//        ReusableMethods.waitForClickablility(us023SelectMenuPage.selectTitle,25);
+////        for (int i = 0; i < 15; i++) {
+////            try {
+////                us023SelectMenuPage.selectTitle.click();
+////            }catch(Exception exception){
+////                System.out.println("exception = " + exception);
+////            }
+////        }
+//        us023SelectMenuPage.selectTitle.click();
         //ReusableMethods.waitFor(2);
         //action.click(us023SelectMenuPage.SelectDropDownBoxes.get(4)).build().perform();
         Driver.getDriver().navigate().refresh();
 
         for (int i = 0; i < us023SelectMenuPage.SelectOption.size(); i++) {
-            ReusableMethods.waitForVisibility(us023SelectMenuPage.SelectOption.get(i),5);
+            ReusableMethods.waitForVisibilityStaleElement(us023SelectMenuPage.SelectOption.get(i));
+            //ReusableMethods.waitForVisibility(us023SelectMenuPage.SelectOption.get(i),5);
             String expectedResult=us023SelectMenuPage.SelectOption.get(i).getText();
 
             ReusableMethods.waitForClickablility(us023SelectMenuPage.SelectOption.get(i),10);
             //ReusableMethods.scrollTo(us023SelectMenuPage.SelectOption.get(i));
-            us023SelectMenuPage.SelectOption.get(i).click();
+            ReusableMethods.clickStaleElement(us023SelectMenuPage.SelectOption.get(i));
+            //us023SelectMenuPage.SelectOption.get(i).click();
             ReusableMethods.waitForVisibility(us023SelectMenuPage.SelectDropDownBoxes.get(4),5);
             String actualResult= us023SelectMenuPage.SelectDropDownBoxes.get(4).getText();
             Assert.assertTrue(actualResult.contains(expectedResult));
             us023SelectMenuPage.SelectDropDownBoxes.get(4).click();
         }
-        us023SelectMenuPage.SelectDropDownBoxes.get(3).click();
+
+        ReusableMethods.clickStaleElement( us023SelectMenuPage.SelectDropDownBoxes.get(3));
+        //us023SelectMenuPage.SelectDropDownBoxes.get(3).click();
 
     }
 
@@ -139,8 +145,9 @@ public class US023_SelectMenu_Test {
         System.out.println(select.getFirstSelectedOption().getText());
 
         for (WebElement selectMenu : select.getOptions()) {
-            ReusableMethods.waitForClickablility(us023SelectMenuPage.oldSelectMenu,10);
-            us023SelectMenuPage.oldSelectMenu.click();
+//            ReusableMethods.waitForClickablility(us023SelectMenuPage.oldSelectMenu,10);
+//            us023SelectMenuPage.oldSelectMenu.click();
+            ReusableMethods.clickStaleElement(us023SelectMenuPage.oldSelectMenu);
             String toBeSelected=selectMenu.getText();
 
             selectMenu.click();
@@ -161,9 +168,10 @@ public class US023_SelectMenu_Test {
         Assert.assertTrue(us023SelectMenuPage.SelectDropDownBoxes.get(7).getText().contains("Multiselect drop down"));
 
         WebElement selectBox =us023SelectMenuPage.multiSelectDropDownBox;
-        ReusableMethods.waitForClickablility(selectBox,10);
-
-        selectBox.click();
+        ReusableMethods.clickStaleElement(selectBox);
+//        ReusableMethods.waitForClickablility(selectBox,10);
+//
+//        selectBox.click();
 
         List <String> optionsText=new ArrayList<>();
         for (int i = 0; i <us023SelectMenuPage.SelectOption.size() ; i++) {

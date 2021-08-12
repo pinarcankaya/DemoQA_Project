@@ -2,6 +2,7 @@ package com.demoqa.utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -85,6 +86,7 @@ public class ReusableMethods {
         boolean cevir = true;
         while (cevir) {
             try {
+                ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 element.click();
                 cevir = false;
@@ -109,6 +111,20 @@ public class ReusableMethods {
             }
         }
     }
+    //=====StaleElementReferenceException3=====//
+    public static void waitForVisibilityStaleElement(WebElement element){
+        WebDriverWait wait=new WebDriverWait(Driver.getDriver(),20);
+        boolean cevir = true;
+        while (cevir) {
+            try {
+                wait.until(ExpectedConditions.visibilityOf(element));
+                cevir = false;
+            } catch (StaleElementReferenceException e) {
+                cevir = true;
+            }
+        }
+    }
+
 //======== Returns false if an element is not visible =====
     public static boolean isElementVisible(WebElement el){
         try {
@@ -251,4 +267,5 @@ public class ReusableMethods {
         ex.executeScript("arguments[0].click()", webElement);
         return true;
     }
+
 }

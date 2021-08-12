@@ -13,11 +13,12 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
-    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     private Driver(){}
 
-    public static WebDriver getDriver(){
+    public static  WebDriver getDriver(){
 
         //google
 
@@ -54,8 +55,10 @@ public class Driver {
     }
 
     public static void closeDriver(){
+
             driver.get().quit();  // driver'ı kapat
             driver.remove(); // driver'ı hafızadan temizle.
+
     }
 }
 
