@@ -14,9 +14,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-
 import java.util.concurrent.TimeUnit;
+
+//Not: 72 ve 91 satirlar calismiyor
 
 public class US14_ModalDialogs_Test {
 
