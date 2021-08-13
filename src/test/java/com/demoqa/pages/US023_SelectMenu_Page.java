@@ -27,6 +27,9 @@ public class US023_SelectMenu_Page {
     @FindBy (xpath = "//div[@tabindex=-1]")
     public List <WebElement> SelectOption;
 
+    @FindBy(xpath = "(//div[@class=' css-tlfecz-indicatorContainer'])[2]")
+    public WebElement selectTitle;
+
     @FindBy (id = "selectMenuContainer")
     public List <WebElement> selectMenuContainer;
 

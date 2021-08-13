@@ -98,6 +98,7 @@
                     <!--                    <argLine>-XX:MaxPermSize=256m</argLine>-->
                     <!--                    <argLine>-Dfile.encoding=UTF-8</argLine>-->
                     <!--                    <useFile>false</useFile>-->
+
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>

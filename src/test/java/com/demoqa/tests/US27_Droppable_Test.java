@@ -18,14 +18,14 @@ import java.util.concurrent.TimeUnit;
 public class US27_Droppable_Test {
     
     US27_Droppable_Page droppablePage=new US27_Droppable_Page();
-    Actions action=new Actions(Driver.driver);
+    Actions action=new Actions(Driver.getDriver());
     String url="https://demoqa.com";
 
     @BeforeMethod
     public void setup(){
         Driver.getDriver().get(url);
-        Driver.driver.manage().window().maximize();
-        Driver.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         ReusableMethods.waitFor(3);
         action.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.clickWithJS(droppablePage.interactions);

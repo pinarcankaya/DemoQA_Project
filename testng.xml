@@ -5,8 +5,11 @@
           name="parallel test">
         <classes>
 
-                    <class name="com/demoqa/tests/US01_TextBox_Test.java"/>
-                    <class name="com/demoqa/tests/US02_Check_Box_Test.java"/>
+                    <class name="com.demoqa.tests.US01_TextBox_Test"/>
+<!--                    <class name="com.demoqa.tests.US09_PracticeForm_Test"/>-->
+<!--                    <class name="com.demoqa.tests.US023_SelectMenu_Test"/>-->
+                    <class name="com.demoqa.tests.US30_BookStoreMenu_Test"/>
+
         </classes>
     </test>
 </suite>
