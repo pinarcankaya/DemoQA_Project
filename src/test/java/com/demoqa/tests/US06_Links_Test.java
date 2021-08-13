@@ -72,7 +72,7 @@ public class US06_Links_Test {
 
 
         //2. yol
-        Set<String> child = Driver.driver.getWindowHandles();
+        Set<String> child = Driver.getDriver().getWindowHandles();
         List<String> list = new ArrayList<>(child);
         ReusableMethods.waitFor(3);
         Driver.getDriver().switchTo().window(list.get(1)); // get(1) yeni acilan pencereye gidiyor get(2) ikincisine vs. devam ediyor. "0" ana sayfa ve sonrasi child gibi

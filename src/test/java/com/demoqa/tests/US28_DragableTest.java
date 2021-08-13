@@ -28,8 +28,8 @@ public class US28_DragableTest {
     @BeforeClass
     public void setup() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        Driver.driver.manage().window().maximize();
-        Driver.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         ReusableMethods.clickWithJS(draggablePage.dragableInteractions);
     }
 
@@ -55,7 +55,7 @@ public class US28_DragableTest {
     @Test(priority = 3)
     public void TC163() { //Sayfanin title`i "ToolsQA" olmalidir
         String actualTitle = "ToolsQA";
-        String expectedTitle = Driver.driver.getTitle();
+        String expectedTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
 
     }
@@ -215,6 +215,6 @@ mausla hareket ettirebilsin*/
 
     @AfterClass
     public void closeWindow() {
-        Driver.driver.close();
+        Driver.getDriver().close();
     }
 }

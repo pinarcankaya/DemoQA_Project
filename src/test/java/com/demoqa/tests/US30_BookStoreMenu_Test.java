@@ -11,9 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -29,12 +27,15 @@ public class US30_BookStoreMenu_Test { JavascriptExecutor jse = (JavascriptExecu
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-
-        Thread.sleep(500);
-        jse.executeScript("window.scrollBy(0,750)");
-        us030BookStoreMenuPage.BookStoreAppCard.click();
+        //Driver.getDriver().navigate().refresh();
+        //action.sendKeys(Keys.PAGE_DOWN).perform();
+       // Thread.sleep(2000);
+        //jse.executeScript("window.scrollBy(0,750)");
+        ReusableMethods.clickStaleElement(us030BookStoreMenuPage.BookStoreAppCard);
+        //ReusableMethods.clickWithJS(us030BookStoreMenuPage.BookStoreAppCard);
+        //us030BookStoreMenuPage.BookStoreAppCard.click();
     }
-    @Test (priority = 1, dependsOnMethods = "setUp")
+    @Test (priority = 2, dependsOnMethods = "setUp")
     //Book Store ifadesi Baslik olarak gorunmeli
     public void US030176(){
         String s="Book Store";
@@ -45,7 +46,7 @@ public class US30_BookStoreMenu_Test { JavascriptExecutor jse = (JavascriptExecu
 
     }
 
-    @Test  (priority = 2, dependsOnMethods = "setUp")
+    @Test  (priority = 3, dependsOnMethods = "setUp")
     //Arama alaninin altinda sirasiyla " Image, Title,Author ve Publisher " sekmeleri gorunmeli ve aktif olmali
     public void US030177(){
         // Point location=us030BookStoreMenuPage.ColumnHeaders.get(1).getLocation();
@@ -59,7 +60,7 @@ public class US30_BookStoreMenu_Test { JavascriptExecutor jse = (JavascriptExecu
 
     }
 
-    @Test  (priority = 3, dependsOnMethods = "setUp")
+    @Test  (priority = 4, dependsOnMethods = "setUp")
     /*Liste de kitap ismi ,yazar ismi  ve yayinci ismi  search girince  ilgili sonuclar dogru olarak gorunmeli
      ya teker teker yada hepsini bir anda girerek test edebilirsiniz*/
     public void US030178(){
@@ -84,7 +85,7 @@ public class US30_BookStoreMenu_Test { JavascriptExecutor jse = (JavascriptExecu
 
     }
 
-    @Test  (priority = 4, dependsOnMethods = "setUp")
+    @Test  (priority = 5, dependsOnMethods = "setUp")
     /* Kitab liste tablosunun altinda  "Previous ve Next "yon ifaderli olmai ve Page gosterge alani gorunur ve aktif
     olmali ve satir sayisini gosteren  aktif rows ifadesi olmali ve en 5 en fazla 100 Row secilebilir olmali .*/
 
@@ -144,9 +145,9 @@ ilgili kitabin linkinin calisip calismadigini linki acarak test ediniz
                 "the distributed version control system. It provides a compact, readable introduction to Git for" +
                 " new users, as well as a reference to common commands and procedures for those of you with Git exp");
         bookInfoList.add("Website :\n" + "http://chimera.labs.oreilly.com/books/1230000000561/index.html");
-        // ReusableMethods.waitForClickablility(us030BookStoreMenuPage.bookListBody.get(0),10);
+         ReusableMethods.waitForClickablility(us030BookStoreMenuPage.GitPocketGuideLink,10);
 
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
         us030BookStoreMenuPage.GitPocketGuideLink.click();
 
         for (int i = 0; i < us030BookStoreMenuPage.BookCardList.size()-1; i++) {
@@ -156,7 +157,8 @@ ilgili kitabin linkinin calisip calismadigini linki acarak test ediniz
         }
         String currentWindowHandle=Driver.getDriver().getWindowHandle();
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
+        ReusableMethods.waitForClickablility(us030BookStoreMenuPage.websiteLink,10);
         us030BookStoreMenuPage.websiteLink.click();
         Set<String> windowHandles=Driver.getDriver().getWindowHandles();
         for (String handle: windowHandles
@@ -172,7 +174,7 @@ ilgili kitabin linkinin calisip calismadigini linki acarak test ediniz
 
     }
 
-    @Test  (priority = 5, dependsOnMethods = "setUp")
+    @Test  (priority = 7, dependsOnMethods = "setUp")
     /*
     "Back to BookStore  butunun  assert ediniz  tiklanir olup olmadigini ve istenilen yere gelip gelmedigini
      */
