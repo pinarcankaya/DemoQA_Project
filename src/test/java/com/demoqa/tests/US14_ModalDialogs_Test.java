@@ -68,7 +68,7 @@ public class US14_ModalDialogs_Test {
     //2- Verify that text of the Modal dialog box/pupup has 47 characters.
     @Test (priority = 3, dependsOnMethods = {"modalDialogs"})
     public void textCharSize() {
-        ReusableMethods.waitFor(4);
+        ReusableMethods.waitFor(2);
         this.modalDialogsPage.smallButton.click();
         ReusableMethods.waitFor(2);
         int lengthOfText = modalDialogsPage.text.getText().length();

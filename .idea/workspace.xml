@@ -23,36 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="547aed1e-0f31-4962-9ff4-bf327cb41a69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/paralleltest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smokeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smokeTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US014_ModalDialogs_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US014_ModalDialogs_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US06_Links_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US06_Links_Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US14_ModalDialogs_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US14_ModalDialogs_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/DemoQA_Project.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US006_Links_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US006_Links_Page.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US014_ModalDialogs_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US014_ModalDialogs_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US03_Radio_Button_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US18_Slider_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US22_Menu_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US22_Menu_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US_04_Web_Tabels_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US_05_Buttons_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/pages/US_11_Alert_Farame_Window_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US012_Frame_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US014_ModalDialogs_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US015_Accordian_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US03_Radio_Button_Text.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US06_Links_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US06_Links_Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US14_ModalDialogs_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US14_ModalDialogs_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US18_Slider_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US20_Tabs_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US20_Tabs_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US22_Menu_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US29_BookStoreApp_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US29_BookStoreApp_Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US_05_Buttons_Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US_11_Alert_Frame_Window_Tests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/utilities/ReusableMethods$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +82,24 @@
       <recent name="com.demoqa.utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.US14_ModalDialogs_Test">
+  <component name="RunManager" selected="TestNG.US14_ModalDialogs_Test (1)">
+    <configuration name="US14_ModalDialogs_Test (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demoqa.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US14_ModalDialogs_Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="US14_ModalDialogs_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage">
         <pattern>
@@ -178,31 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US14_ModalDialogs_Test.verifyClose" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US14_ModalDialogs_Test" />
-      <option name="METHOD_NAME" value="verifyClose" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.US14_ModalDialogs_Test (1)" />
+        <item itemvalue="TestNG.US14_ModalDialogs_Test.textCharSize" />
         <item itemvalue="TestNG.US14_ModalDialogs_Test" />
         <item itemvalue="TestNG.US14_ModalDialogs_Test.assertClose" />
         <item itemvalue="TestNG.US14_ModalDialogs_Test.fontFamily" />
-        <item itemvalue="TestNG.US14_ModalDialogs_Test.verifyClose" />
-        <item itemvalue="TestNG.US14_ModalDialogs_Test.textCharSize" />
       </list>
     </recent_temporary>
   </component>
@@ -233,38 +207,38 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="427" key="GridCell.Tab.0.bottom" timestamp="1628718580896">
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom" timestamp="1628864069005">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="427" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628718580896" />
-    <state width="1877" height="427" key="GridCell.Tab.0.center" timestamp="1628718580896">
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628864069005" />
+    <state width="1877" height="301" key="GridCell.Tab.0.center" timestamp="1628864069004">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="427" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628718580896" />
-    <state width="1877" height="427" key="GridCell.Tab.0.left" timestamp="1628718580895">
+    <state width="1877" height="301" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628864069004" />
+    <state width="1877" height="301" key="GridCell.Tab.0.left" timestamp="1628864069004">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="427" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628718580895" />
-    <state width="1877" height="427" key="GridCell.Tab.0.right" timestamp="1628718580896">
+    <state width="1877" height="301" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628864069004" />
+    <state width="1877" height="301" key="GridCell.Tab.0.right" timestamp="1628864069004">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="427" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628718580896" />
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1628700147156">
+    <state width="1877" height="301" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628864069004" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1628719533153">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628700147156" />
-    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1628700147156">
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628719533153" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1628719533153">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628700147156" />
-    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1628700147156">
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628719533153" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1628719533152">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628700147156" />
-    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1628700147156">
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628719533152" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1628719533153">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628700147156" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628719533153" />
     <state x="-1582" y="173" width="1520" height="703" key="MergeDialog" timestamp="1628630690653">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
@@ -308,6 +282,11 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/demoqa/tests/US14_ModalDialogs_Test.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

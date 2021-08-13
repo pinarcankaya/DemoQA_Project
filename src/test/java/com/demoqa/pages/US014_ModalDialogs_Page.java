@@ -20,7 +20,7 @@ public class US014_ModalDialogs_Page {
     @FindBy(xpath = "//*[@class='mt-2 btn btn-primary']")
     public WebElement buttons;
 
-    @FindBy(id = "showSmallModal")
+    @FindBy(xpath = "//button[contains(text(), 'Small modal')]") //*[@id='showSmallModal']
     public WebElement smallButton;
 
     @FindBy(xpath = "//div[@class='modal-body']")
