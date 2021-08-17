@@ -30,11 +30,11 @@ public class US14_ModalDialogs_Test {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        this.actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.clickStaleElement(modalDialogsPage.alertsFrameWindows);
-        this.actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         ((JavascriptExecutor)Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", this.modalDialogsPage.modalDialogs);
-        this.modalDialogsPage.modalDialogs.click();
+        modalDialogsPage.modalDialogs.click();
 
     }
     //TC063
@@ -50,14 +50,14 @@ public class US14_ModalDialogs_Test {
         ReusableMethods.waitFor(1);
         Assert.assertTrue(modalDialogsPage.text.isDisplayed());
 
-        this.wait.until(ExpectedConditions.visibilityOf(modalDialogsPage.smallLargeClose));
-        this.modalDialogsPage.smallLargeClose.click();
+        wait.until(ExpectedConditions.visibilityOf(modalDialogsPage.smallLargeClose));
+        modalDialogsPage.smallLargeClose.click();
 
-        this.wait.until(ExpectedConditions.visibilityOf(modalDialogsPage.largeButton));
-        this.modalDialogsPage.largeButton.click();
+        wait.until(ExpectedConditions.visibilityOf(modalDialogsPage.largeButton));
+        modalDialogsPage.largeButton.click();
 
         Assert.assertTrue(modalDialogsPage.text.isDisplayed());
-        this.modalDialogsPage.smallLargeClose.click();
+        modalDialogsPage.smallLargeClose.click();
         //ReusableMethods.waitFor(1);
     }
 
@@ -74,7 +74,7 @@ public class US14_ModalDialogs_Test {
         System.out.println(lengthOfText );
         Assert.assertEquals(lengthOfText ,47);
 
-        this.modalDialogsPage.smallLargeClose.click();
+        modalDialogsPage.smallLargeClose.click();
         //ReusableMethods.waitFor(1);
     }
 
@@ -95,16 +95,16 @@ public class US14_ModalDialogs_Test {
 
         System.out.println(modalDialogsPage.closeSmall.size());
         ReusableMethods.waitFor(1);
-        this.modalDialogsPage.smallClose.click();
+        modalDialogsPage.smallClose.click();
         ReusableMethods.waitFor(1);
 
         Assert.assertEquals(modalDialogsPage.closeSmall.size(), 0);
         System.out.println(modalDialogsPage.closeSmall.size());
 
 //        2.yol: butonu false / true yaparak assert yap.
-        this.modalDialogsPage.smallButton.click();
+        modalDialogsPage.smallButton.click();
         ReusableMethods.waitFor(1);
-        this.modalDialogsPage.smallClose.click();
+        modalDialogsPage.smallClose.click();
         ReusableMethods.waitFor(1);
 
         boolean button = ReusableMethods.isElementVisible(modalDialogsPage.smallClose); //button visible mi? degil, degilse false olsun
@@ -127,7 +127,7 @@ public class US14_ModalDialogs_Test {
             System.out.println("Font family contains: Roboto");
         }else
         System.out.println("Font family does not contain: Roboto");
-        this.modalDialogsPage.smallLargeClose.click();
+        modalDialogsPage.smallLargeClose.click();
 
     }
 
@@ -147,7 +147,7 @@ public class US14_ModalDialogs_Test {
 
         System.out.println(modalDialogsPage.closeLarge2.size());
         ((JavascriptExecutor)Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", this.modalDialogsPage.closeLarge);
-        this.modalDialogsPage.closeLarge.click();
+        modalDialogsPage.closeLarge.click();
 
         ReusableMethods.waitFor(2);
         Assert.assertEquals(modalDialogsPage.closeLarge2.size(), 0);

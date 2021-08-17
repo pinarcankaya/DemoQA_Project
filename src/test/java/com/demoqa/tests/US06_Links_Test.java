@@ -28,11 +28,14 @@ public class US06_Links_Test {
             Driver.getDriver().get(ConfigurationReader.getProperty("url"));
             Driver.getDriver().manage().window().maximize();
             Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            this.linksPage.elementsCard.click();
-            this.actions.sendKeys(Keys.ARROW_DOWN).perform();
-            this.actions.sendKeys(Keys.ARROW_DOWN).perform();
+
+//            ReusableMethods.scrollTo(linksPage.elementsCard);
+//            linksPage.elementsCard.click();
+            actions.sendKeys(Keys.ARROW_DOWN).perform();
+            ReusableMethods.clickStaleElement(linksPage.elementsCard);
+            actions.sendKeys(Keys.ARROW_DOWN).perform();
             ReusableMethods.scrollTo(linksPage.links);
-            this.linksPage.links.click();
+            linksPage.links.click();
 
     }
     //1-Go to main-header "Links"
@@ -58,7 +61,7 @@ public class US06_Links_Test {
     public void home(){
 
         String parentHandle = Driver.getDriver().getWindowHandle();
-        this.linksPage.homeLink.click();
+        linksPage.homeLink.click();
 
         //1. yol
 //        ReusableMethods.waitFor(10);
@@ -92,16 +95,16 @@ public class US06_Links_Test {
     @Test
     public void moved(){
         ReusableMethods.waitFor(3);
-        this.linksPage.moved.click();
+        linksPage.moved.click();
         ReusableMethods.waitFor(3);
-        this.actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.waitFor(3);
         Assert.assertTrue(linksPage.status.isDisplayed());
     }
 
-    @AfterClass
-    public void tearDownMethod() {
-        Driver.closeDriver();
-    }
+//    @AfterClass
+//    public void tearDownMethod() {
+//        Driver.closeDriver();
+//    }
 
 }

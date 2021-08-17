@@ -10,7 +10,7 @@ public class US006_Links_Page {
 
     public US006_Links_Page(){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath = "//div[@class='card-up']")
+    @FindBy(xpath = "(//div[@class ='card-body'])[1]")
     public WebElement elementsCard;
 
     @FindBy(xpath = "//span[.='Links']")

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class US21_ToolTips_Page {
     public US21_ToolTips_Page(){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath = "//*/h5[contains(text(), 'Widgets')]")
+    @FindBy(xpath = "(//div[@class ='card-body'])[4]")//*/h5[contains(text(), 'Widgets')]
     public WebElement widgets;
 
     @FindBy(xpath = "//span[contains(text(), 'Tool Tips')]")

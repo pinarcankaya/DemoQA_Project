@@ -24,8 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d098e823-59ee-402b-a601-3815e22144c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paralleltest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/paralleltest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US006_Links_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US006_Links_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US21_ToolTips_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/pages/US21_ToolTips_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US06_Links_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US06_Links_Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US14_ModalDialogs_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US14_ModalDialogs_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US14_ModalDialogs_Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/demoqa/tests/US14_ModalDialogs_Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US21_ToolTips_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US21_ToolTips_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US29_BookStoreApp_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/tests/US29_BookStoreApp_Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +65,17 @@
     <property name="project.structure.side.proportion" value="0.34712642" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
-  <component name="RunManager" selected="TestNG.US14_ModalDialogs_Test">
+  <component name="RunManager" selected="TestNG.C:/Users/Mehmet/IdeaProjects/DemoQA_Project/paralleltest.xml">
+    <configuration name="C:/Users/Mehmet/IdeaProjects/DemoQA_Project/paralleltest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoQA_Project" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/paralleltest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="US14_ModalDialogs_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
@@ -96,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US14_ModalDialogs_Test.fontFamily" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US21_ToolTips_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -105,16 +120,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US14_ModalDialogs_Test" />
-      <option name="METHOD_NAME" value="fontFamily" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US21_ToolTips_Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US14_ModalDialogs_Test.modalDialogs" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US29_BookStoreApp_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -123,27 +137,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US14_ModalDialogs_Test" />
-      <option name="METHOD_NAME" value="modalDialogs" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US14_ModalDialogs_Test.textCharSize" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US14_ModalDialogs_Test" />
-      <option name="METHOD_NAME" value="textCharSize" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US29_BookStoreApp_Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -152,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/Mehmet/IdeaProjects/DemoQA_Project/paralleltest.xml" />
+        <item itemvalue="TestNG.US29_BookStoreApp_Test" />
         <item itemvalue="TestNG.US14_ModalDialogs_Test" />
+        <item itemvalue="TestNG.US21_ToolTips_Test" />
         <item itemvalue="TestNG.US14_ModalDialogs_Test.assertClose" />
-        <item itemvalue="TestNG.US14_ModalDialogs_Test.fontFamily" />
-        <item itemvalue="TestNG.US14_ModalDialogs_Test.modalDialogs" />
-        <item itemvalue="TestNG.US14_ModalDialogs_Test.textCharSize" />
       </list>
     </recent_temporary>
   </component>
@@ -188,22 +183,38 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1828" y="92" width="1736" height="866" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628968250501" />
-    <state width="1877" height="340" key="GridCell.Tab.0.bottom" timestamp="1628969508414">
+    <state width="1877" height="328" key="GridCell.Tab.0.bottom" timestamp="1629149602372">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628969508414" />
-    <state width="1877" height="340" key="GridCell.Tab.0.center" timestamp="1628969508414">
+    <state width="1877" height="328" key="GridCell.Tab.0.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1629149602372" />
+    <state width="1877" height="328" key="GridCell.Tab.0.center" timestamp="1629149602372">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628969508414" />
-    <state width="1877" height="340" key="GridCell.Tab.0.left" timestamp="1628969508414">
+    <state width="1877" height="328" key="GridCell.Tab.0.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1629149602372" />
+    <state width="1877" height="328" key="GridCell.Tab.0.left" timestamp="1629149602372">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628969508414" />
-    <state width="1877" height="340" key="GridCell.Tab.0.right" timestamp="1628969508414">
+    <state width="1877" height="328" key="GridCell.Tab.0.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1629149602372" />
+    <state width="1877" height="328" key="GridCell.Tab.0.right" timestamp="1629149602372">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1628969508414" />
+    <state width="1877" height="328" key="GridCell.Tab.0.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1629149602372" />
+    <state width="1877" height="328" key="GridCell.Tab.1.bottom" timestamp="1629149602373">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="328" key="GridCell.Tab.1.bottom/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1629149602373" />
+    <state width="1877" height="328" key="GridCell.Tab.1.center" timestamp="1629149602372">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="328" key="GridCell.Tab.1.center/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1629149602372" />
+    <state width="1877" height="328" key="GridCell.Tab.1.left" timestamp="1629149602372">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="328" key="GridCell.Tab.1.left/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1629149602372" />
+    <state width="1877" height="328" key="GridCell.Tab.1.right" timestamp="1629149602372">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="328" key="GridCell.Tab.1.right/0.0.1536.834/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1629149602372" />
     <state x="349" y="160" key="IDE.errors.dialog" timestamp="1628888916933">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

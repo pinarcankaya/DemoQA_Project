@@ -4,6 +4,7 @@ import com.demoqa.pages.US014_ModalDialogs_Page;
 import com.demoqa.pages.US21_ToolTips_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
+import com.demoqa.utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -22,18 +23,14 @@ public class US21_ToolTips_Test {
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
 
     @BeforeMethod
-    public void setup() throws InterruptedException {
+    public void setup() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(3000);
+        ReusableMethods.clickStaleElement(toolTipsPage.widgets);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(2000);
-        toolTipsPage.widgets.click();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        wait.until(ExpectedConditions.visibilityOf(toolTipsPage.toolTips));
-        toolTipsPage.toolTips.click();
+        ReusableMethods.clickStaleElement(toolTipsPage.toolTips);
     }
     //TC112
     //Sayfanin basliginin "Tool Tips "oldugunu assert edin.
@@ -97,7 +94,7 @@ public class US21_ToolTips_Test {
     @Test
     public void colorsOfHoverOver() throws InterruptedException {
         actions.moveToElement(toolTipsPage.emptyBox).build().perform();
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(2);
         String backgroundColor = toolTipsPage.hoverOverText.getCssValue("background-color");
         String color = toolTipsPage.hoverOverText.getCssValue("color");
         System.out.println(backgroundColor);
