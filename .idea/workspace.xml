@@ -33,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Mehmet" />
+        <entry key="$PROJECT_DIR$" value="Mehmet2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,10 +58,10 @@
     <property name="project.structure.side.proportion" value="0.34712642" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/Mehmet/IdeaProjects/DemoQA_Project/paralleltest.xml">
-    <configuration name="C:/Users/Mehmet/IdeaProjects/DemoQA_Project/paralleltest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.US06_Links_Test">
+    <configuration name="C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng1.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/paralleltest.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng1.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -69,8 +69,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US14_ModalDialogs_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="US01_TextBox_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.demoqa.tests.*" />
@@ -78,7 +87,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US14_ModalDialogs_Test" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US01_TextBox_Test" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -86,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US14_ModalDialogs_Test.assertClose" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US06_Links_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -95,25 +104,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US14_ModalDialogs_Test" />
-      <option name="METHOD_NAME" value="assertClose" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="US21_ToolTips_Test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoQA_Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demoqa.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US21_ToolTips_Test" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US06_Links_Test" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -121,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="US29_BookStoreApp_Test" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="US30_BookStoreMenu_Test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoQA_Project" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +121,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demoqa.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US29_BookStoreApp_Test" />
+      <option name="MAIN_CLASS_NAME" value="com.demoqa.tests.US30_BookStoreMenu_Test" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -138,6 +129,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.US30_BookStoreMenu_Test" />
+        <item itemvalue="TestNG.US06_Links_Test" />
+        <item itemvalue="TestNG.US01_TextBox_Test" />
+        <item itemvalue="TestNG.C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng1.xml" />
+        <item itemvalue="TestNG.C:/Users/abdkz/IdeaProjects/DemoQA_Project/testng.xml" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -203,10 +203,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1628888916933" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1628888680353">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1629326047230">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1628888680353" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1629326047230" />
+    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629324715704">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1629324715704" />
     <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1628888820088">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
