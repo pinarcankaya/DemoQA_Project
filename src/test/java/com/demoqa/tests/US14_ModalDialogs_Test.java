@@ -5,18 +5,17 @@ import com.demoqa.pages.US014_ModalDialogs_Page;
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-
 import java.util.concurrent.TimeUnit;
+
+
 
 public class US14_ModalDialogs_Test {
 
@@ -24,18 +23,19 @@ public class US14_ModalDialogs_Test {
     Actions actions = new Actions(Driver.getDriver());
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
 
-    @BeforeMethod
-    public void setup() throws InterruptedException {
+    @Test (
+            priority = 1
+    )
+    public void modalDialogs() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(3000);
+        ReusableMethods.clickStaleElement(modalDialogsPage.alertsFrameWindows);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        modalDialogsPage.alertsFrameWindows.click();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        wait.until(ExpectedConditions.visibilityOf(modalDialogsPage.modalDialogs));
+        ((JavascriptExecutor)Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", this.modalDialogsPage.modalDialogs);
         modalDialogsPage.modalDialogs.click();
+
     }
     //TC063
     //1- Click "Small Modal" button
@@ -44,11 +44,10 @@ public class US14_ModalDialogs_Test {
     //4- Click "Large Modal" button
     //5- Assert that the Modal dialog box/pupup oppened
 
-    @Test
-    public void modalDiaButtons() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOf(modalDialogsPage.smallButton));
-        modalDialogsPage.smallButton.click();
-        Thread.sleep(2000);
+    @Test (priority = 2, dependsOnMethods = {"modalDialogs"})
+    public void modalDiaButtons()  {
+        this.modalDialogsPage.smallButton.click();
+        ReusableMethods.waitFor(1);
         Assert.assertTrue(modalDialogsPage.text.isDisplayed());
 
         wait.until(ExpectedConditions.visibilityOf(modalDialogsPage.smallLargeClose));
@@ -58,23 +57,25 @@ public class US14_ModalDialogs_Test {
         modalDialogsPage.largeButton.click();
 
         Assert.assertTrue(modalDialogsPage.text.isDisplayed());
+        modalDialogsPage.smallLargeClose.click();
+        //ReusableMethods.waitFor(1);
     }
 
     //TC064
     //1- Click "Small Modal" button
     //2- Verify that text of the Modal dialog box/pupup has 47 characters.
-    @Test
-    public void textCharSize() throws InterruptedException {
-        Thread.sleep(3000);
-        modalDialogsPage.smallButton.click();
-        Thread.sleep(3000);
-        int lengthofText = modalDialogsPage.text.getText().length();
+    @Test (priority = 3, dependsOnMethods = {"modalDialogs"})
+    public void textCharSize() {
+        ReusableMethods.clickWithJS(modalDialogsPage.smallButton);
+        ReusableMethods.waitFor(1);
+        int lengthOfText = modalDialogsPage.text.getText().length();
 
         System.out.println(modalDialogsPage.text.getText());
-        System.out.println(lengthofText );
-        Assert.assertEquals(lengthofText ,47);
+        System.out.println(lengthOfText );
+        Assert.assertEquals(lengthOfText ,47);
 
         modalDialogsPage.smallLargeClose.click();
+        //ReusableMethods.waitFor(1);
     }
 
     //TC065
@@ -82,40 +83,42 @@ public class US14_ModalDialogs_Test {
     //2- Click close button
     //3- Verify that the dialog box is closed
 
-    @Test
-    public void verifyClose() throws InterruptedException {
-        modalDialogsPage.smallButton.click();
-        Thread.sleep(3000);
+    @Test (priority = 4, dependsOnMethods = {"modalDialogs"})
+    public void verifyClose()  {
+
+        ReusableMethods.clickStaleElement(modalDialogsPage.smallButton);
+        ReusableMethods.waitFor(1);
 
         // 1.yol: Dialog penceresindeki close button un "size"  "1" oldugunu ve kapandiktan sonra da buton
         // gorunmedigi icin "size"  "0" oldugunu dogrula.
         // Not:size() ini alabilmek icin elementi(closeLarge2) List icine aldik
 
         System.out.println(modalDialogsPage.closeSmall.size());
+        ReusableMethods.waitFor(1);
         modalDialogsPage.smallClose.click();
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
 
         Assert.assertEquals(modalDialogsPage.closeSmall.size(), 0);
         System.out.println(modalDialogsPage.closeSmall.size());
 
-//        2.yol: butonu false / true yaparak assert yap
+//        2.yol: butonu false / true yaparak assert yap.
         modalDialogsPage.smallButton.click();
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
         modalDialogsPage.smallClose.click();
-        Thread.sleep(3000);
+        ReusableMethods.waitFor(1);
 
-        boolean button = ReusableMethods.isElementVisible(modalDialogsPage.smallClose);
+        boolean button = ReusableMethods.isElementVisible(modalDialogsPage.smallClose); //button visible mi? degil, degilse false olsun
         Assert.assertFalse(button);
         System.out.println("result = " + button);
+
     }
 
     //TC066
     //1- Click "Large Modal" button
     //2-Verify that the text has font-family "Roboto" in Modal dialog box
-    @Test
+    @Test (priority = 5, dependsOnMethods = {"modalDialogs"})
     public void fontFamily(){
-        modalDialogsPage.largeButton.click();
-
+        ReusableMethods.clickStaleElement(modalDialogsPage.largeButton);
         String bodyFont = modalDialogsPage.text.getCssValue("font-family");
         System.out.println(bodyFont);
         Assert.assertTrue(bodyFont.contains("Roboto"));
@@ -124,6 +127,8 @@ public class US14_ModalDialogs_Test {
             System.out.println("Font family contains: Roboto");
         }else
         System.out.println("Font family does not contain: Roboto");
+        modalDialogsPage.smallLargeClose.click();
+
     }
 
 
@@ -132,30 +137,25 @@ public class US14_ModalDialogs_Test {
     //2- Click close button
     //3- Verify that the dialog box is closed
 
-    @Test
-    public void assertClose() throws InterruptedException {
-
-        modalDialogsPage.buttons.click();
-        Thread.sleep(3000);
+    @Test (priority = 6, dependsOnMethods = {"modalDialogs"})
+    public void assertClose() {
+        ReusableMethods.clickStaleElement(modalDialogsPage.buttons);
 
         // 1.yol: Dialog penceresindeki close button un "size"  "1" oldugunu ve kapandiktan sonra da buton
         // gorunmedigi icin "size"  "0" oldugunu dogrula.
         // Not:size() ini alabilmek icin elementi(closeLarge2) List icine aldik
 
         System.out.println(modalDialogsPage.closeLarge2.size());
-
+        ((JavascriptExecutor)Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", this.modalDialogsPage.closeLarge);
         modalDialogsPage.closeLarge.click();
-        Thread.sleep(3000);
 
+        ReusableMethods.waitFor(2);
         Assert.assertEquals(modalDialogsPage.closeLarge2.size(), 0);
         System.out.println(modalDialogsPage.closeLarge2.size());
-
-
-
     }
-    @AfterMethod
-    public void tearDownMethod(){
-        Driver.closeDriver();
-    }
+//    @AfterMethod
+//    public void tearDownMethod(){
+//        Driver.closeDriver();
+//    }
 
 }

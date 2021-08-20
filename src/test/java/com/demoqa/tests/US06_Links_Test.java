@@ -1,7 +1,6 @@
 package com.demoqa.tests;
 
 import com.demoqa.pages.US006_Links_Page;
-
 import com.demoqa.utilities.ConfigurationReader;
 import com.demoqa.utilities.Driver;
 import com.demoqa.utilities.ReusableMethods;
@@ -12,9 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -24,38 +21,30 @@ public class US06_Links_Test {
     US006_Links_Page linksPage = new US006_Links_Page();
     Actions actions = new Actions(Driver.getDriver());
     WebDriverWait visibleWait = new WebDriverWait(Driver.getDriver(), 10);
-    WebDriverWait clickWait = new WebDriverWait(Driver.getDriver(), 10);
 
 
     @BeforeMethod
-    public void setup() {
+    public void setup() throws InterruptedException {
             Driver.getDriver().get(ConfigurationReader.getProperty("url"));
             Driver.getDriver().manage().window().maximize();
             Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            linksPage.elementsCard.click();
 
-
-           actions.sendKeys(Keys.ARROW_DOWN).perform(); //
-  //         ReusableMethods.clickWithJS e bak
-
+//            ReusableMethods.scrollTo(linksPage.elementsCard);
+//            linksPage.elementsCard.click();
             actions.sendKeys(Keys.ARROW_DOWN).perform();
-
-
-
-  //       ReusableMethods.waitForClickablility(linksPage.links, 10);
-            //Soru: ElementClickInterceptedException: element click intercepted: Element <span class="text">...</span> is not clickable
-
-        clickWait.until(ExpectedConditions.elementToBeClickable(linksPage.links));
-        linksPage.links.click();
+            ReusableMethods.clickStaleElement(linksPage.elementsCard);
+            actions.sendKeys(Keys.ARROW_DOWN).perform();
+            ReusableMethods.scrollTo(linksPage.links);
+            linksPage.links.click();
 
     }
     //1-Go to main-header "Links"
-    //2- Check if its collor is #AAA
+    //2- Check if its color is #AAA
     @Test
     public void linkColor() {
 
-//        ReusableMethods.waitForVisibility(linksPage.headerLinks, 10);
-        visibleWait.until(ExpectedConditions.visibilityOf(linksPage.headerLinks));
+
+        this.visibleWait.until(ExpectedConditions.visibilityOf(linksPage.headerLinks));
         String headerColor = linksPage.headerLinks.getCssValue("color");
         System.out.println(headerColor);
         String convertToHex  = Color.fromString(headerColor).asHex();
@@ -88,7 +77,8 @@ public class US06_Links_Test {
         //2. yol
         Set<String> child = Driver.getDriver().getWindowHandles();
         List<String> list = new ArrayList<>(child);
-        Driver.getDriver().switchTo().window(list.get(1)); // Bu sekilde sırayla acilan pencereye gidiyor. "0" ana sayfa ve sonrasi child gibi
+        ReusableMethods.waitFor(3);
+        Driver.getDriver().switchTo().window(list.get(1)); // get(1) yeni acilan pencereye gidiyor get(2) ikincisine vs. devam ediyor. "0" ana sayfa ve sonrasi child gibi
 
         //3.yol
 //        for (String w : child )
@@ -108,8 +98,6 @@ public class US06_Links_Test {
         linksPage.moved.click();
         ReusableMethods.waitFor(3);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-//        actions.sendKeys(Keys.ARROW_DOWN).perform();
-//        actions.sendKeys(Keys.ARROW_DOWN).perform();
         ReusableMethods.waitFor(3);
         Assert.assertTrue(linksPage.status.isDisplayed());
     }

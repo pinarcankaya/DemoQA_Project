@@ -41,7 +41,7 @@ public class US18_Slider_Test {
 
         //1.Yol //CUSTOM METHOD ILE
 
-       int sliderBeforeValue=Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //25
+        int sliderBeforeValue=Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //25
         System.out.println(sliderBeforeValue);
 
         ReusableMethods.setSlider(sliderPage.sliderButton,sliderPage.sliderValue,10);
@@ -54,7 +54,7 @@ public class US18_Slider_Test {
 
 
         //2.yol
-     //   int sliderValue=Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //ilk value 25 geliyor
+        //   int sliderValue=Integer.parseInt(sliderPage.sliderValue.getAttribute("value"));  //ilk value 25 geliyor
 //        action.click(sliderPage.sliderButton).build().perform();
 //        for (int i = 0; i <sliderValue-10 ; i++) {  //25-10=15  ///baslangic noktasini 50  aliyor
 //            action.sendKeys(Keys.ARROW_LEFT).build().perform();
