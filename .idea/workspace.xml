@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d098e823-59ee-402b-a601-3815e22144c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demoqa/utilities/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +213,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834/-1920.0.1920.1050@0.0.1536.834" timestamp="1629324715704" />
+    <state x="360" y="78" key="new project wizard" timestamp="1629409267347">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="360" y="78" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1629409267347" />
     <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1628888820088">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

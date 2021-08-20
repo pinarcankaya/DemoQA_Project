@@ -54,8 +54,11 @@ public class Driver {
     }
 
     public static void closeDriver(){
-            driver.get().quit();  // driver'ı kapat
-            driver.remove(); // driver'ı hafızadan temizle.
+//        if (driver!=null) {
+//            driver.quit();
+//            //driver is pointing the chrome driver is not null
+//            driver=null;
+//        }
     }
 }
 
